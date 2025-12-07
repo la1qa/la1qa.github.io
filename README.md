@@ -1,5 +1,6 @@
-This repository includes all necessary files for the creation of my website portfolio, also my first website ever. 
-I hope to get my hands dirty and delve onto the world of html, css and javascript in order to achieve the ultimate pretty, efficient, interesting, and informative portfolio. I will also be using git locally and pushing onto github, which is something I haven't done in a while. I hope to include this in my workflow from now on.
+This repository contains all the necessary files for my website portfolio, my very first website!
+
+I’m excited to dive into HTML, CSS, and JavaScript to create a portfolio that is not only visually appealing but also efficient, engaging, and informative. I’ll be using Git locally and pushing updates to GitHub, a workflow I’m revisiting and plan to integrate regularly from now on.
 
 The palette 🎨 I have chosen is the following:
 
@@ -34,14 +35,6 @@ The palette 🎨 I have chosen is the following:
   </div>
 
 </div>
-
-<!-- Responsive color palette for GitHub Markdown -->
-
-| <div style="background:#f76c6c;width:100%;height:60px;border-radius:6px;"></div> | <div style="background:#a8d0e6;width:100%;height:60px;border-radius:6px;"></div> | <div style="background:#f8e9a1;width:100%;height:60px;border-radius:6px;"></div> | <div style="background:#24305e;width:100%;height:60px;border-radius:6px;"></div> |
-| --- | --- | --- | --- |
-| #f76c6c | #a8d0e6 | #f8e9a1 | #24305e |
-
-
 
 Goals for the website:
 - Both Dark&Light mode

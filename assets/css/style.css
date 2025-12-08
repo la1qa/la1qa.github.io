@@ -19,6 +19,7 @@ html {
   --text-color: #222222;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
+  --header-bar: #a8d0e6;
 }
 
 [data-theme="dark"] {
@@ -26,6 +27,7 @@ html {
   --text-color: #ffffff;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
+  --header-bar: #24305e;
 }
 
 body {
@@ -125,7 +127,7 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: #24305e;
+  background-color: var(--header-bar);
 }
 
 .nav {
@@ -278,7 +280,7 @@ img {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 0.5rem 0.65rem;
-  border: 1px var(--box-color-1) solid;
+  border: 2px var(--box-color-1) solid;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -299,6 +301,14 @@ img {
   width: max-content;
   font-size: 1.3rem;
   margin-top: 6rem;
+}
+
+.home__icon .fa-github {
+  color: var(--text-color);
+}
+
+.home__icon .fa-linkedin {
+  color: var(--text-color);
 }
 
 .home__icon {

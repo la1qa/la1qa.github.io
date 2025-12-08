@@ -17,11 +17,15 @@ html {
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
+  --box-color-1: #f76c6c;
+  --box-color-2: #a8d0e6;
 }
 
 [data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #f0f0f0;
+  --box-color-1: #f76c6c;
+  --box-color-2: #a8d0e6;
 }
 
 body {
@@ -209,7 +213,7 @@ img {
 }
 
 .scroll-header .nav__menu {
-  background-color: var(--bg-color);
+  background-color: #f1c40f;
 }
 
 .home {
@@ -274,15 +278,15 @@ img {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 0.5rem 2rem;
-  border: 1px #24305e solid;
+  border: 1px var(--box-color-1) solid;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .home__hire:hover {
-  background-color: var(--text-color);
-  color: #24305e;
-  border: 1px #24305e solid;
+  background-color: var(--box-color-1);
+  color: var(--text-color);
+  border: 1px var(--box-color-1) solid;
   transition: 0.3s ease-in;
 }
 
@@ -294,17 +298,17 @@ img {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background-color: var(--bg-color);
-  color: #e4a109;
+  color: var(--text-color);
   padding: 0.5rem 0.65rem;
-  border: 1px #e4a109 solid;
+  border: 1px var(--box-color-2) solid;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .home__download:hover {
-  background-color: var(--bg-color);
-  color: #2a3749;
-  transition: 0.3s;
+  background-color: var(--box-color-2);
+  color: var(--text-color);
+  transition: 0.3s ease-in;
 }
 
 .home__download:focus {

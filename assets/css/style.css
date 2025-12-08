@@ -19,7 +19,7 @@ html {
   --text-color: #222222;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
-  --header-bar: #a8d0e6;
+  --header-bar-color: #a8d0e6;
 }
 
 [data-theme="dark"] {
@@ -27,7 +27,7 @@ html {
   --text-color: #ffffff;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
-  --header-bar: #24305e;
+  --header-bar-color: #24305e;
 }
 
 body {
@@ -127,7 +127,7 @@ img {
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--header-bar);
+  background-color: var(--header-bar-color);
 }
 
 .nav {
@@ -594,6 +594,14 @@ img {
   .nav__list {
     display: flex;
   }
+  /* ensure nav list items are vertically centered inside the header */
+  .nav__list,
+  .nav__list > .nav__item,
+  .nav__list > div,
+  .nav__item > .nav__link {
+    align-items: center;
+    display: flex;
+  }
   .nav__item {
     margin-right: 1.5rem;
     margin-bottom: 0;
@@ -721,4 +729,27 @@ body.dark h1, body.dark .support a {color: #fff;}
 
 .checkbox:checked + .checkbox-label .ball {
   transform: translateX(24px);
+}
+
+.lang-selector select {
+  padding: 6px 10px;
+  border-radius: 0px;
+  border: 0px;
+  background: var(--header-bar-color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 14px;
+  /* ensure select uses the same site font */
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1.4;
+  transition: 0.3s;
+}
+
+.lang-selector select:hover {
+  border-color: var(--box-color-1);
+}
+
+.lang-selector {
+  display: inline-block;
 }

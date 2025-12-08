@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">    
+<html data-theme="dark" lang="en">    
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +8,9 @@
     <title>Indify a Freefolio template by OSSPH</title>
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   </head>
   <body>
     <!-- Header -->
@@ -28,9 +31,14 @@
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
             </li>
-            <li class="nav__item">
-              <button id="theme-toggle"> Theme</button>
-            </li>
+            <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
           </ul>
         </div>
 

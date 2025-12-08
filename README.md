@@ -14,7 +14,7 @@ The palette 🎨 I have chosen is the following:
 ![Color Palette](assets/img/palette.png)
 
 <!--
-https://pixelied.com/colors/palette-editor/f8e9a1-f76c6c-a8d0e6-24305e
+https://pixelied.com/colors/palette-editor/f8e9a1-f76c6c-a8d0e6-24305e-ffffff-222222
 -->
 
 ### Goals for the website:

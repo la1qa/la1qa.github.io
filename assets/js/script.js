@@ -1,16 +1,14 @@
 const username = "la1qa";
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-  document.documentElement.setAttribute("data-theme", savedTheme);
-}
+const checkbox = document.getElementById("checkbox");
 
-const toggle = document.getElementById("theme-toggle");
+// Load saved preference
+const savedTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", savedTheme);
+checkbox.checked = savedTheme === "dark";
 
-toggle.addEventListener("click", () => {
-  const currentTheme = document.documentElement.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+checkbox.addEventListener("change", () => {
+  const newTheme = checkbox.checked ? "dark" : "light";
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 });
-

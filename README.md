@@ -36,7 +36,7 @@ The palette 🎨 I have chosen is the following:
 
 </div>
 
-Goals for the website:
+### Goals for the website:
 - Both Dark&Light mode
 - Nice transitions
 - Catalan&English (Spanish?)

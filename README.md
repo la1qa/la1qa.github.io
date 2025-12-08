@@ -11,7 +11,11 @@ The palette 🎨 I have chosen is the following:
 #24305e  
 -->
 
-![Color Palette](images/palette.png)
+![Color Palette](assets/img/palette.png)
+
+<!--
+https://pixelied.com/colors/palette-editor/f8e9a1-f76c6c-a8d0e6-24305e
+-->
 
 ### Goals for the website:
 - Both Dark&Light mode

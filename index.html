@@ -19,7 +19,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link">Home</a>
+              <a href="#home" class="nav__link" data-i18n="home"></a>
             </li>
             <li class="nav__item">
               <a href="#services" class="nav__link">Services</a>
@@ -38,6 +38,14 @@
                     <span class="ball"></span>
                 </label>
             </div>
+            <!-- Language switcher -->
+            <div class="lang-selector">
+            <select id="language-dropdown">
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+            </select>
+            </div>
+
           </ul>
         </div>
 
@@ -54,20 +62,16 @@
             <img src="./assets/img/getxo.jpg" alt="" class="home-image" />   
           </div>
           <div class="home__greeting" data-aos="fade-up">
-            <span>Hello there,</span>
+            <span data-i18n="greeting"></span>
           </div>
           <div class="home__title" data-aos="fade-up">
-            <h1>I'm Laia</h1>
+            <h1 data-i18n="name"></h1>
           </div>
           <div class="home__career" data-aos="fade-up">
             <p>Data Scientist </p>
           </div>
           <div class="home__description" data-aos="fade-up">
-            <p>
-              Welcome to my website! 
-              I'm a final-year student pursuing my Bachelor's in Computational Mathematics and Data Analytics at Universitat Autònoma de Barcelona (UAB).
-              I'm passionate about turning data into actionable insights and driving informed decision-making through advanced analytics and machine learning techniques.
-            </p>
+            <p data-i18n="presentation"></p>
           </div>
           <div class="home__button">
             <a href="./assets/files/Laia_Querol_Alturo_CV.pdf" download="Laia_Querol_Alturo_CV.pdf">
@@ -208,5 +212,7 @@
         delay: 0
       });
     </script>
+    <script src="./assets/js/lang.js"></script>
+    <script src="./assets/js/i18n.js"></script>
   </body>
 </html>

@@ -315,7 +315,6 @@ img {
 .home__icon:focus {
   outline: 0;
 }
-
 .home__img {
   position: absolute;
   right: 0;
@@ -323,33 +322,19 @@ img {
 }
 
 .home__img img {
-  width: 240px;
-  height: 320px;
-  object-fit: cover; /* prevents distortion */
+  width: 35vw;
+  height: 35vw;
+  max-width: 380px;
+  max-height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 90% center;
 }
 
-/* 🔥 Mobile & tablet responsive behavior */
-@media (max-width: 768px) {
-  .home__img {
-    position: relative; /* stop absolute overlap */
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
 
-  .home__img img {
-    width: 70vw;   /* scales with screen size */
-    height: auto;  /* keep aspect ratio */
-    max-width: 260px;
-  }
-}
-
-/* 🔥 Ultra-small phones */
-@media (max-width: 480px) {
-  .home__img img {
-    width: 80vw;
-    max-width: 220px;
-  }
+.contact {
+  background-color: var(--bg-color);
+  padding-bottom: 4rem;
 }
 
 .contact__inputs {

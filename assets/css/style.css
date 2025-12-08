@@ -16,14 +16,14 @@ html {
 
 :root {
   --bg-color: #ffffff;
-  --text-color: #000000;
+  --text-color: #222222;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
 }
 
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --text-color: #f0f0f0;
+  --bg-color: #222222;
+  --text-color: #ffffff;
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
 }
@@ -272,41 +272,19 @@ img {
   margin: 0.1rem;
 }
 
-.home__hire {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 0.5rem 2rem;
-  border: 1px var(--box-color-1) solid;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.home__hire:hover {
-  background-color: var(--box-color-1);
-  color: var(--text-color);
-  border: 1px var(--box-color-1) solid;
-  transition: 0.3s ease-in;
-}
-
-.home__hire:focus {
-  outline: 0;
-}
-
 .home__download {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 0.5rem 0.65rem;
-  border: 1px var(--box-color-2) solid;
+  border: 1px var(--box-color-1) solid;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .home__download:hover {
-  background-color: var(--box-color-2);
+  background-color: var(--box-color-1);
   color: var(--text-color);
   transition: 0.3s ease-in;
 }
@@ -346,7 +324,32 @@ img {
 
 .home__img img {
   width: 240px;
-  filter: drop-shadow(1rem 0.8rem 2rem rgba(7, 7, 7, 0.76));
+  height: 320px;
+  object-fit: cover; /* prevents distortion */
+}
+
+/* 🔥 Mobile & tablet responsive behavior */
+@media (max-width: 768px) {
+  .home__img {
+    position: relative; /* stop absolute overlap */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .home__img img {
+    width: 70vw;   /* scales with screen size */
+    height: auto;  /* keep aspect ratio */
+    max-width: 260px;
+  }
+}
+
+/* 🔥 Ultra-small phones */
+@media (max-width: 480px) {
+  .home__img img {
+    width: 80vw;
+    max-width: 220px;
+  }
 }
 
 .contact__inputs {

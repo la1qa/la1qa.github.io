@@ -15,9 +15,9 @@ const translations = {
   ca: {
     greeting: "Hola,",
     name: "Soc la Laia",
-    presentation: `Benvingut al meu web! 
-                  Sóc una estudiant de darrer curs que està cursant el Grau en Matemàtica Computacional i Analítica de Dades a la Universitat Autònoma de Barcelona (UAB).
-                  Em apassiona convertir les dades en informació útil i impulsar la presa de decisions informada mitjançant tècniques avançades d'anàlisi i aprenentatge computacional.`,
+    presentation: `Benvinguts al meu web! 
+                  Soc una estudiant de darrer curs cursant el Grau en Matemàtica Computacional i Analítica de Dades a la Universitat Autònoma de Barcelona (UAB).
+                  M'apassiona convertir les dades en informació útil i impulsar la presa de decisions informada mitjançant tècniques avançades d'anàlisi i aprenentatge computacional.`,
     contact_button: "Contacta’m",
     home: "Inici",
     services: "Serveis",

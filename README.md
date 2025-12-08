@@ -11,7 +11,7 @@ The palette 🎨 I have chosen is the following:
 #24305e  
 -->
 
-![Color Palette](images\palette.png)
+![Color Palette](images/palette.png)
 
 ### Goals for the website:
 - Both Dark&Light mode

@@ -752,4 +752,11 @@ body.dark h1, body.dark .support a {color: #fff;}
 
 .lang-selector {
   display: inline-block;
+  /* space from the theme checkbox (to the left) */
+  margin-left: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  /* reduce spacing on small screens so the mobile menu looks tidy */
+  .lang-selector { margin-left: 6px; }
 }

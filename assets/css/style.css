@@ -252,13 +252,6 @@ img {
   padding-top: 0.5rem;
 }
 
-.home__career {
-  display: block;
-  color: var(--text-color);
-  line-height: 0.1rem;
-  margin-bottom: 2rem;
-}
-
 .home__description {
   color: var(--text-color);
 }
@@ -307,8 +300,27 @@ img {
   color: var(--text-color);
 }
 
+.home__icon .fa-github:hover {
+  color: var(--header-bar-color);
+  transition: 0.3s;
+}
+
 .home__icon .fa-linkedin {
   color: var(--text-color);
+}
+
+.home__icon .fa-linkedin:hover {
+  color: var(--header-bar-color);
+  transition: 0.3s;
+}
+
+.home__icon .fa-spotify {
+  color: var(--text-color);
+}
+
+.home__icon .fa-spotify:hover {
+  color: var(--header-bar-color);
+  transition: 0.3s;
 }
 
 .home__icon {

@@ -20,6 +20,9 @@ html {
   --box-color-1: #f76c6c;
   --box-color-2: #a8d0e6;
   --header-bar-color: #a8d0e6;
+  /* header height used by layout calculations */
+  --header-height: 3rem;
+  --side-panel-width: 280px;
 }
 
 [data-theme="dark"] {
@@ -225,6 +228,7 @@ img {
 
 .home__container {
   position: relative;
+  /* full viewport minus header so scrolling lands cleanly on next section */
   height: calc(100vh - var(--header-height));
   grid-template-rows: repeat(2, max-content);
   align-content: space-around;
@@ -247,9 +251,9 @@ img {
   font-size: 1.5rem;
   font-weight: 900;
   color: var(--text-color);
-  line-height: 2rem;
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  line-height: 1.8rem;
+  padding-bottom: 2rem;
+  padding-top: 1.6rem;
 }
 
 .home__description {
@@ -302,6 +306,7 @@ img {
 
 .home__icon .fa-github:hover {
   color: var(--header-bar-color);
+  transform: translateY(-2px);
   transition: 0.3s;
 }
 
@@ -311,6 +316,7 @@ img {
 
 .home__icon .fa-linkedin:hover {
   color: var(--header-bar-color);
+  transform: translateY(-2px);
   transition: 0.3s;
 }
 
@@ -320,6 +326,7 @@ img {
 
 .home__icon .fa-spotify:hover {
   color: var(--header-bar-color);
+  transform: translateY(-2px);
   transition: 0.3s;
 }
 
@@ -337,11 +344,13 @@ img {
 .home__icon:focus {
   outline: 0;
 }
+
 .home__img {
   position: absolute;
   right: 0;
   bottom: 0;
   overflow: hidden;
+  padding-top: 2rem;
 }
 
 .home__img img {
@@ -537,7 +546,7 @@ img {
 }
 
 .footer {
-  background-color: #2a3749;
+  background-color: var(--header-bar-color);
 }
 
 .footer__container {
@@ -548,7 +557,9 @@ img {
 .footer__copy {
   text-align: center;
   font-weight: 100;
-  color: #e4a109;
+  color: var(--text-color);
+  margin: 0; /* remove extra margin */
+  line-height: 1.2; /* tighter line spacing */
 }
 
 .footer__copy-link {
@@ -660,8 +671,62 @@ img {
   }
   .services__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
+
+  /* move the section title/subtitle into the left column as a stacked sidebar */
+  .services__section {
+    grid-column: 1 / 2;
+    align-self: start;
+    text-align: left;
+    padding-top: 2rem;
+  }
+
+  .services__container > .services__data {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  /* Split layout styles */
+  .split {
+    display: grid;
+    grid-template-columns: var(--side-panel-width) 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .split-left {
+    position: sticky;
+    top: calc(var(--header-height) + 1rem);
+    height: calc(100vh - var(--header-height) - 2rem);
+    align-self: start;
+  }
+
+  .left-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* tighter overall gap so title and icons sit closer */
+    padding: 0.5rem 0.5rem;
+  }
+
+  .split-left .home__img {
+    position: static;
+  }
+
+  .split-left .home__img img {
+    width: calc(var(--side-panel-width) - 40px);
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .split-left .home__title {
+    padding-top: 1.8rem;
+    padding-bottom: 0.1rem; /* reduce space under title in left panel */
+  }
+
+  .split-right { padding-left: 1rem; }
   .portfolio__title {
     font-size: 1.5rem;
   }
@@ -685,10 +750,58 @@ img {
     margin-right: auto;
   }
   .home__data {
-    padding-top: 2rem;
+    padding-top: 1.8rem;
   }
   .home__img {
-    height: 670px;
+    max-height: 670px;
+  }
+}
+
+
+/* Reduce the main name heading only when it appears in the split left panel */
+.split-left .home__title h1 {
+  font-size: 1.2rem; /* smaller than the global/home heading */
+  line-height: 1.15rem;
+  margin: 0;
+}
+
+.split-left .home__greeting {
+  font-size: 0.95rem;
+}
+
+/* Reduce spacing for social icons inside the split left panel */
+  .split-left .home__social {
+  margin-top: 0.6rem; /* sit closer to the title */
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  gap: 0.05rem; /* tight vertical spacing between icons */
+  align-items: center;
+  font-size: 1.15rem; /* slightly larger base so icons scale nicely */
+  width: max-content;
+}
+
+.split-left .home__icon {
+  font-size: 1.5rem; /* slightly larger icon */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.05rem 0.1rem; /* smaller vertical padding to reduce distance */
+  border-radius: 6px;
+}
+
+.split-left .home__icon i {
+  font-size: 1.4rem; /* ensure the <i> scales too */
+  line-height: 1;
+}
+
+.split-left .home__icon:hover {
+  transform: translateY(-2px);
+  transition: transform 180ms ease;
+}
+
+@media (max-width: 767px) {
+  .split-left .home__title h1 {
+    font-size: 1.4rem;
   }
 }
 
@@ -772,3 +885,17 @@ body.dark h1, body.dark .support a {color: #fff;}
   /* reduce spacing on small screens so the mobile menu looks tidy */
   .lang-selector { margin-left: 6px; }
 }
+
+@media (max-width: 767px) {
+  .split-left {
+    display: none;
+  }
+  .split {
+    display: block; /* stack instead of grid */
+  }
+  .split-right {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+

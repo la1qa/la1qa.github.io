@@ -22,13 +22,13 @@
               <a href="#home" class="nav__link" data-i18n="home"></a>
             </li>
             <li class="nav__item">
-              <a href="#services" class="nav__link">Services</a>
+              <a href="#experience" class="nav__link" data-i18n="experience"></a>
             </li>
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link">Portfolio</a>
+              <a href="#projects" class="nav__link" data-i18n="projects"></a>
             </li>
             <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
+              <a href="./blog.html" class="nav__link" data-i18n="blog" target="_blank" rel="noopener"></a>
             </li>
             <div>
                 <input type="checkbox" class="checkbox" id="checkbox">
@@ -55,6 +55,7 @@
       </nav>
     </header>
     <!-- Home -->
+    <main class="page">
     <section class="home" id="home">
       <div class="home__container bd-container bd-grid" >
         <div class="home__data" >
@@ -99,106 +100,124 @@
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
-      <h2 class="section-title" data-aos="fade-up">SERVICES</h2>
-      <p class="section-subtitle" data-aos="fade-up">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit facere doloremque perspiciatis! In, corporis?
-      </p>
-      <div class="services__container bd-container bd-grid">
-        <div class="services__data" data-aos="fade-up">
-          <div class="services__img">
-            <img src="./assets/img/grass.jpg" alt="" />
+    <!-- Split layout: left sticky panel (home-like) + right scrolling content (experience, projects) -->
+    <section class="split bd-container" id="portfolio">
+      <div class="split-left bd-container">
+        <!-- Left sticky panel -->
+        <div class="left-panel">
+          <div class="home__img" data-aos="fade-up">
+            <img src="./assets/img/getxo.jpg" alt="" class="home-image" />
           </div>
-          <h3 class="services__title">Lorem, ipsum.</h3>
-          <p class="services__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, mollitia.
-          </p>
-        </div>
-
-        <div class="services__data" data-aos="fade-up">
-          <div class="services__img">
-            <img src="./assets/img/grass.jpg" alt="" />
+          <div class="home__title" data-aos="fade-up">
+            <h1>Laia Querol Alturo</h1>
           </div>
-          <h3 class="services__title">Lorem, ipsum.</h3>
-          <p class="services__description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, est.
-          </p>
-        </div>
-
-        <div class="services__data" data-aos="fade-up">
-          <div class="services__img">
-            <img src="./assets/img/grass.jpg" alt="" />
+          <div class="home__social" data-aos="fade-up">
+            <a href="https://github.com/la1qa" class="home__icon" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="www.linkedin.com/in/laia-querol-alturo" target="_blank" class="home__icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" class="home__icon"><i class="fab fa-spotify"></i></a>
           </div>
-          <h3 class="services__title">Lorem, ipsum.</h3>
-          <p class="services__description">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, dolorem?
-          </p>
-        </div>
-
-        <div class="services__data" data-aos="fade-up">
-          <div class="services__img">
-            <img src="./assets/img/grass.jpg" alt="" />
-          </div>
-          <h3 class="services__title">Lorem, ipsum.</h3>
-          <p class="services__description">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta fugiat, possimus quo id architecto alias!
-          </p>
         </div>
       </div>
-    </section>
-    <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
-      <h2 class="section-title" data-aos="fade-up">PORTFOLIO</h2>
-      <p class="section-subtitle" data-aos="fade-up">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore.
-      </p>
-      <div class="portfolio__container bd-container bd-grid swiper" data-aos="fade-up">
-        <div class="swiper-wrapper">
-          <div class="portfolio__data swiper-slide">
-            <h3 class="portfolio__title">Project Name</h3>
-            <div class="portfolio__img">
-              <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+
+      <div class="split-right">
+        <!-- Experience (right column) -->
+        <section class="services" id="experience">
+          <h2 class="section-title" data-aos="fade-up" data-i18n="experience"></h2>
+          <p class="section-subtitle" data-aos="fade-up">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem impedit facere doloremque perspiciatis! In, corporis?
+          </p>
+          <div class="services__container bd-container bd-grid">
+            <div class="services__data" data-aos="fade-up">
+              <div class="services__img">
+                <img src="./assets/img/grass.jpg" alt="" />
+              </div>
+              <h3 class="services__title">Lorem, ipsum.</h3>
+              <p class="services__description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, mollitia.
+              </p>
             </div>
-            <p class="portfolio__description">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, at!
-            </p>
-            <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
-              <span
-                >Visit website <i class="fas fa-arrow-circle-right"></i
-              ></span>
-            </a>
-          </div>
-          <div class="portfolio__data swiper-slide">
-            <h3 class="portfolio__title">Project Name</h3>
-            <div class="portfolio__img">
-              <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+
+            <div class="services__data" data-aos="fade-up">
+              <div class="services__img">
+                <img src="./assets/img/grass.jpg" alt="" />
+              </div>
+              <h3 class="services__title">Lorem, ipsum.</h3>
+              <p class="services__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto, est.
+              </p>
             </div>
-            <p class="portfolio__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, unde!
-            </p>
-            <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
-              <span
-                >Visit website <i class="fas fa-arrow-circle-right"></i
-              ></span>
-            </a>
-          </div>
-          <div class="portfolio__data swiper-slide">
-            <h3 class="portfolio__title">Project Name</h3>
-            <div class="portfolio__img">
-              <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+
+            <div class="services__data" data-aos="fade-up">
+              <div class="services__img">
+                <img src="./assets/img/grass.jpg" alt="" />
+              </div>
+              <h3 class="services__title">Lorem, ipsum.</h3>
+              <p class="services__description">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, dolorem?
+              </p>
             </div>
-            <p class="portfolio__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, architecto.</p>
-            <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
-              <span
-                >Visit website <i class="fas fa-arrow-circle-right"></i
-              ></span>
-            </a>
+
+            <div class="services__data" data-aos="fade-up">
+              <div class="services__img">
+                <img src="./assets/img/grass.jpg" alt="" />
+              </div>
+              <h3 class="services__title">Lorem, ipsum.</h3>
+              <p class="services__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta fugiat, possimus quo id architecto alias!
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="swiper-pagination"></div>
+        </section>
+
+        <!-- Projects (right column) -->
+        <section class="portfolio" id="projects">
+          <h2 class="section-title" data-aos="fade-up" data-i18n="projects"></h2>
+          <p class="section-subtitle" data-aos="fade-up">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore.
+          </p>
+          <div class="portfolio__container bd-container bd-grid swiper" data-aos="fade-up">
+            <div class="swiper-wrapper">
+              <div class="portfolio__data swiper-slide">
+                <h3 class="portfolio__title">Project Name</h3>
+                <div class="portfolio__img">
+                  <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+                </div>
+                <p class="portfolio__description">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, at!
+                </p>
+                <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
+                  <span>Visit website <i class="fas fa-arrow-circle-right"></i></span>
+                </a>
+              </div>
+              <div class="portfolio__data swiper-slide">
+                <h3 class="portfolio__title">Project Name</h3>
+                <div class="portfolio__img">
+                  <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+                </div>
+                <p class="portfolio__description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, unde!
+                </p>
+                <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
+                  <span>Visit website <i class="fas fa-arrow-circle-right"></i></span>
+                </a>
+              </div>
+              <div class="portfolio__data swiper-slide">
+                <h3 class="portfolio__title">Project Name</h3>
+                <div class="portfolio__img">
+                  <img src="https://dummyimage.com/640x360/fff/aaa" alt="" />
+                </div>
+                <p class="portfolio__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, architecto.</p>
+                <a class="portfolio__link" href="https://theuselessweb.com/" target="_blank">
+                  <span>Visit website <i class="fas fa-arrow-circle-right"></i></span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
       </div>
     </section>
+    </main>
     <!-- Footer -->
     <footer id="contact">
       <footer class="footer section">

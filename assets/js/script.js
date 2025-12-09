@@ -12,3 +12,9 @@ checkbox.addEventListener("change", () => {
   document.documentElement.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 });
+
+// GitHub calendar
+GitHubCalendar(".calendar", username, {
+  responsive: true,
+  global_stats: false,
+});

@@ -148,11 +148,12 @@ img {
     width: 100%;
     padding-top: 1.5rem;
     text-align: center;
-    background-color: var(--bg-color);
+    background-color: var(--text-color);
     transition: 0.3s;
     box-shadow: 0 2px 4px rgba(165, 146, 146, 0.1);
     border-radius: 0 0 1rem 1rem;
   }
+  
 }
 
 .nav__item {
@@ -294,7 +295,7 @@ img {
 
 .home__social {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: max-content;
   font-size: 1.3rem;
   margin-top: 6rem;
@@ -802,6 +803,22 @@ img {
 @media (max-width: 767px) {
   .split-left .home__title h1 {
     font-size: 1.4rem;
+  }
+  .home__social {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  .home__icon {
+    margin: 0.1rem 0;
+    font-size: 2.0rem;
+  }
+  .home__img img {
+    width: 180px;
+    height: 180px;
   }
 }
 

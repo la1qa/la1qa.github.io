@@ -11,7 +11,9 @@ const translations = {
     projects: "Projects",
     blog: "Blog",
     matcad: "Computational Mathematics and Data Analytics",
-    batxillerat: "Scientific-Technological Baccalaureate"
+    batxillerat: "Scientific-Technological Baccalaureate",
+    cvc: "Computer Vision Center",
+    cvc_internship: "Machine Learning Intern"
   },
 
   ca: {
@@ -26,6 +28,8 @@ const translations = {
     projects: "Projectes",
     blog: "Blog",
     matcad: "Matemàtica Computacional i Analítica de Dades",
-    batxillerat: "Batxillerat Científic-Tecnològic"
+    batxillerat: "Batxillerat Científic-Tecnològic",
+    cvc: "Centre de Visió per Computador",
+    cvc_internship: "Becària en Aprenentatge Computacional"
   }
 };

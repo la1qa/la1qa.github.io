@@ -15,21 +15,25 @@ html {
 }
 
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #fdfdff;
   --text-color: #222222;
   --button-color: #f76c6c;
   --header-bar-color: #a8d0e6;
   --hover-color: #f76c6c;
   --header-height: 3rem;
   --side-panel-width: 280px;
+  --timeline-line-color: #f8e9a1;
+  --bg-split-color: #f0f0f0;
 }
 
 [data-theme="dark"] {
   --bg-color: #222222;
-  --text-color: #ffffff;
+  --text-color: #fefefe;
   --button-color: #f8e9a1;
   --hover-color: #f8e9a1;
   --header-bar-color: #24305e;
+  --bg-split-color: #1a1a1a;
+  --timeline-line-color: #f76c6c;
 }
 
 body {
@@ -88,7 +92,7 @@ img {
   padding: 2rem 0 0 0;
   text-align: center;
   letter-spacing: 0.1rem;
-  color: #24305e;
+  color: var(--text-color)
 }
 
 .section-title::after {
@@ -100,7 +104,7 @@ img {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #24305e;
+  background-color: var(--header-bar-color);
 }
 
 .section-subtitle {
@@ -297,7 +301,7 @@ img {
   flex-direction: row;
   width: max-content;
   font-size: 1.3rem;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .home__icon .fa-github {
@@ -410,7 +414,7 @@ img {
 }
 
 .services {
-  background-color: #f9f9f9;
+  background-color: var(--bg-split-color);
   padding-bottom: 4rem;
 }
 
@@ -457,7 +461,7 @@ img {
 }
 
 .portfolio {
-  background-color: var(--bg-color);
+  background-color: var(--bg-split-color);
   padding-bottom: 4rem;
 }
 
@@ -529,6 +533,49 @@ img {
   background-color: var(--bg-color);
   color: #2a3749;
   transition: 0.3s;
+}
+
+.education {
+  background-color: var(--bg-split-color);
+  padding-bottom: 4rem;
+}
+
+.education__section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+  letter-spacing: 0.25rem;
+}
+
+.education__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.education__data {
+  display: grid;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  text-align: left;
+  transition: 0.4s;
+  background: var(--bg-color);
+}
+
+.education__title {
+  color: var(--button-color);
+  margin-bottom: 0.5rem;
+}
+
+.education span{
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.education__description {
+  color: #f9f9f9;
+  margin-bottom: 1.5rem;
 }
 
 .swiper-pagination {
@@ -974,3 +1021,70 @@ body.dark h1, body.dark .support a {color: #fff;}
   }
 }
 
+/* Timeline Section */
+.timeline {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  position: relative;
+  padding-left: 10px;
+}
+
+/* Title */
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Vertical line */
+.timeline-line {
+  position: absolute;
+  left: 0px;           /* aligns with markers */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--timeline-line-color);
+  border-radius: 3px;
+}
+
+/* Individual timeline entry */
+.timeline-item {
+  position: relative;
+}
+
+/* Marker circle */
+.timeline-marker {
+  position: absolute;
+  left: 0px;          /* centers the marker on the line */
+  top: 20px;
+  width: 14px;
+  height: 14px;
+  background: var(--timeline-line-color);
+  border-radius: 50%;
+  z-index: 2;
+  border-color: var(--bg-split-color);
+  border-width: 2px;
+  border-style: solid;
+}
+
+/* Content box */
+.timeline-content {
+  margin-left: 40px;    /* pushes content to the right of the line */
+  background: var(--bg-color);
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+
+.timeline-content h3 {
+  margin: 0;
+}
+
+.timeline-content span {
+  font-size: 0.9em;
+}
+
+.timeline-content p {
+  margin-top: 5px;
+  line-height: 1.4;
+}
+/* End of Timeline Section */

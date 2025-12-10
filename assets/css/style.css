@@ -17,10 +17,9 @@ html {
 :root {
   --bg-color: #ffffff;
   --text-color: #222222;
-  --box-color-1: #f76c6c;
-  --box-color-2: #a8d0e6;
+  --button-color: #f76c6c;
   --header-bar-color: #a8d0e6;
-  /* header height used by layout calculations */
+  --hover-color: #f76c6c;
   --header-height: 3rem;
   --side-panel-width: 280px;
 }
@@ -28,8 +27,8 @@ html {
 [data-theme="dark"] {
   --bg-color: #222222;
   --text-color: #ffffff;
-  --box-color-1: #f76c6c;
-  --box-color-2: #a8d0e6;
+  --button-color: #f8e9a1;
+  --hover-color: #f8e9a1;
   --header-bar-color: #24305e;
 }
 
@@ -278,14 +277,14 @@ img {
   background-color: var(--bg-color);
   color: var(--text-color);
   padding: 0.5rem 0.65rem;
-  border: 2px var(--box-color-1) solid;
+  border: 2px var(--button-color) solid;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .home__download:hover {
-  background-color: var(--box-color-1);
-  color: var(--text-color);
+  background-color: var(--button-color);
+  color: var(--bg-color);
   transition: 0.3s ease-in;
 }
 
@@ -306,7 +305,7 @@ img {
 }
 
 .home__icon .fa-github:hover {
-  color: var(--header-bar-color);
+  color: var(--hover-color);
   transform: translateY(-2px);
   transition: 0.3s;
 }
@@ -316,7 +315,7 @@ img {
 }
 
 .home__icon .fa-linkedin:hover {
-  color: var(--header-bar-color);
+  color: var(--hover-color);
   transform: translateY(-2px);
   transition: 0.3s;
 }
@@ -326,7 +325,7 @@ img {
 }
 
 .home__icon .fa-spotify:hover {
-  color: var(--header-bar-color);
+  color: var(--hover-color);
   transform: translateY(-2px);
   transition: 0.3s;
 }
@@ -335,6 +334,7 @@ img {
   cursor: pointer;
   margin: 0.5rem;
   color: #f9f9f9;
+  font-size: 2rem;
 }
 
 .home__icon:hover {
@@ -947,7 +947,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 .lang-selector select:hover {
-  border-color: var(--box-color-1);
+  border-color: var(--button-color);
 }
 
 .lang-selector {

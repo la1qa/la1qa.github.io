@@ -6,9 +6,12 @@ const translations = {
                   I'm a final-year student pursuing my Bachelor's in Computational Mathematics and Data Analytics at Universitat Autònoma de Barcelona (UAB).`,
     contact_button: "Contact me",
     home: "Home",
+    education: "Education",
     experience: "Experience",
     projects: "Projects",
-    blog: "Blog"
+    blog: "Blog",
+    matcad: "Computational Mathematics and Data Analytics",
+    batxillerat: "Scientific-Technological Baccalaureate"
   },
 
   ca: {
@@ -18,8 +21,11 @@ const translations = {
                   Soc una estudiant de darrer curs cursant el Grau en Matemàtica Computacional i Analítica de Dades a la Universitat Autònoma de Barcelona (UAB).`,
     contact_button: "Contacta’m",
     home: "Inici",
+    education: "Educació",
     experience: "Experiència",
     projects: "Projectes",
-    blog: "Blog"
+    blog: "Blog",
+    matcad: "Matemàtica Computacional i Analítica de Dades",
+    batxillerat: "Batxillerat Científic-Tecnològic"
   }
 };

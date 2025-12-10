@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Ultimate 2000s Blog</title>
+<style>
+    /* Glittery animated background */
+    body {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        animation: glitter 6s infinite alternate;
+    }
+
+    @keyframes glitter {
+        0% { background-color: #ffccff; }
+        25% { background-color: #ccffff; }
+        50% { background-color: #ffffcc; }
+        75% { background-color: #ffcccc; }
+        100% { background-color: #ccffcc; }
+    }
+
+    .hidden { display: none; }
+
+    .container {
+        width: 900px;
+        margin: 20px auto;
+        background: #ffffff;
+        border: 8px double;
+        border-image-slice: 1;
+        border-width: 10px;
+        border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+        padding: 20px;
+        box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+    }
+
+    header {
+        text-align: center;
+        background: linear-gradient(to right, #ff69b4, #ff1493);
+        color: white;
+        padding: 20px 0;
+        border-bottom: 4px solid #ff1493;
+        animation: headerGlow 4s infinite alternate;
+    }
+
+    @keyframes headerGlow {
+        0% { text-shadow: 2px 2px #ff1493; }
+        50% { text-shadow: 2px 2px #ffff00; }
+        100% { text-shadow: 2px 2px #00ffff; }
+    }
+
+    header h1 { margin:0; font-size:48px; }
+
+    nav {
+        float: left;
+        width: 200px;
+        background: #ffe4e1;
+        padding: 15px;
+        margin-right: 20px;
+        border: 3px dashed hotpink;
+        animation: navBounce 3s infinite alternate;
+    }
+
+    @keyframes navBounce { 0% { transform: translateY(0); } 50% { transform: translateY(-5px); } 100% { transform: translateY(0); } }
+
+    nav a { display:block; text-decoration:none; color: #ff1493; margin-bottom:10px; font-weight:bold; }
+    nav a:hover { animation: rainbowText 2s infinite; }
+
+    @keyframes rainbowText {
+        0% { color:red; } 14% { color:orange; } 28% { color:yellow; } 42% { color:green; } 57% { color:blue; } 71% { color:indigo; } 85% { color:violet; } 100% { color:red; }
+    }
+
+    .content { overflow:hidden; }
+
+    article {
+        margin-bottom:30px;
+        border-bottom:1px dotted #ff69b4;
+        padding-bottom:10px;
+        animation: bounce 3s infinite;
+    }
+
+    article h2 { color:#ff1493; }
+    article p { line-height:1.5; }
+
+    footer {
+        text-align:center;
+        padding:15px;
+        background: linear-gradient(to right, #ff69b4, #ff1493);
+        color:white;
+        margin-top:20px;
+        border-top: 4px solid #ff1493;
+        animation: footerGlow 4s infinite alternate;
+    }
+
+    @keyframes footerGlow {
+        0% { text-shadow: 2px 2px #ff1493; }
+        50% { text-shadow: 2px 2px #ffff00; }
+        100% { text-shadow: 2px 2px #00ffff; }
+    }
+
+    .blinky { width:50px; vertical-align:middle; animation: blinkyAnim 1s infinite alternate; }
+
+    @keyframes blinkyAnim { 0% { opacity:1; } 50% { opacity:0.2; } 100% { opacity:1; } }
+
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+    /* Password prompt */
+    #passwordPrompt {
+        width: 100%;
+        height: 100vh;
+        background: #ffccff url('https://www.toptal.com/designers/subtlepatterns/patterns/pw_maze_white.png');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #passwordPrompt input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 3px solid hotpink;
+        margin-top: 10px;
+    }
+
+    #passwordPrompt button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        background: hotpink;
+        color: white;
+        border: 3px solid #ff1493;
+        cursor: pointer;
+        animation: buttonGlow 2s infinite alternate;
+    }
+
+    #passwordPrompt button:hover { background: #ff1493; }
+    #errorMsg { color: red; display: none; margin-top: 10px; }
+
+    @keyframes buttonGlow {
+        0% { box-shadow: 0 0 5px hotpink; }
+        50% { box-shadow: 0 0 20px yellow; }
+        100% { box-shadow: 0 0 5px cyan; }
+    }
+
+    /* Floating sparkles */
+    .sparkle {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: radial-gradient(circle, #fff 0%, #ff0 80%, #f0f 100%);
+        border-radius: 50%;
+        animation: float 5s linear infinite;
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0) translateX(0); opacity:1; }
+        50% { transform: translateY(-200px) translateX(50px); opacity:0.5; }
+        100% { transform: translateY(-400px) translateX(-50px); opacity:0; }
+    }
+</style>
+</head>
+<body>
+
+<!-- Password screen -->
+<div id="passwordPrompt">
+    <h1>Enter the secret password to access the blog</h1>
+    <input type="password" id="passwordInput" placeholder="Password">
+    <button onclick="checkPwd()">Enter</button>
+    <div id="errorMsg">Incorrect password! Try again.</div>
+</div>
+
+<!-- Blog content -->
+<div class="container hidden" id="blogContent">
+    <header>
+        <h1>My Ultimate 2000s Blog</h1>
+    </header>
+
+    <div class="content">
+        <nav>
+            <h3>Links</h3>
+            <a href="#">Home</a>
+            <a href="#">About Me</a>
+            <a href="#">Archives</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <main>
+            <article>
+                <h2>Welcome to My Blog! <img src="https://i.gifer.com/ZZ5H.gif" class="blinky" alt="GIF"></h2>
+                <p>Hello internet! This is my totally rad 2000s blog with glittery backgrounds, rainbow borders, floating sparkles, blinking GIFs, bouncing posts, and secret password protection!</p>
+            </article>
+
+            <article>
+                <h2>My Top 5 Songs of the 2000s</h2>
+                <p>1. Song A<br>2. Song B<br>3. Song C<br>4. Song D<br>5. Song E</p>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2005 My Ultimate 2000s Blog. All rights reserved.
+    </footer>
+</div>
+
+<script>
+    // Camouflaged password check
+    (function(){
+        const _key = [2,5,12,9,15,7,3]; // Random array to obscure password logic
+        const _secret = "blog123".split("").map(c => c.charCodeAt(0)); // store password char codes
+
+        window.checkPwd = function() {
+            const input = document.getElementById("passwordInput").value;
+            const code = input.split("").map(c => c.charCodeAt(0));
+            let match = true;
+            for(let i=0;i<_secret.length;i++){
+                if(code[i] !== _secret[i]) { match=false; break; }
+            }
+            if(match && code.length===_secret.length){
+                document.getElementById("passwordPrompt").style.display = "none";
+                document.getElementById("blogContent").classList.remove("hidden");
+            } else {
+                document.getElementById("errorMsg").style.display = "block";
+            }
+        }
+    })();
+
+    // Add floating sparkles
+    for(let i=0;i<20;i++){
+        const s = document.createElement('div');
+        s.className = 'sparkle';
+        s.style.left = Math.random()*100+'%';
+        s.style.top = Math.random()*100+'%';
+        s.style.animationDelay = Math.random()*5+'s';
+        document.body.appendChild(s);
+    }
+</script>
+
+</body>
+</html>

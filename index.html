@@ -16,6 +16,9 @@
     <header class="l-header" id="header">
       <nav class="nav bd-container">
         <a href="#" class="nav__logo">LAIA QUEROL ALTURO</a>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
@@ -48,10 +51,6 @@
 
           </ul>
         </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </div>
       </nav>
     </header>
     <!-- Home -->
@@ -59,9 +58,6 @@
     <section class="home" id="home">
       <div class="home__container bd-container bd-grid" >
         <div class="home__data" >
-          <div class="home__img" data-aos="fade-up">
-            <img src="./assets/img/getxo.jpg" alt="" class="home-image" />   
-          </div>
           <div class="home__greeting" data-aos="fade-up">
             <span data-i18n="greeting"></span>
           </div>
@@ -76,25 +72,30 @@
               <button class="home__download" data-aos="fade-up">DOWNLOAD CV</button>
             </a>
           </div>
-          <div class="home__social" data-aos="fade-up">
-            <a
-              href="https://github.com/la1qa"
-              class="home__icon"
-              target="_blank"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              href="https://linkedin.com/in/laia-querol-alturo"
-              target="_blank"
-              class="home__icon"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <a
-              href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2"
-              target="_blank"
-              class="home__icon"
-              ><i class="fab fa-spotify"></i
-            ></a>
+          <div class="home__img-social" data-aos="fade-up">
+            <div class="home__social" data-aos="fade-up">
+                <a
+                href="https://github.com/la1qa"
+                class="home__icon"
+                target="_blank"
+                ><i class="fab fa-github"></i
+                ></a>
+                <a
+                href="https://linkedin.com/in/laia-querol-alturo"
+                target="_blank"
+                class="home__icon"
+                ><i class="fab fa-linkedin"></i
+                ></a>
+                <a
+                href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2"
+                target="_blank"
+                class="home__icon"
+                ><i class="fab fa-spotify"></i
+                ></a>
+            </div>
+            <div class="home__img" data-aos="fade-up">
+                <img src="./assets/img/getxo.jpg" alt="" class="home-image" />   
+            </div>
           </div>
         </div>
       </div>

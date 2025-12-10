@@ -849,7 +849,7 @@ img {
     display: flex;
   }
 
-  /* Flex container for image + socials */
+  /* flex container for image + socials */
   .home__img-social {
     display: flex;
     flex-direction: row;

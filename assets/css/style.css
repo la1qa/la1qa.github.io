@@ -1050,6 +1050,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 /* Individual timeline entry */
 .timeline-item {
   position: relative;
+  margin-bottom: 20px;
 }
 
 /* Marker circle */
@@ -1088,3 +1089,109 @@ body.dark h1, body.dark .support a {color: #fff;}
   line-height: 1.4;
 }
 /* End of Timeline Section */
+
+@media (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+.dropdown {
+  position: relative;
+  list-style: none;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  left: auto;
+  background: white;
+  min-width: 180px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  z-index: 100;
+}
+
+/* make the lang row match the link rows */
+.dropdown-content .lang-selector {
+  height: auto;    /* allow height to be determined by padding */
+  padding: 6px 8px;
+  display: flex;
+  align-items: center; /* vertical center */
+  gap: 10px;
+  cursor: pointer;
+  min-width: 180px;    /* same min width as dropdown */
+  box-sizing: border-box;
+}
+
+/* icon sizing + alignment */
+.dropdown-content .lang-selector i {
+  width: 20px;
+  min-width: 20px;     /* reserve space like other icons */
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  color: #333;
+  flex-shrink: 0;
+  padding: auto;
+}
+
+/* style select to visually match link text */
+.dropdown-content #language-dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 6px 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: #333;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* matching hover behavior like anchors */
+.dropdown-content .lang-selector:hover {
+  background: #f0f0f0;
+}
+
+/* custom caret — using a pseudo element on the wrapper so layout stays intact */
+.dropdown-content .lang-selector::after {
+  content: "▾";
+  font-size: 0.8rem;
+  position: relative;
+  margin-left: 8px;
+  color: #666;
+  pointer-events: none;
+}
+
+.dropdown-content a {
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

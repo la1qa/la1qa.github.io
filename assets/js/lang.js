@@ -13,7 +13,9 @@ const translations = {
     matcad: "Computational Mathematics and Data Analytics",
     batxillerat: "Scientific-Technological Baccalaureate",
     cvc: "Computer Vision Center",
-    cvc_internship: "Machine Learning Intern"
+    cvc_internship: "Machine Learning Intern",
+    rosa_sensat: "Rosa Sensat Scolarship",
+    portfolio: "Portfolio"
   },
 
   ca: {
@@ -30,6 +32,8 @@ const translations = {
     matcad: "Matemàtica Computacional i Analítica de Dades",
     batxillerat: "Batxillerat Científic-Tecnològic",
     cvc: "Centre de Visió per Computador",
-    cvc_internship: "Becària en Aprenentatge Computacional"
+    cvc_internship: "Becària en Aprenentatge Computacional",
+    rosa_sensat: "Beca Rosa Sensat",
+    portfolio: "Portfoli"
   }
 };

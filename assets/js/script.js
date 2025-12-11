@@ -13,6 +13,21 @@ checkbox.addEventListener("change", () => {
   localStorage.setItem("theme", newTheme);
 });
 
+// Mobile theme check
+const themeToggle = document.getElementById("themeToggle");
+
+// Load preference
+const storedTheme = localStorage.getItem("siteTheme") || "light";
+document.documentElement.setAttribute("data-theme", storedTheme);
+themeToggle.checked = storedTheme === "dark";
+
+// Toggle theme
+themeToggle.addEventListener("change", () => {
+  const updatedTheme = themeToggle.checked ? "dark" : "light";
+  document.documentElement.setAttribute("data-theme", updatedTheme);
+  localStorage.setItem("siteTheme", updatedTheme);
+});
+
 // GitHub calendar
 GitHubCalendar(".calendar", username, {
   responsive: true,

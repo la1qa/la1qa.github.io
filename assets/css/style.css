@@ -1125,7 +1125,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 /* make the lang row match the link rows */
-.dropdown-content .lang-selector {
+.lang-selector-mobile {
   height: auto;    /* allow height to be determined by padding */
   padding: 6px 8px;
   display: flex;
@@ -1137,7 +1137,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 /* icon sizing + alignment */
-.dropdown-content .lang-selector i {
+.lang-selector-mobile i {
   width: 20px;
   min-width: 20px;     /* reserve space like other icons */
   text-align: center;
@@ -1149,9 +1149,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 /* style select to visually match link text */
-.dropdown-content #language-dropdown {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+#language-dropdown-mobile {
   appearance: none;
   background: transparent;
   border: none;
@@ -1165,12 +1163,12 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 /* matching hover behavior like anchors */
-.dropdown-content .lang-selector:hover {
+.lang-selector-mobile:hover {
   background: #f0f0f0;
 }
 
 /* custom caret — using a pseudo element on the wrapper so layout stays intact */
-.dropdown-content .lang-selector::after {
+.lang-selector-mobile::after {
   content: "▾";
   font-size: 0.8rem;
   position: relative;

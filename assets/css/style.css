@@ -947,7 +947,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
 
 .checkbox-label {
-  background-color: #111;
+  background-color: var(--bg-color);
   width: 50px;
   height: 26px;
   border-radius: 50px;
@@ -964,14 +964,14 @@ body.dark h1, body.dark .support a {color: #fff;}
 .fa-sun {color: #f39c12;}
 
 .checkbox-label .ball {
-  background-color: #fff;
+  background-color: var(--text-color);
   width: 22px;
   height: 22px;
   position: absolute;
   left: 2px;
   top: 2px;
   border-radius: 50%;
-  transition: transform 0.2s linear;
+  transition: 0.2s linear;
 }
 
 .checkbox:checked + .checkbox-label .ball {

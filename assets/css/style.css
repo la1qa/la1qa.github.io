@@ -251,8 +251,6 @@ img {
 
 .home__data {
   color: var(--text-color);
-  padding: 1rem 0.35rem;
-  padding-top: clamp(2rem, 20vw, 20vh);
   z-index: 10;
   position: relative;
 }
@@ -726,8 +724,9 @@ img {
   .home__container {
     grid-template-rows: max-content 0.5fr;
     grid-template-columns: repeat(2, 1fr);
-    align-content: start;
-    padding-top: clamp(3rem, 8vh, 6rem);
+    align-content: center;
+    padding-top: 0;
+    transform: translateY(5vh);
   }
   .home__greeting {
     font-size: 1.25rem;
@@ -755,8 +754,8 @@ img {
   }
   .home__img {
     width: max-content;
-    top: 50%;
-    transform: translateY(-40%);
+    top: 0;
+    transform: translateY(-10%);
   }
   .home__img img {
     width: 380px;
@@ -1072,7 +1071,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 }
 
 .checkbox:checked + .checkbox-label .ball {
-  transform: translateX(1.5rem); /* 24px -> 1.5rem */
+  transform: translateX(24px);
 }
 
 .lang-selector select {

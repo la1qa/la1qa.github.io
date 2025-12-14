@@ -21,7 +21,7 @@ html {
   --header-bar-color: #a8d0e6;
   --hover-color: #f76c6c;
   --header-height: 3rem;
-  --side-panel-width: 280px;
+  --side-panel-width: 25%;
   --timeline-line-color: #f8e9a1;
   --bg-split-color: #f0f0f0;
 }
@@ -133,9 +133,11 @@ img {
 
 .nav {
   height: 3rem;
+  min-height: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -161,6 +163,7 @@ img {
 .nav__link {
   color: var(--text-color);
   transition: 0.3s;
+  font-size: 0.9rem;
 }
 
 .nav__link:hover {
@@ -174,6 +177,7 @@ img {
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .nav__logo:hover,
@@ -306,7 +310,8 @@ img {
 .home__download:hover {
   background-color: var(--button-color);
   color: var(--bg-color);
-  transition: 0.3s ease-in;
+  transform: translateY(-3px);
+  transition: transform 180ms ease;
 }
 
 .home__download:focus {
@@ -363,7 +368,7 @@ img {
 }
 
 .home__icon:hover {
-  color: #e4a109;
+  color: var(--hover-color);
   transition: 0.3s;
 }
 
@@ -374,7 +379,7 @@ img {
 .home__img {
   position: absolute;
   overflow: hidden;
-  padding-top: 2rem;
+  padding-top: 1.2rem;
   right: 0;
 }
 
@@ -700,9 +705,6 @@ img {
   .section-subtitle {
     font-size: 1rem;
   }
-  .nav {
-    height: calc(var(--header-height) + 1rem);
-  }
   .nav__list {
     display: flex;
   }
@@ -799,21 +801,22 @@ img {
     display: flex;
     flex-direction: column;
     gap: 0.25rem; /* tighter overall gap so title and icons sit closer */
-    padding: 0.5rem 0.5rem;
+    padding: 0rem 0.0rem;
   }
 
   .split-left .home__img {
     position: static;
+    max-width: 100%;
   }
 
   .split-left .home__img img {
-    width: calc(var(--side-panel-width) - 40px);
+    width: 100%;
     height: auto;
     border-radius: 50%;
   }
 
   .split-left .home__title {
-    padding-top: 1.8rem;
+    padding-top: 1.2rem;
     padding-bottom: 0.1rem; /* reduce space under title in left panel */
   }
 
@@ -848,7 +851,7 @@ img {
 
 /* Reduce the main name heading only when it appears in the split left panel */
 .split-left .home__title h1 {
-  font-size: 1.2rem; /* smaller than the global/home heading */
+  font-size: 1.3rem; /* smaller than the global/home heading */
   /* unitless line-height avoids collisions on wrap */
   line-height: 1.25;
   margin: 0;
@@ -863,32 +866,75 @@ img {
 }
 
 /* Reduce spacing for social icons inside the split left panel */
-  .split-left .home__social {
-  margin-top: 0.6rem; /* sit closer to the title */
+.split-left .home__social {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 3px solid var(--button-color);
   display: flex;
-  flex-direction: column; /* stack vertically */
-  gap: 0.05rem; /* tight vertical spacing between icons */
-  align-items: center;
-  font-size: 1.15rem; /* slightly larger base so icons scale nicely */
-  width: max-content;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  width: 100%;
 }
 
 .split-left .home__icon {
-  font-size: 1.5rem; /* slightly larger icon */
-  display: inline-flex;
+  font-size: 1.1rem;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.05rem 0.1rem; /* smaller vertical padding to reduce distance */
-  border-radius: 6px;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 0px solid var(--button-color);
+  color: var(--text-color);
+  margin: 0;
 }
 
 .split-left .home__icon i {
-  font-size: 1.4rem; /* ensure the <i> scales too */
+  font-size: 1.4rem;
+  min-width: 1.6rem;
   line-height: 1;
 }
 
 .split-left .home__icon:hover {
-  transform: translateY(-2px);
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  color: var(--bg-color);
+  transform: translateX(5px);
+  transition: transform 180ms ease;
+}
+
+.split-left .home__icon:hover i {
+  color: var(--bg-color);
+}
+
+.split-left .home__download {
+  padding: 0.4rem 0.5rem;
+  margin: 0.4rem auto;
+  font-size: 1.1rem;
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;  
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.split-left .home__download i {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.split-left .home__download:hover {
+  background-color: var(--button-color);
+  border-color: var(--button-color);
+  color: var(--bg-color);
+  transform: translateX(5px);
   transition: transform 180ms ease;
 }
 
@@ -1029,7 +1075,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   background: var(--header-bar-color);
   color: var(--text-color);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.9rem;
   /* ensure select uses the same site font */
   font-family: inherit;
   font-weight: inherit;
@@ -1257,13 +1303,13 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 .theme-switch .sun,
 .theme-switch .moon {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  font-size: 18px;
   text-align: center;
-  line-height: 30px;
   transition: opacity 0.3s;
 }
 

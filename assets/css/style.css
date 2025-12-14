@@ -250,6 +250,7 @@ img {
   padding: 1rem 0.35rem;
   padding-top: clamp(2rem, 20vw, 20vh);
   z-index: 10;
+  position: relative;
 }
 
 .home__greeting {
@@ -739,6 +740,7 @@ img {
   }
   .home__description {
     font-size: 1rem;
+    max-width: calc(95% - 380px);
   }
   .home__social {
     display: flex;

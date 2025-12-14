@@ -1034,38 +1034,45 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 .checkbox {
   opacity: 0;
   position: absolute;
+  font-size: 2rem;
 }
 
 .checkbox-label {
   background-color: var(--bg-color);
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
+  width: 3.125rem;        /* 50px -> 3.125rem (base 16px) */
+  height: 1.625rem;       /* 26px -> 1.625rem */
+  border-radius: 3.125rem;/* 50px -> 3.125rem */
   position: relative;
-  padding: 5px;
+  padding: 0.3125rem;     /* 5px -> 0.3125rem */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.fa-moon {color: #f1c40f;}
+.fa-moon {
+  color: #f1c40f;
+  font-size: 0.9rem;
+}
 
-.fa-sun {color: #f39c12;}
+.fa-sun {
+  color: #f39c12;
+  font-size: 0.9rem;
+}
 
 .checkbox-label .ball {
   background-color: var(--text-color);
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;   /* 22px -> 1.375rem */
+  height: 1.375rem;  /* 22px -> 1.375rem */
   position: absolute;
-  left: 2px;
-  top: 2px;
+  left: 0.125rem;    /* 2px -> 0.125rem */
+  top: 0.125rem;     /* 2px -> 0.125rem */
   border-radius: 50%;
   transition: 0.2s linear;
 }
 
 .checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
+  transform: translateX(1.5rem); /* 24px -> 1.5rem */
 }
 
 .lang-selector select {

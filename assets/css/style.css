@@ -132,7 +132,7 @@ img {
 /* Layout */
 .bd-container {
   max-width: 1024px;
-  width: 100%;
+  width: calc(100% - 2rem);
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 0 0 0 0;
@@ -329,6 +329,42 @@ img {
 
 .home__download:focus {
   outline: 0;
+}
+
+/* Gradient bar replacing the download button; tweak stop vars to change lengths */
+.home__color-line {
+  /*33, 27, 22, 18*/
+  --stop1: 25%; 
+  --stop2: 25%;
+  --stop3: 25%;
+  --stop4: 25%;
+  display: block;
+  width: min(360px, 100%);
+  height: 8px;
+  border-radius: 999px;
+  margin: 1.5rem 0 0.75rem;
+  background: linear-gradient(
+    90deg,
+    #f8e9a1 0%,
+    #f8e9a1 var(--stop1),
+    #f76c6c var(--stop1),
+    #f76c6c calc(var(--stop1) + var(--stop2)),
+    #a8d0e6 calc(var(--stop1) + var(--stop2)),
+    #a8d0e6 calc(var(--stop1) + var(--stop2) + var(--stop3)),
+    #24305e calc(var(--stop1) + var(--stop2) + var(--stop3)),
+    #24305e 100%
+  );
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.home__button {
+  margin-top: 0.3rem;
+  max-width: 360px;
+}
+
+/* Bring the split-left color bar closer to the title without affecting other buttons */
+.split-left .home__color-line {
+  margin: 0.5rem 0 0.5rem;
 }
 
 .home__social {
@@ -543,12 +579,12 @@ img {
 }
 
 .portfolio__title {
-  color: #e4a109;
+  color: var(--button-color);
   margin-bottom: 1rem;
 }
 
 .portfolio__description {
-  color: #f9f9f9;
+  color: var(--text-color);
   margin-bottom: 1.5rem;
 }
 
@@ -561,17 +597,18 @@ img {
   font-weight: 500;
   font-size: 0.75rem;
   background-color: var(--bg-color);
-  color: #e4a109;
+  color: var(--button-color);
   padding: 0.5rem 1rem;
-  border: 1px #e4a109 solid;
+  border: 1px var(--button-color) solid;
   cursor: pointer;
   border-radius: 8px;
 }
 
 .portfolio__link span:hover {
-  background-color: var(--bg-color);
-  color: #2a3749;
+  background-color: var(--button-color);
+  color: var(--bg-color);
   transition: 0.3s;
+  transform: translateX(5px);
 }
 
 .education {
@@ -892,9 +929,9 @@ img {
 
 /* Reduce spacing for social icons inside the split left panel */
 .split-left .home__social {
-  margin-top: 0.5rem;
-  padding-top: 0.75rem;
-  border-top: 2px solid var(--button-color);
+  margin-top: 0.1rem;
+  padding-top: 0.1rem;
+  border-top: 0px solid var(--button-color);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -904,7 +941,7 @@ img {
 }
 
 .split-left .home__icon {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -939,7 +976,7 @@ img {
 
 .split-left .home__download {
   padding: 0.4rem 0.5rem;
-  margin: 0.4rem auto;
+  margin: 0.2rem auto;
   font-size: 1.1rem;
   width: 100%;
   display: flex;
@@ -1141,10 +1178,11 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Timeline Section */
 .timeline {
-  width: 100%;
+  width: calc(100% - 4rem);
   margin: 0rem 2rem;
   position: relative;
   padding-left: 1rem;
+  box-sizing: border-box;
 }
 
 /* Title */
@@ -1188,10 +1226,13 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Content box */
 .timeline-content {
-  margin-left: 2rem;  
+  margin-left: 2rem;
+  margin-right: 1rem;
+  max-width: calc(100% - 3rem);
   background: var(--bg-color);
   padding: 15px 20px;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .timeline-content h3 {

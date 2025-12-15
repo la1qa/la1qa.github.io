@@ -14,6 +14,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Ensure all anchor targets stop slightly earlier when navigated */
+[id] {
+  scroll-margin-top: 2rem;
+}
+
 :root {
   --bg-color: #fdfdff;
   --text-color: #222222;
@@ -46,6 +51,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   transition: background-color 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -76,6 +83,14 @@ img {
   display: block;
 }
 
+/*Flexbox fix for overflowing content*/
+.flex-container {
+    display: flex;
+}
+.flex-item {
+    min-width: 0;
+}
+
 /* Class CSS */
 .section {
   padding: 3rem 0 2rem;
@@ -89,7 +104,7 @@ img {
 .section-title {
   position: relative;
   font-size: 1.5rem;
-  padding: 2rem 0 0 0;
+  padding: 1.5rem 0 0 0;
   text-align: center;
   letter-spacing: 0.1rem;
   color: var(--text-color)
@@ -117,9 +132,10 @@ img {
 /* Layout */
 .bd-container {
   max-width: 1024px;
-  width: calc(100% - 2rem);
+  width: 100%;
   margin-left: 1rem;
   margin-right: 1rem;
+  padding: 0 0 0 0;
 }
 
 .l-header {
@@ -267,8 +283,8 @@ img {
   color: var(--text-color);
   /* use unitless so it scales with the current font-size */
   line-height: 1.25;
-  padding-bottom: clamp(0.4em, 1.5vw, 1.5em);
-  padding-top: clamp(0.4em, 1.3vw, 1.5em);
+  padding-bottom: clamp(0.4rem, 1vw, 1rem);
+  padding-top: clamp(0.4rem, 1vw, 1rem);
 }
 
 /* Adaptive size + healthy line-height for the main hero name */
@@ -437,7 +453,7 @@ img {
 
 .services {
   background-color: var(--bg-split-color);
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .services__section {
@@ -484,7 +500,7 @@ img {
 
 .portfolio {
   background-color: var(--bg-split-color);
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .portfolio__section {
@@ -508,6 +524,7 @@ img {
   text-align: left;
   transition: 0.4s;
   background: var(--bg-color);
+  margin: 0rem 2rem;
 }
 
 .portfolio__img {
@@ -559,7 +576,7 @@ img {
 
 .education {
   background-color: var(--bg-split-color);
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
 }
 
 .education__section {
@@ -583,6 +600,7 @@ img {
   text-align: left;
   transition: 0.4s;
   background: var(--bg-color);
+  margin: 0rem 2rem;
 }
 
 .education__title {
@@ -725,6 +743,8 @@ img {
     grid-template-columns: repeat(2, 1fr);
     align-content: center;
     padding-top: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
     transform: translateY(5vh);
   }
   .home__greeting {
@@ -780,6 +800,7 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
+
   /* Split layout styles */
   .split {
     display: grid;
@@ -793,13 +814,15 @@ img {
     top: calc(var(--header-height) + 1rem);
     height: calc(100vh - var(--header-height) - 2rem);
     align-self: start;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
   }
 
   .left-panel {
     display: flex;
     flex-direction: column;
     gap: 0.25rem; /* tighter overall gap so title and icons sit closer */
-    padding: 0rem 0.0rem;
+    padding: 0 0 0 0;
   }
 
   .split-left .home__img {
@@ -808,9 +831,12 @@ img {
   }
 
   .split-left .home__img img {
-    width: 100%;
+    width: 94%;
     height: auto;
     border-radius: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .split-left .home__title {
@@ -818,7 +844,8 @@ img {
     padding-bottom: 0.1rem; /* reduce space under title in left panel */
   }
 
-  .split-right { padding-left: 1rem; }
+  .split-right { padding-left: 0rem; }
+
   .portfolio__title {
     font-size: 1.5rem;
   }
@@ -867,7 +894,7 @@ img {
 .split-left .home__social {
   margin-top: 0.5rem;
   padding-top: 0.75rem;
-  border-top: 3px solid var(--button-color);
+  border-top: 2px solid var(--button-color);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -1074,9 +1101,9 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 }
 
 .lang-selector select {
-  padding: 6px 10px;
-  border-radius: 0px;
-  border: 0px;
+  padding: 3px 5px;
+  border-radius: 2px;
+  border: 0px solid transparent;
   background: var(--header-bar-color);
   color: var(--text-color);
   cursor: pointer;
@@ -1088,14 +1115,10 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   transition: 0.3s;
 }
 
-.lang-selector select:hover {
-  border-color: var(--button-color);
-}
-
 .lang-selector {
   display: inline-block;
   /* space from the theme checkbox (to the left) */
-  margin-left: 12px;
+  margin-left: 0.6rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -1118,11 +1141,10 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Timeline Section */
 .timeline {
-  width: 90%;
-  max-width: 800px;
-  margin: 50px auto;
+  width: 100%;
+  margin: 0rem 2rem;
   position: relative;
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 
 /* Title */
@@ -1144,8 +1166,9 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Individual timeline entry */
 .timeline-item {
+  width: 100%;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 /* Marker circle */
@@ -1165,7 +1188,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Content box */
 .timeline-content {
-  margin-left: 40px;    /* pushes content to the right of the line */
+  margin-left: 2rem;  
   background: var(--bg-color);
   padding: 15px 20px;
   border-radius: 6px;

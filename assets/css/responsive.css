@@ -5,7 +5,11 @@
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     #project-list {
@@ -16,19 +20,23 @@
 /* Mobile phones */
 @media (max-width: 600px) {
     header h1 {
-        font-size: 26px;
+        font-size: 1.625rem;
     }
 
     header p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1rem;
     }
 
     #project-list li {
         padding: 12px 15px;
-        font-size: 16px;
+        font-size: 1rem;
     }
 }

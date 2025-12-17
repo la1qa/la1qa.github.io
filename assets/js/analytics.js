@@ -118,7 +118,7 @@ const Analytics = {
     // Project/external links
     document.addEventListener("click", (event) => {
       const link = event.target.closest("a");
-      if (link && (link.href.includes("github.com") || link.href.includes("theuselessweb.com") || link.href.includes("linkedin.com"))) {
+      if (link && (link.href.includes("github.com") || link.href.includes("liu.se") || link.href.includes("linkedin.com") || link.href.includes("uab.cat"))) {
         let externalClicks = localStorage.getItem("portfolio_externalClicks") || 0;
         externalClicks = Number(externalClicks) + 1;
         localStorage.setItem("portfolio_externalClicks", externalClicks);

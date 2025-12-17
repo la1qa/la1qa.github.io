@@ -1230,6 +1230,10 @@ img {
     width: 100%;
   }
 
+  .home__description {
+    text-align: center;
+  }
+
   .home__button {
     display: flex;
   }

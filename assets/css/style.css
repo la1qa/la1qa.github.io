@@ -916,7 +916,7 @@ img {
   .split {
     display: grid;
     grid-template-columns: var(--side-panel-width) 1fr;
-    gap: 2rem;
+    gap: 4rem;
     align-items: start;
   }
 

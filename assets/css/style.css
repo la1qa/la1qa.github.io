@@ -108,7 +108,7 @@ img {
 /* Class CSS */
 .section {
   padding: 3rem 0 2rem 0;
-  margin: 0 2% 0 2%;
+  margin: 0;
 }
 
 .section-title,
@@ -147,9 +147,9 @@ img {
 /* Layout */
 .bd-container {
   max-width: 1024px;
-  width: 96%;
-  margin-left: 2%;
-  margin-right: 2%;
+  width: calc(100% - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 0 0 0 0;
 }
 
@@ -505,6 +505,8 @@ img {
 .experience {
   background-color: var(--bg-split-color);
   padding-bottom: 2rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 .experience__section {
@@ -559,6 +561,8 @@ img {
 .projects {
   background-color: var(--bg-split-color);
   padding-bottom: 2rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 .projects__section {
@@ -654,12 +658,11 @@ img {
 
 .education__data {
   display: grid;
-  padding: 1.0rem 1rem;
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
   background: var(--bg-color);
-  margin: 0rem 0rem;
+  margin: 1rem 0rem 0rem;
 }
 
 .education__header {
@@ -670,8 +673,8 @@ img {
 }
 
 .education__logo {
-  width: 60px;
-  height: 60px;
+  width: clamp(50px, 8vw, 60px);
+  height: clamp(50px, 8vw, 60px);
   object-fit: contain;
   border-radius: 8px;
   flex-shrink: 0;
@@ -1203,7 +1206,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 .lang-selector {
   display: inline-block;
   /* space from the theme checkbox (to the left) */
-  margin-left: 0.6rem;
+  margin-left: 0.7rem;
 }
 
 @media screen and (max-width: 767px) {

@@ -14,8 +14,11 @@ const translations = {
     batxillerat: "Scientific-Technological Baccalaureate",
     cvc: "Computer Vision Center",
     cvc_internship: "Machine Learning Intern",
+    cvc_time2: "Sep 2024 - Feb 2025",
+    cvc_time1: "Feb 2024 - Jun 2024",
     rosa_sensat: "Rosa Sensat Scolarship",
-    portfolio: "Portfolio"
+    portfolio: "Portfolio",
+    erasmus: "<strong>Erasmus+</strong> Program"
   },
 
   ca: {
@@ -33,7 +36,10 @@ const translations = {
     batxillerat: "Batxillerat Científic-Tecnològic",
     cvc: "Centre de Visió per Computador",
     cvc_internship: "Becària en Aprenentatge Computacional",
+    cvc_time2: "Set 2024 - Feb 2025",
+    cvc_time1: "Feb 2024 - Jun 2024",
     rosa_sensat: "Beca Rosa Sensat",
-    portfolio: "Portfoli"
+    portfolio: "Portfoli",
+    erasmus: "Programa <strong>Erasmus+</strong>"
   }
 };

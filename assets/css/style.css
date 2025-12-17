@@ -72,6 +72,12 @@ h3 {
   font-size: 1.1rem;
 }
 
+h4 {
+  font-size: 0.8rem;
+  font-weight: 150;
+  margin: 0.25rem 0rem 0.25rem 0rem;
+}
+
 strong {
   font-weight: 600;
 }
@@ -534,8 +540,15 @@ img {
 }
 
 .experience__title {
-  color: #e4a109;
-  margin-bottom: 0.5rem;
+  color: var(--button-color);
+}
+
+.experience__time {
+  border: 2px solid var(--timeline-line-color);
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  margin-left: -0.5rem;
+  width: max-content;
 }
 
 .experience__description {
@@ -1215,8 +1228,10 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   width: calc(100% - 4rem);
   margin: 0rem 2rem;
   position: relative;
-  padding-left: 1rem;
+  padding-left: 0rem;
   box-sizing: border-box;
+  display: grid;
+  gap: 1rem;
 }
 
 /* Title */
@@ -1228,7 +1243,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 /* Vertical line */
 .timeline-line {
   position: absolute;
-  left: 0px;           /* aligns with markers */
+  left: 0%;           /* aligns with markers */
   top: 0;
   bottom: 0;
   width: 3px;
@@ -1240,14 +1255,13 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 .timeline-item {
   width: 100%;
   position: relative;
-  margin-bottom: 1.5rem;
 }
 
 /* Marker circle */
 .timeline-marker {
   position: absolute;
-  left: 0px;          /* centers the marker on the line */
-  top: 20px;
+  left: -5.0px;          /* centers the marker on the line */
+  top: 1.6rem;
   width: 14px;
   height: 14px;
   background: var(--timeline-line-color);
@@ -1260,11 +1274,11 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Content box */
 .timeline-content {
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-right: 1rem;
   max-width: calc(100% - 3rem);
   background: var(--bg-color);
-  padding: 15px 20px;
+  padding: 1rem 1rem;
   border-radius: 6px;
   box-sizing: border-box;
 }

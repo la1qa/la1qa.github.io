@@ -656,8 +656,8 @@ img {
 
 /* Remove side insets specifically inside the education section */
 .education .bd-container, .experience .bd-container, .projects .bd-container {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
   width: 100%;
   padding: 0;
 }
@@ -683,6 +683,12 @@ img {
   height: clamp(50px, 8vw, 60px);
   object-fit: contain;
   border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.education__header a {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 

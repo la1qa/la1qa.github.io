@@ -524,7 +524,6 @@ img {
 
 .experience__data {
   display: grid;
-  padding: 2rem 1rem;
   border-radius: 0.5rem;
   text-align: center;
   transition: 0.4s;
@@ -581,12 +580,11 @@ img {
 
 .projects__data {
   display: grid;
-  padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
   background: var(--bg-color);
-  margin: 0rem 2rem;
+  margin: 0rem 0rem;
 }
 
 .projects__img {
@@ -668,8 +666,8 @@ img {
 .education__header {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 0.75rem;
+  gap: clamp(0.5rem, 2.0vw, 1rem);
+  margin-bottom: 0.5rem;
 }
 
 .education__logo {
@@ -692,13 +690,19 @@ img {
 }
 
 .education__subtitle {
-  font-size: 0.9rem;
   margin: 0;
 }
 
 .education span{
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+}
+
+@media (max-width: 767px) {
+  .education span{
+    margin-bottom: 0.5rem;
+    font-size: 0.7rem;
+  }
 }
 
 .education__description {
@@ -1052,6 +1056,9 @@ img {
 }
 
 @media (max-width: 767px) {
+  .split-left .bd-container{
+    margin: 0 0.5rem 0 0.5rem;
+  }
   .split-left .home__title h1 {
     font-size: 1.4rem;
   }
@@ -1077,7 +1084,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     height: auto; /* let content grow naturally */
-    padding: 1rem;
+    padding: 0.5rem;
   }
 
   .home__data {
@@ -1225,12 +1232,19 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
     width: 100%;
     padding-left: 0;
   }
+  .education span{
+    margin-bottom: 0.25rem;
+    font-size: clamp(0.2rem, calc(2.5vw), 1.1rem);
+  }
+  h3 {
+    font-size: clamp(0.2rem, calc(2.5vw), 1.2rem);
+  }
 }
 
 /* Timeline Section */
 .timeline {
   width: calc(100% - 4rem);
-  margin: 0rem 2rem;
+  margin: 0rem 1.5rem;
   position: relative;
   padding-left: 0rem;
   box-sizing: border-box;

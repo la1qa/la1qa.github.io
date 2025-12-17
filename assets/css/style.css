@@ -70,7 +70,6 @@ h3 {
 
 h3 {
   font-size: 1.1rem;
-  line-height: 1.10;
 }
 
 h4 {
@@ -655,6 +654,14 @@ img {
   row-gap: 0.5rem;
 }
 
+/* Remove side insets specifically inside the education section */
+.education .bd-container, .experience .bd-container, .projects .bd-container {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  padding: 0;
+}
+
 .education__data {
   display: grid;
   border-radius: 0.5rem;
@@ -687,7 +694,7 @@ img {
 
 .education__title {
   color: var(--button-color);
-  margin: 0;
+  margin: 0.25rem 0 0 0;
 }
 
 .education__subtitle {
@@ -1240,17 +1247,19 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   }
   .education span{
     margin-bottom: 0.25rem;
-    font-size: clamp(0.2rem, calc(2.75vw), 0.8rem);
+    font-size: clamp(0.5rem, calc(3.0vw), 0.9rem);
+    line-height: 1.1;
   }
   h3 {
-    font-size: clamp(0.2rem, calc(3.25vw), 1.2rem);
+    font-size: clamp(0.6rem, calc(3.5vw), 1.2rem);
+    line-height: 1.2;
   }
 }
 
 /* Timeline Section */
 .timeline {
-  width: calc(100% - 2.5rem);
-  margin: 0rem 1.5rem;
+  width: calc(100% - 2.0rem);
+  margin: 0rem 1.0rem;
   position: relative;
   padding-left: 0rem;
   box-sizing: border-box;

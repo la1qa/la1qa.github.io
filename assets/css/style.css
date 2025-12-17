@@ -107,7 +107,8 @@ img {
 
 /* Class CSS */
 .section {
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 2rem 0;
+  margin: 0 2% 0 2%;
 }
 
 .section-title,
@@ -146,9 +147,9 @@ img {
 /* Layout */
 .bd-container {
   max-width: 1024px;
-  width: calc(100% - 2rem);
-  margin-left: 1rem;
-  margin-right: 1rem;
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
   padding: 0 0 0 0;
 }
 

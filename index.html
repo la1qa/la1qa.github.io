@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:type" content="website" />
     <title>Laia Querol Alturo's Portfolio</title>
+    <!-- Google Analytics (GA4) - replace G-XXXXXXXXXX with your Measurement ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0C6WF7MPN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} 
+      gtag('js', new Date());
+      // send_page_view true by default; GA will record initial page view
+      gtag('config', 'G-Y0C6WF7MPN');
+    </script>
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <!-- Font Awesome -->
@@ -201,7 +210,7 @@
                   <h4 class="experience__time" data-i18n="cvc_time2"></h4>
                   <h3 class="experience__title" data-i18n="cvc_internship"></h3>
                   <span data-i18n="cvc"></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore.</p>
+                  <p>Extracurricular internship in the Medical Imaging team. Working on tasks in Machine Learning.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -210,7 +219,7 @@
                   <h4 class="experience__time" data-i18n="cvc_time2"></h4>
                   <h3 class="experience__title"data-i18n="rosa_sensat"></h3>
                   <span data-i18n="cvc"></span>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, labore.</p>
+                  <p>Obtained a grant to work in the Medical Imaging team. Working on tasks in Machine Learning.</p>
                 </div>
             </div>
           </section>
@@ -250,6 +259,7 @@
     </footer>
     <!-- JS script -->
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/analytics.js"></script>
     <script>       
       AOS.init({
         once: true,

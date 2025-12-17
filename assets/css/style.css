@@ -301,7 +301,7 @@ img {
 .home__box {
   position: relative;
   background-color: var(--bg-color);
-  padding: 2rem;
+  padding: 2rem 3rem 2rem 3rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: center;
@@ -333,7 +333,7 @@ img {
   height: 5vw;
   max-height: 3rem;
   background-color: var(--text-color);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 .home__line-2 {
@@ -353,7 +353,7 @@ img {
   .home__box {
     position: relative;
     background-color: var(--bg-color);
-    padding: 2rem;
+    padding: 1.75rem;
     display: inline;
     align-items: center;
   }

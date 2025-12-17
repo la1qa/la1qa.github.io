@@ -1,9 +1,9 @@
 const translations = {
   en: {
-    greeting: "Hello there!",
+    greeting: "Heyo!",
     name: "I'm Laia.",
-    presentation: `Welcome to my website! 
-                  I'm a final-year student pursuing my Bachelor's in Computational Mathematics and Data Analytics at Universitat Autònoma de Barcelona (UAB).`,
+    presentation: `Welcome to my website!
+                   This is a space where I share what I do, what I’m learning, and what I’m excited to build next. It serves as a portfolio of my work, but it is also a reflection of how I think and create.`,
     contact_button: "Contact me",
     home: "Home",
     education: "Education",
@@ -25,7 +25,7 @@ const translations = {
     greeting: "Hola!",
     name: "Soc la Laia.",
     presentation: `Benvinguts al meu web! 
-                  Soc una estudiant de darrer curs cursant el Grau en Matemàtica Computacional i Analítica de Dades a la Universitat Autònoma de Barcelona (UAB).`,
+                   Aquest és un espai on comparteixo el que faig, el que estic aprenent i el que em fa il·lusió construir a continuació. Serveix com a portfoli de la meva feina, però també és un reflex de com penso i creo.`,
     contact_button: "Contacta’m",
     home: "Inici",
     education: "Educació",

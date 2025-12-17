@@ -285,10 +285,11 @@ img {
 
 .home__container {
   position: relative;
-  /* full viewport minus header so scrolling lands cleanly on next section */
-  height: calc(100vh - var(--header-height));
+  /* Try to fill the viewport, but allow it to grow if content needs more room */
+  min-height: calc(100vh - var(--header-height));
   grid-template-rows: repeat(2, max-content);
-  align-content: space-around;
+  align-content: start;
+  padding-top: 1.5rem;
   z-index: 1; /* ensure content paints above home::after accent */
 }
 

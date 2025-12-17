@@ -1264,8 +1264,8 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Timeline Section */
 .timeline {
-  width: calc(100% - 2.0rem);
-  margin: 0rem 1.0rem;
+  width: calc(100% - 1.5rem);
+  margin: 0rem 0.5rem;
   position: relative;
   padding-left: 0rem;
   box-sizing: border-box;
@@ -1313,13 +1313,14 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 
 /* Content box */
 .timeline-content {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  max-width: calc(100% - 3rem);
+  margin-left: clamp(0.5rem, 2vw, 1.15rem);
+  margin-right: clamp(0.5rem, 2vw, 1.15rem);
+  max-width: calc(100% - 0.0rem);
   background: var(--bg-color);
   padding: 1rem 1rem;
   border-radius: 6px;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .timeline-content h3 {

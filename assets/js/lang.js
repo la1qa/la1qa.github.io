@@ -15,7 +15,9 @@ const translations = {
     cvc: "Computer Vision Center",
     cvc_internship: "Machine Learning Intern",
     cvc_time2: "Sep 2024 - Feb 2025",
+    cvc_time2_text: "Extracurricular internship in the Medical Imaging team. Following up on previous internship.",
     cvc_time1: "Feb 2024 - Jun 2024",
+    cvc_time1_text: "Obtained a grant to work in the Medical Imaging team. Working on tasks in Machine Learning.",
     rosa_sensat: "Rosa Sensat Scolarship",
     portfolio: "Portfolio",
     erasmus: "<strong>Erasmus+</strong> Program"
@@ -37,7 +39,9 @@ const translations = {
     cvc: "Centre de Visió per Computador",
     cvc_internship: "Becària en Aprenentatge Computacional",
     cvc_time2: "Set 2024 - Feb 2025",
+    cvc_time2_text: "Pràctiques extracurriculars en l'equip d'Imatge Mèdica. Continuació de les pràctiques anteriors.",
     cvc_time1: "Feb 2024 - Jun 2024",
+    cvc_time1_text: "Obtinguda una beca per treballar a l'equip d'Imatge Mèdica. Treballant en tasques d'Aprenentatge Computacional.",
     rosa_sensat: "Beca Rosa Sensat",
     portfolio: "Portfoli",
     erasmus: "Programa <strong>Erasmus+</strong>"

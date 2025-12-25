@@ -85,9 +85,6 @@ strong {
 
 /* Title font family overrides */
 .section-title,
-.projects__title,
-.experience__title,
-.education__title,
 .home__title h1 {
   font-family: "Playfair Display", serif;
 }
@@ -128,23 +125,30 @@ img {
 
 .section-title {
   position: relative;
-  font-size: 1.5rem;
-  padding: 1.0rem 0 0 0;
-  text-align: center;
-  letter-spacing: 0.1rem;
-  color: var(--text-color)
+  font-size: 1.75rem;
+  padding: 0 0 0 0.75rem;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--text-color);
+  font-weight: 900;
+  letter-spacing: 0.05rem;
+  z-index: 2;
+  border-radius: 8px;
+  background-color: var(--header-bar-color);
 }
 
 .section-title::after {
   content: "";
   position: absolute;
-  width: 10%;
-  height: 0.15rem;
+  width: 00%;
+  height: 0.25rem;
   bottom: -0.25rem;
   left: 0;
-  right: 0;
-  margin: auto;
+  right: auto;
+  margin: 0;
   background-color: var(--header-bar-color);
+  z-index: 0;
 }
 
 .section-subtitle {
@@ -940,10 +944,6 @@ img {
   .section {
     padding-top: 2rem;
   }
-  .section-title {
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-  }
   .section-subtitle {
     font-size: 1rem;
   }
@@ -1209,6 +1209,11 @@ img {
   }
   .section-title {
     margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  .section-title::after {
+    right: 0;
+    margin: auto;
   }
   .home::after{
     right: 0rem;
@@ -1636,5 +1641,12 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   .split-left {
     transition: opacity 0.6s ease;
     opacity: 1; /* always visible; only home fades */
+  }
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .home__container {
+    max-height: min(calc(100vh - var(--header-height)), 125vw);
+    overflow: hidden; /* or auto if you want scroll */
   }
 }

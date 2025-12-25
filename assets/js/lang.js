@@ -20,7 +20,8 @@ const translations = {
     cvc_time1_text: "Obtained a grant to work in the Medical Imaging team. Working on tasks in Machine Learning.",
     rosa_sensat: "Rosa Sensat Scolarship",
     portfolio: "Portfolio",
-    erasmus: "<strong>Erasmus+</strong> Program"
+    erasmus: "<strong>Erasmus+</strong> Program",
+    scroll_down: "Scroll down"
   },
 
   ca: {

@@ -89,6 +89,10 @@ strong {
   font-family: "Playfair Display", serif;
 }
 
+.split .home__title h1 {
+  font-family: "Poppins", sans-serif;
+}
+
 ul {
   padding: 0;
   list-style: none;
@@ -118,6 +122,21 @@ img {
   margin: 0;
 }
 
+.portfolio-title {
+  text-align: center;
+  font-size: 2.0rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  color: var(--text-color);
+  top: var(--header-height);
+  background-color: var(--bg-color);
+  z-index: 10;
+}
+
+.portfolio-title h1 {
+  font-size: clamp(2.0rem, 4.0vw, 3.0rem);
+}
+
 .section-title,
 .section-subtitle {
   text-align: center;
@@ -126,7 +145,7 @@ img {
 .section-title {
   position: relative;
   font-size: 1.75rem;
-  padding: 0 0 0 0.75rem;
+  padding: 0 0.75rem 0 0.75rem;
   margin-right: auto;
   margin-bottom: 0.5rem;
   text-align: left;
@@ -165,6 +184,10 @@ img {
   margin-left: 1rem;
   margin-right: 1rem;
   padding: 0 0 0 0;
+}
+
+#portfolio.split.bd-container {
+  margin-top: 1rem;
 }
 
 .l-header {
@@ -445,7 +468,7 @@ img {
   width: 100%;
   height: 0.5rem;
   border-radius: 8px;
-  margin: 0rem 0 0.75rem;
+  margin: 0 0 0 0.75rem;
   background: linear-gradient(
     90deg,
     #f8e9a1 0%,
@@ -466,7 +489,7 @@ img {
 
 /* Bring the split-left color bar closer to the title without affecting other buttons */
 .split-left .home__color-line {
-  margin: 0.5rem 0 0.5rem;
+  margin: -0.25rem 0 0.5rem 0;
 }
 
 .home__social {
@@ -1029,12 +1052,13 @@ img {
     grid-template-columns: var(--side-panel-width) 1fr;
     gap: 4rem;
     align-items: start;
+    margin: 1rem 0;
   }
 
   .split-left {
     position: sticky;
-    top: calc(var(--header-height) + 1rem);
-    height: calc(100vh - var(--header-height) - 2rem);
+    top: calc(var(--header-height) + 2rem);
+    height: calc(100vh - var(--header-height) - 4rem);
     align-self: start;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
@@ -1050,6 +1074,8 @@ img {
   .split-left .home__img {
     position: static;
     max-width: 100%;
+    margin: 0;
+    padding: 0 0.5rem;
   }
 
   .split-left .home__img img {

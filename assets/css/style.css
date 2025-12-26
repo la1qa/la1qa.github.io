@@ -30,6 +30,8 @@ html {
   --side-panel-width: 25%;
   --timeline-line-color: #f8e9a1;
   --bg-split-color: #fdfdff; /* #f0f0f0 */
+  --bg-off: rgba(168, 208, 230, 0.25);
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
@@ -40,6 +42,8 @@ html {
   --header-bar-color: #24305e;
   --bg-split-color: #222222; /* #1a1a1a */
   --timeline-line-color: #f76c6c;
+  --bg-off: rgba(36, 48, 94, 0.5);
+  --box-shadow-color: rgba(0, 0, 0, 0.35);
 }
 
 body {
@@ -709,6 +713,7 @@ img {
   border-radius: 1rem;
   margin-left: -0.5rem;
   width: max-content;
+  background-color: var(--bg-color);
 }
 
 .experience__description {
@@ -741,8 +746,9 @@ img {
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
-  background: transparent;
+  background: var(--bg-off);
   margin: 0rem 0rem;
+  padding: 1rem 1rem;
 }
 
 .projects__img {
@@ -768,7 +774,6 @@ img {
 
 .projects__description {
   color: var(--text-color);
-  margin-bottom: 1.5rem;
 }
 
 .projects__link {
@@ -785,6 +790,7 @@ img {
   border: 1px var(--button-color) solid;
   cursor: pointer;
   border-radius: 8px;
+  margin: 1rem 1rem;
 }
 
 .projects__link span:hover {
@@ -826,8 +832,9 @@ img {
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
-  background: transparent;
-  margin: 1rem 0rem;
+  background: var(--bg-off);
+  margin: 0.25rem 0rem;
+  padding: 0.75rem 0.75rem;
 }
 
 .education__header {
@@ -1124,9 +1131,6 @@ img {
   }
   .projects__img img {
     width: 550px;
-  }
-  .projects__description {
-    margin: 2rem 5rem;
   }
   .projects__link span {
     font-size: 1rem;
@@ -1480,7 +1484,8 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 .timeline-marker {
   position: absolute;
   left: -5.0px;          /* centers the marker on the line */
-  top: 1.6rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 14px;
   height: 14px;
   background: var(--timeline-line-color);
@@ -1501,6 +1506,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   border-radius: 6px;
   box-sizing: border-box;
   width: 100%;
+  background: var(--bg-off);
 }
 
 .timeline-content h3 {
@@ -1512,6 +1518,49 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
 }
 
 .timeline-content p {
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* Experience time container (with marker inline) */
+.experience-time {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: clamp(0.5rem, 2vw, 1.15rem);
+  margin-right: clamp(0.5rem, 2vw, 1.15rem);
+  margin-bottom: 0.25rem;
+  padding-left: 0.5rem;
+}
+
+.experience-time .timeline-marker {
+  position: absolute;
+  left: -23.0px;
+  top: 45%;
+  margin: 0;
+}
+
+/* Experience data container */
+.experience-data {
+  margin-left: clamp(0.5rem, 2vw, 1.15rem);
+  margin-right: clamp(0.5rem, 2vw, 1.15rem);
+  max-width: calc(100% - 0.0rem);
+  background: var(--bg-off);
+  padding: 1rem 1rem;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.experience-data h3 {
+  margin: 0;
+}
+
+.experience-data span {
+  font-size: 0.9em;
+}
+
+.experience-data p {
   margin-top: 5px;
   line-height: 1.4;
 }
@@ -1697,4 +1746,9 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
     max-height: min(calc(100vh - var(--header-height)), 125vw);
     overflow: hidden; /* or auto if you want scroll */
   }
+}
+
+.projects__data, .experience-data, .education__data {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px var(--box-shadow-color);
 }

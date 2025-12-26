@@ -27,7 +27,7 @@ html {
   --header-bar-color: #a8d0e6;
   --hover-color: #f76c6c;
   --header-height: 3rem;
-  --side-panel-width: 25%;
+  --side-panel-width: 30%;
   --timeline-line-color: #f8e9a1;
   --bg-split-color: #fdfdff; /* #f0f0f0 */
 }
@@ -85,7 +85,8 @@ strong {
 
 /* Title font family overrides */
 .section-title,
-.home__title h1 {
+.home__title h1,
+.portfolio-title {
   font-family: "Playfair Display", serif;
 }
 
@@ -125,12 +126,13 @@ img {
 .portfolio-title {
   text-align: center;
   font-size: 2.0rem;
-  margin-bottom: 1rem;
-  padding-top: 1rem;
-  color: var(--text-color);
+  margin: 1rem 0 1rem 0;
+  padding-top: 0rem;
+  color: var(--bg-color);
   top: var(--header-height);
-  background-color: var(--bg-color);
+  background-color: var(--button-color);
   z-index: 10;
+  border-radius: 4px;
 }
 
 .portfolio-title h1 {
@@ -154,7 +156,16 @@ img {
   letter-spacing: 0.05rem;
   z-index: 2;
   border-radius: 8px;
-  background-color: var(--header-bar-color);
+  background-color: transparent;
+}
+
+.section-title::before {
+  content: ">";
+  color: var(--button-color);
+  margin-right: 0.4rem;
+  margin-left: -1rem;
+  font-weight: bolder;
+  font-family: "Poppins", sans-serif;
 }
 
 .section-title::after {
@@ -438,7 +449,7 @@ img {
 .home__download {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--text-color);
   padding: 0.5rem 0.65rem;
   border: 2px var(--button-color) solid;
@@ -649,7 +660,7 @@ img {
 
 
 .experience {
-  background-color: var(--bg-split-color);
+  background-color: transparent;
   padding-bottom: 2rem;
   margin-left: 0rem;
   margin-right: 0rem;
@@ -688,7 +699,8 @@ img {
 }
 
 .experience__title {
-  color: var(--button-color);
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 .experience__time {
@@ -704,7 +716,7 @@ img {
 }
 
 .projects {
-  background-color: var(--bg-split-color);
+  background-color: transparent;
   padding-bottom: 2rem;
   margin-left: 0rem;
   margin-right: 0rem;
@@ -729,7 +741,7 @@ img {
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
-  background: var(--bg-color);
+  background: transparent;
   margin: 0rem 0rem;
 }
 
@@ -749,8 +761,9 @@ img {
 }
 
 .projects__title {
-  color: var(--button-color);
+  color: var(--text-color);
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 .projects__description {
@@ -782,7 +795,7 @@ img {
 }
 
 .education {
-  background-color: var(--bg-split-color);
+  background-color: transparent;
   padding-bottom: 2rem;
 }
 
@@ -813,8 +826,8 @@ img {
   border-radius: 0.5rem;
   text-align: left;
   transition: 0.4s;
-  background: var(--bg-color);
-  margin: 1rem 0rem 0rem;
+  background: transparent;
+  margin: 1rem 0rem;
 }
 
 .education__header {
@@ -845,7 +858,8 @@ img {
 }
 
 .education__title {
-  color: var(--button-color);
+  color: var(--text-color);
+  font-weight: bold;
   margin: 0.25rem 0 0 0;
 }
 
@@ -1050,18 +1064,20 @@ img {
   .split {
     display: grid;
     grid-template-columns: var(--side-panel-width) 1fr;
-    gap: 4rem;
+    gap: 1rem;
     align-items: start;
-    margin: 1rem 0;
+    margin: 1rem 0rem;
   }
 
   .split-left {
     position: sticky;
     top: calc(var(--header-height) + 2rem);
-    height: calc(100vh - var(--header-height) - 4rem);
+    height: calc(100vh - var(--header-height) - 1rem);
     align-self: start;
-    padding: 0 0 0 0;
+    padding: 0 0.75rem;
     margin: 0 0 0 0;
+    border: 0px solid var(--header-bar-color);
+    border-radius: 200px 200px 2px 2px;
   }
 
   .left-panel {
@@ -1075,7 +1091,7 @@ img {
     position: static;
     max-width: 100%;
     margin: 0;
-    padding: 0 0.5rem;
+    padding: 0.1rem 0rem;
   }
 
   .split-left .home__img img {
@@ -1085,6 +1101,7 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1rem;
   }
 
   .split-left .home__title {
@@ -1092,7 +1109,12 @@ img {
     padding-bottom: 0.1rem; /* reduce space under title in left panel */
   }
 
-  .split-right { padding-left: 0rem; }
+  .split-right { 
+    padding: 0 1rem; 
+    margin: 0 0rem;
+    background-color: transparent;
+    border-left: 0px solid var(--header-bar-color);
+  }
 
   .projects__title {
     font-size: 1.5rem;
@@ -1474,7 +1496,7 @@ body.dark h1, body.dark .support a {color: var(--text-color);}
   margin-left: clamp(0.5rem, 2vw, 1.15rem);
   margin-right: clamp(0.5rem, 2vw, 1.15rem);
   max-width: calc(100% - 0.0rem);
-  background: var(--bg-color);
+  background: transparent;
   padding: 1rem 1rem;
   border-radius: 6px;
   box-sizing: border-box;

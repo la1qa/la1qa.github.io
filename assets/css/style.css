@@ -1074,7 +1074,7 @@ img {
     top: calc(var(--header-height) + 2rem);
     height: calc(100vh - var(--header-height) - 1rem);
     align-self: start;
-    padding: 0 0.75rem;
+    padding: 0 0;
     margin: 0 0 0 0;
     border: 0px solid var(--header-bar-color);
     border-radius: 200px 200px 2px 2px;

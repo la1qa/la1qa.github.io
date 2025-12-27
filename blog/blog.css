@@ -80,6 +80,7 @@ nav a {
 
 .row {
     display: flex;
+    flex-direction: row;
     gap: 1rem;
 }
 
@@ -104,6 +105,13 @@ nav a {
 
 .side-bar .cronological-entries {
     flex: 1; /* stretch to fill remaining sidebar space */
+}
+
+.cronological-entries ul ul {
+    margin-left: 1rem;
+}
+.cronological-entries button {
+    font-weight: bold;
 }
 
 .main {

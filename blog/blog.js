@@ -37,57 +37,246 @@ document.addEventListener('DOMContentLoaded', () => {
         if (el) el.textContent = '???';
     }
 
+
     // Chronology builder
+    const POSTS_BASE_PATH = '/blog/posts/';
+
     const chronologyList = document.querySelector('.cronological-entries ul');
     const formatter = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
-    const buildChronology = () => {
+    
+    // Function to fetch all posts
+    const fetchAllPosts = async () => {
+        try {
+            const response = await fetch('https://api.github.com/repos/la1qa/la1qa.github.io/contents/blog/posts');
+            if (!response.ok) return [];
+            
+            const files = await response.json();
+            const postFiles = files
+                .filter(file => file.name.endsWith('.html'))
+                .map(file => file.name);
+            
+            if (!postFiles.length) return [];
+
+            const posts = [];
+            
+            for (const file of postFiles) {
+                try {
+                    const response = await fetch(`${POSTS_BASE_PATH}${file}`);
+                    if (!response.ok) continue;
+                    
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    
+                    const article = doc.querySelector('[data-date]');
+                    if (!article) continue;
+                    
+                    const dateAttr = article.getAttribute('data-date');
+                    const title = article.querySelector('h2')?.textContent || file;
+                    
+                    posts.push({
+                        file: file,
+                        date: new Date(dateAttr),
+                        dateStr: dateAttr,
+                        title: title
+                    });
+                } catch (e) {
+                    console.error(`Failed to load post: ${file}`, e);
+                }
+            }
+
+            return posts;
+        } catch (e) {
+            console.error('Failed to fetch posts:', e);
+            return [];
+        }
+    };
+
+    // Build Latest Posts section
+    const latestList = document.querySelector('.latest-posts');
+    const MAX_LATEST = 5;
+
+    const buildLatestPosts = async () => {
+        if (!latestList) return;
+
+        try {
+            const res = await fetch(
+                'https://api.github.com/repos/la1qa/la1qa.github.io/contents/blog/posts'
+            );
+            if (!res.ok) return;
+
+            const files = await res.json();
+
+            const htmlFiles = files
+                .filter(f => f.type === 'file' && f.name.endsWith('.html'));
+
+            const posts = [];
+
+            for (const file of htmlFiles) {
+                try {
+                    const postRes = await fetch(`${POSTS_BASE_PATH}${file.name}`);
+                    if (!postRes.ok) continue;
+
+                    const html = await postRes.text();
+                    const doc = new DOMParser().parseFromString(html, 'text/html');
+
+                    const article = doc.querySelector('article.post');
+                    if (!article) return;
+
+                    const date = new Date(article.dataset.date);
+                    if (isNaN(date)) return;
+
+                    const title =
+                        article.querySelector('h2')?.textContent?.trim() || file;
+
+                    const summary =
+                        article.querySelector('[data-summary]')?.textContent?.trim() || '';
+
+                    posts.push({
+                        file: file.name,
+                        title,
+                        date,
+                        summary
+                    });
+                } catch {}
+            }
+
+            posts.sort((a, b) => b.date - a.date);
+
+            latestList.innerHTML = '';
+
+            posts.slice(0, 5).forEach(post => {
+                const li = document.createElement('li');
+
+                const a = document.createElement('a');
+                a.href = `${POSTS_BASE_PATH}${post.file}`;
+                a.textContent = post.title;
+                a.setAttribute('data-post', '');
+
+                const p = document.createElement('p');
+                p.textContent = post.summary;
+
+                li.appendChild(a);
+                if (post.summary) li.appendChild(p);
+                latestList.appendChild(li);
+            });
+        } catch (err) {
+            console.error('Latest posts failed:', err);
+        }
+    };
+    
+    const buildChronology = async () => {
         if (!chronologyList) return;
-        var fs = require('fs');
-        var postsDir = './blog/posts';
-        if (!fs.existsSync(postsDir)) return;
-        const posts = fs.readdirSync(postsDir)
-            .filter(file => file.endsWith('.html'))
-            .map(file => {
-                const content = fs.readFileSync(`${postsDir}/${file}`, 'utf-8');
-                const tempDiv = document.createElement('div');
-                tempDiv.innerHTML = content;
-                return tempDiv.querySelector('.post-entry');
-            })
-            .filter(post => post !== null);
-        
-        if (!posts.length) return;
 
-        const monthMap = new Map(); // key: YYYY-MM => { label, post }
-        posts.forEach((post) => {
-            const dateAttr = post.getAttribute('data-date');
-            if (!dateAttr) return;
-            const date = new Date(dateAttr);
-            if (isNaN(date.getTime())) return;
-            const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-            if (!monthMap.has(key)) {
-                monthMap.set(key, { label: formatter.format(date), post });
+        try {
+            // Fetch list of files from GitHub API
+            const response = await fetch('https://api.github.com/repos/la1qa/la1qa.github.io/contents/blog/posts');
+            if (!response.ok) return;
+            
+            const files = await response.json();
+            
+            // Filter for HTML files only
+            const postFiles = files
+                .filter(file => file.name.endsWith('.html'))
+                .map(file => file.name);
+            
+            if (!postFiles.length) return;
+
+            const posts = [];
+            
+            // Fetch and parse each post file to extract date and title
+            for (const file of postFiles) {
+                try {
+                    const response = await fetch(`${POSTS_BASE_PATH}${file}`);
+                    if (!response.ok) continue;
+                    
+                    const html = await response.text();
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    
+                    // Look for article with data-date attribute
+                    const article = doc.querySelector('[data-date]');
+                    if (!article) continue;
+                    
+                    const dateAttr = article.getAttribute('data-date');
+                    const title = article.querySelector('h2')?.textContent || file;
+                    
+                    posts.push({
+                        file: file,
+                        date: dateAttr,
+                        title: title
+                    });
+                } catch (e) {
+                    console.error(`Failed to load post: ${file}`, e);
+                }
             }
-        });
 
-        const sorted = Array.from(monthMap.entries())
-            .sort((a, b) => (a[0] < b[0] ? 1 : -1));
+            if (!posts.length) return;
 
-        chronologyList.innerHTML = '';
-        sorted.forEach(([monthKey, data]) => {
-            const anchorId = `month-${monthKey}`;
-            if (!data.post.id) {
-                data.post.id = anchorId;
-            }
-            const li = document.createElement('li');
-            const link = document.createElement('a');
-            link.href = `#${anchorId}`;
-            link.textContent = data.label;
-            li.appendChild(link);
-            chronologyList.appendChild(li);
-        });
+            const monthMap = new Map(); // key: YYYY-MM => { label, files }
+            posts.forEach((post) => {
+                const date = new Date(post.date);
+                if (isNaN(date.getTime())) return;
+                const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+                if (!monthMap.has(key)) {
+                    monthMap.set(key, { 
+                        label: formatter.format(date), 
+                        files: [] 
+                    });
+                }
+                monthMap.get(key).files.push(post);
+            });
+
+            const sorted = Array.from(monthMap.entries())
+                .sort((a, b) => (a[0] < b[0] ? 1 : -1));
+
+            chronologyList.innerHTML = '';
+
+            sorted.forEach(([_, data]) => {
+                const monthLi = document.createElement('li');
+
+                // Month toggle button
+                const monthBtn = document.createElement('button');
+                monthBtn.type = 'button';
+                monthBtn.textContent = `${data.label} (${data.files.length})`;
+                monthBtn.style.background = 'none';
+                monthBtn.style.border = 'none';
+                monthBtn.style.padding = '0';
+                monthBtn.style.cursor = 'pointer';
+
+                // Posts list (collapsed by default)
+                const postsUl = document.createElement('ul');
+                postsUl.hidden = true;
+
+                // Toggle behavior
+                monthBtn.addEventListener('click', () => {
+                    postsUl.hidden = !postsUl.hidden;
+                });
+
+                // Individual post links
+                data.files.forEach(post => {
+                    const postLi = document.createElement('li');
+                    const postLink = document.createElement('a');
+
+                    postLink.href = `${POSTS_BASE_PATH}${post.file}`;
+                    postLink.textContent = post.title;
+
+                    postLi.appendChild(postLink);
+                    postsUl.appendChild(postLi);
+                });
+
+                monthLi.appendChild(monthBtn);
+                monthLi.appendChild(postsUl);
+                chronologyList.appendChild(monthLi);
+            });
+
+        } catch (e) {
+            console.error('Failed to build chronology:', e);
+        }
     };
 
     buildChronology();
+    buildLatestPosts();
 
     // Simple SPA-like loader for post detail pages into the main column
     const main = document.querySelector('.main');

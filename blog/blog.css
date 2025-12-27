@@ -1,0 +1,210 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: rgba(175, 206, 253, 0.3);
+    --border-color: #78a6df;
+    --text-color: #333;
+    --side-panel-width: 280px;
+    --border-px: 3px;
+    --border-radius: 3px;
+    --header-color: #4f78ae;
+}
+
+body {
+    font-family: "Source Code Pro", monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: rgba(175, 206, 253, 0.25);
+}
+
+h2, p, h3, h1 {
+    margin: 0;
+}
+
+.hidden { display: none; }
+
+.container {
+    max-width: 1024px;
+    width: calc(100% - 2rem);
+    margin: 1rem auto;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* 
+    border: 8px double;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+*/
+
+header {
+    text-align: center;
+    background-image: url(img/blue_clouds.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 35px 0;
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+header h1 { margin:0; font-size:48px; }
+
+nav {
+    background: var(--bg-color);
+    padding: 1rem;
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+nav a { 
+    text-decoration:none; 
+    color: var(--text-color); 
+    font-weight:bold; 
+    color: var(--header-color);
+}
+
+.content { overflow:hidden; }
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.side-bar {
+    flex: var(--side-panel-width);
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar div {
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--bg-color);
+}
+
+.side-bar h3 { 
+    margin-top:0; 
+    color: var(--header-color);
+}
+
+.main {
+    flex: calc(100% - var(--side-panel-width));
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.home { 
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.home-img {
+    width: 20%;
+    height: auto;    
+    margin-bottom: 0.75rem;
+}
+
+.home h2 { color:var(--header-color); }
+
+.visitor {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.home span {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+article {
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--bg-color);
+}
+
+article h2 { color:var(--header-color); }
+
+.contact {
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    background-color: var(--bg-color);
+}
+
+footer {
+    text-align:center;
+    padding:15px;
+    background-image: url(img/blue_clouds.jpg);
+    background-size: cover;
+    background-position: center;
+    color:white;
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+/* Password prompt */
+#passwordPrompt {
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#passwordPrompt input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-top: 10px;
+}
+
+#passwordPrompt button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: var(--bg-color);
+    color: white;
+    border: var(--border-px) solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    animation: buttonGlow 2s infinite alternate;
+}
+
+#passwordPrompt button:hover { background: var(--border-color); }
+#errorMsg { color: red; display: none; margin-top: 10px; }
+
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,33 @@
+body {
+  background: #ffffff;
+  color: black;
+  font-family: "Verdana", Arial, sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.container img {
+  width: 120px;
+  image-rendering: pixelated;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+#access {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  /* background: red; */ /* enable to debug */
+}

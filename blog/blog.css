@@ -129,7 +129,7 @@ nav a {
 
 .visitor {
     margin-top: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--text-color);
 }
 
@@ -137,6 +137,17 @@ nav a {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+}
+
+.home p {
+    display: flex;
+    flex-direction: row;
+    gap: 1.0rem;
+}
+
+#visitorCount {
+    font-weight: bolder;
+    color: var(--header-color);
 }
 
 article {

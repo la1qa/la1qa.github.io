@@ -42,7 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const formatter = new Intl.DateTimeFormat('en-US', { month: 'long', year: 'numeric' });
     const buildChronology = () => {
         if (!chronologyList) return;
-        const posts = Array.from(document.querySelectorAll('section.post'));
+        var fs = require('fs');
+        var postsDir = './blog/posts';
+        if (!fs.existsSync(postsDir)) return;
+        const posts = fs.readdirSync(postsDir)
+            .filter(file => file.endsWith('.html'))
+            .map(file => {
+                const content = fs.readFileSync(`${postsDir}/${file}`, 'utf-8');
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = content;
+                return tempDiv.querySelector('.post-entry');
+            })
+            .filter(post => post !== null);
+        
         if (!posts.length) return;
 
         const monthMap = new Map(); // key: YYYY-MM => { label, post }

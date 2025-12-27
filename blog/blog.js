@@ -81,13 +81,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const main = document.querySelector('.main');
     const listViewHTML = main ? main.innerHTML : '';
 
+    const blogHome = '/blog/blog.html';
+
     const showList = (push = true) => {
         if (!main) return;
         main.innerHTML = listViewHTML;
         buildChronology();
         attachPostLinks();
         if (push) {
-            history.pushState({ type: 'list' }, '', 'blog.html');
+            history.pushState({ type: 'list' }, '', blogHome);
         }
     };
 

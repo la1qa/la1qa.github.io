@@ -276,7 +276,9 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     buildChronology();
-    buildLatestPosts();
+    buildLatestPosts().then(() => {
+        attachPostLinks();
+    });
 
     // Simple SPA-like loader for post detail pages into the main column
     const main = document.querySelector('.main');
@@ -288,7 +290,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!main) return;
         main.innerHTML = listViewHTML;
         buildChronology();
-        attachPostLinks();
+        buildLatestPosts().then(() => {
+            attachPostLinks();
+            attachListLink();
+        });
         if (push) {
             history.pushState({ type: 'list' }, '', blogHome);
         }

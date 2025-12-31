@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    greeting: "Heyo!",
+    greeting: "Hello!",
     name: "I'm Laia.",
     presentation: `Welcome to my website!
                    This is a space where I share what I do, what I’m learning, and what I’m excited to build next. It serves as a portfolio of my work, but it is also a reflection of how I think and create.`,

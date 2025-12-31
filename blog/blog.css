@@ -107,9 +107,17 @@ nav a {
     flex: 1; /* stretch to fill remaining sidebar space */
 }
 
-.cronological-entries ul ul {
-    margin-left: 1rem;
+.cronological-entries ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0.5rem 0 0 0;
 }
+
+.cronological-entries ul ul {
+    margin: 0 0 0 1.0rem;
+    padding: 0;
+}
+
 .cronological-entries button {
     font-weight: bold;
 }

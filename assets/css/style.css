@@ -29,8 +29,8 @@ html {
   --header-height: 3rem;
   --side-panel-width: 25%;
   --timeline-line-color: #f8e9a1;
-  --bg-split-color: #fdfdff; /* #f0f0f0 */
-  --bg-off: rgba(168, 208, 230, 0.25);
+  --bg-split-color: rgba(168, 208, 230, 0.15); /* #f0f0f0 #fdfdff */
+  --bg-off: #fdfdff;
   --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -40,10 +40,10 @@ html {
   --button-color: #f8e9a1;
   --hover-color: #f8e9a1;
   --header-bar-color: #24305e;
-  --bg-split-color: #222222; /* #1a1a1a */
+  --bg-split-color: rgba(25, 33, 48, 0.8); /* blue overlay on black, adjust opacity and RGB */
   --timeline-line-color: #f76c6c;
-  --bg-off: rgba(36, 48, 94, 0.5);
-  --box-shadow-color: rgba(0, 0, 0, 0.35);
+  --bg-off: #222222;
+  --box-shadow-color: rgba(0, 0, 0, 0.45);
 }
 
 body {
@@ -53,9 +53,10 @@ body {
   font-weight: 500;
   color: var(--text-color);
   background-color: var(--bg-color);
+  background-image: linear-gradient(var(--bg-split-color), var(--bg-split-color));
   line-height: 1.6;
   overflow-x: hidden;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, background-image 0.3s, color 0.3s;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

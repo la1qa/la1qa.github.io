@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             <i className="fas fa-bars"></i>
           </button>
           <div className={styles.dropdownContent}>
-            <a href="/home" className="navbar-link">
+            <a href="/" className="navbar-link">
               <i className="fas fa-user"></i>
               <span data-i18n="home">Home</span>
             </a>

@@ -1,7 +1,9 @@
 @import url('../../index.css');
 
 .spacer {
-  padding: var(--header-height) 10rem;
+  padding-top: 1vh;
+  margin: auto;
+  max-width: 767px;
   color: var(--text-color);
   display: flex;
   flex-direction: column;

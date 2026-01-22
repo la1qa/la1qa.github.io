@@ -1,61 +1,112 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './styles/CV.module.css';
 
 const CV: React.FC = () => {
+    useEffect(() => {
+        // Initialize i18n translations
+        const savedLang = localStorage.getItem("lang") || "en";
+        if (typeof (window as any).setLanguage === 'function') {
+            (window as any).setLanguage(savedLang);
+        }
+    }, []);
+
+    const sectionRef = useRef<HTMLElement | null>(null);
+
     const handleDownload = () => {
-        if (typeof window !== 'undefined' && typeof (window as any).downloadPDF === 'function') {
-            (window as any).downloadPDF();
+        if (typeof window !== 'undefined') {
+            window.print();
         }
     };
 
     return (
         <main className="bd-container l-main">
-            <section className={`${styles.spacer}`} aria-hidden="true">
+            <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>
                 <button
                     className={styles.downloadButton}
                     onClick={handleDownload}
-                >
-                    Download PDF
-                </button>
-
+                data-i18n="print"></button>
                 <header className={styles.header}>
                     <h1>Laia Querol Alturo</h1>
                     <div className={styles.meta}>
-                        <span>Barcelona</span>
+                        <span>Cerdanyola del Vallès, Barcelona</span>
                         <span aria-hidden="true" className={styles.dot}>·</span>
                         <a href="mailto:Laia.QuerolA@autonoma.cat">Laia.QuerolA@autonoma.cat</a>
                     </div>
                 </header>
 
                 <section className={styles.section}>
-                    <h2>Education</h2>
+                    <h2 data-i18n="education"></h2>
                     <div className={styles.item}>
-                        <h3>Bachelor's Degree in Computer Science</h3>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="matcad"></span><span className={styles.date}>Sep 2022 - </span>
+                        </h3>
                         <p>Autonomous University of Barcelona (UAB)</p>
-                        <p className={styles.subtle}>September 2020 - June 2024</p>
                     </div>
-                </section>
-
-                <section className={styles.section}>
-                    <h2>Experience</h2>
                     <div className={styles.item}>
-                        <h3>Internship at Tech Solutions</h3>
-                        <p className={styles.subtle}>June 2023 - September 2023</p>
-                        <ul className={styles.list}>
-                            <li>Developed web applications using JavaScript and React.</li>
-                            <li>Collaborated with the development team to improve user experience.</li>
-                        </ul>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="erasmus"></span><span className={styles.date}>Feb 2025 - Jun 2025</span>
+                        </h3>
+                        <p>Linköping Universitet (LiU)</p>
                     </div>
                 </section>
 
                 <section className={styles.section}>
-                    <h2>Skills</h2>
-                    <ul className={styles.list}>
-                        <li>Programming Languages: Python, Java, C++</li>
-                        <li>Web Development: HTML, CSS, JavaScript</li>
-                        <li>Data Analysis: SQL, R</li>
+                    <h2 data-i18n="experience"></h2>
+                    <div className={styles.item}>
+                        <h2 className={styles.itemTitle}>
+                            <span data-i18n="cvc"></span>
+                        </h2>
+                        <div className={styles.position}>
+                            <h3 className={styles.positionTitle}>
+                                <span data-i18n="cvc_internship"></span>
+                                <span className={styles.date} data-i18n="cvc_time2"></span>
+                            </h3>
+                            <ul className={styles.list}>
+                                <li data-i18n="cvc_time2_text"></li>
+                            </ul>
+                        </div>
+                        <div className={styles.position}>
+                            <h3 className={styles.positionTitle}>
+                                <span data-i18n="rosa_sensat"></span>
+                                <span className={styles.date} data-i18n="cvc_time1"></span>
+                            </h3>
+                            <ul className={styles.list}>
+                                <li data-i18n="cvc_time1_text"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 data-i18n="skills"></h2>
+                    <ul className={styles.skillsList}>
+                        <li>
+                            <span className={styles.skillsTitle}>Programming Languages:</span>
+                            <span>Python, Java, C++, C, JavaScript, TypeScript, SQL, Bash, R</span>
+                        </li>
+                        <li>
+                            <span className={styles.skillsTitle}>Version Control:</span>
+                            <span>Git, GitHub, GitLab</span>
+                        </li>
+                        <li>
+                            <span className={styles.skillsTitle}>Data Analysis:</span>
+                            <span>Pandas, NumPy, PyTorch, Jupyter Notebooks, Excel, Matplotlib, Scikit-learn</span>
+                        </li>
+                        <li>
+                            <span className={styles.skillsTitle}>Front-end Development:</span>
+                            <span>React, Node.js, npm, HTML, CSS</span>
+                        </li>
                     </ul>
                 </section>
+
+                <section className={styles.section}>
+                    <h2 data-i18n="languages"></h2>
+                    <p data-i18n="languages_text"></p>
+                </section>
+
+                <p className={styles.lastUpdate}>
+                    <span data-i18n="last_update"></span>: 22/01/2026
+                </p>
             </section>
         </main>
     );

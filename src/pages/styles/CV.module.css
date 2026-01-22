@@ -1,7 +1,7 @@
 @import url('../../index.css');
 
 .spacer {
-  padding-top: 1rem;
+  padding: 3rem 0;
   margin: auto;
   max-width: 767px;
   color: var(--text-color);
@@ -11,22 +11,27 @@
 }
 
 .downloadButton {
-  color: var(--text-color, #ffffff);
-  display: flex;
-  gap: 0.75rem;
+  color: var(--text-gray, #333);
+  display: inline-flex;
+  gap: 0.5rem;
   align-items: center;
   background: transparent;
-  padding: 0;
-  border: none;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--text-gray, #333);
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+  margin: 1rem 0 0.5rem;
 }
 
 .downloadButton:hover{
-  color: var(--hover-color, #f76c6c);
-  text-decoration: underline;
+  color: var(--accent-color-1, #f76c6c);
+  border-color: var(--accent-color-1, #f76c6c);
 }
 
 .ghostButton {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--text-gray, #333);
   background: transparent;
   color: inherit;
   padding: 0.5rem 0.9rem;
@@ -52,7 +57,7 @@
 }
 
 .header h1 {
-  margin: 0 0 0.25rem;
+  margin: 0;
   font-size: clamp(1.8rem, 2.5vw, 2.4rem);
   font-family: 'Times New Roman', Times, serif;
 }
@@ -64,7 +69,7 @@
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
-  color: var(--text-color);
+  color: var(--text-gray, #333);
 }
 
 .meta a {
@@ -73,7 +78,7 @@
 }
 
 .meta a:hover {
-  color: var(--hover-color, #f76c6c);
+  color: var(--accent-color-2, #f76c6c);
 }
 
 .dot {
@@ -82,43 +87,138 @@
 }
 
 .section {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .section h2 {
   font-size: 1.15rem;
   letter-spacing: 0.02em;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.35rem;
   text-transform: uppercase;
   border-bottom: 1px solid var(--text-color);
 }
 
 .item {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.item h2 {
+  font-size: 1rem;
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item .date {
+  font-size: 0.9rem;
+  color: var(--text-gray, rgba(0, 0, 0, 0.65));
+  font-style: italic;
+  font-weight: 400;
 }
 
 .item h3 {
-  margin: 0 0 0.25rem;
+  margin: 0;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.position {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.positionTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media print {
+  :global(body) {
+    margin: 20mm;
+    background: #fff;
+    color: #000;
+  }
+
+  :global(header#header),
+  :global(footer) {
+    display: none !important;
+  }
+
+  .downloadButton {
+    display: none;
+  }
+
+  .spacer {
+    padding: 0;
+    color: #000;
+  }
+
+  .section,
+  .item {
+    page-break-inside: avoid;
+    color: #000;
+  }
+
+  .section h2 {
+    border-bottom-color: #000;
+  }
+
+  .meta,
+  .date,
+  .subtle,
+  .updated {
+    color: #333 !important;
+  }
 }
 
 .subtle {
   color: rgba(0, 0, 0, 0.65);
   margin-top: 0.1rem;
+  font-style: italic;
 }
 
 .list {
-  margin: 0.5rem 0 0;
+  margin: 0;
   padding-left: 1.2rem;
   display: grid;
   gap: 0.4rem;
 }
 
+.skillsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.skillsList li {
+  margin: 0;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+}
+
+.skillsTitle {
+  margin-bottom: 0rem;
+  color: var(--text-gray, rgba(0, 0, 0, 0.65));
+  font-size: 0.75rem;
+}
+
+.lastUpdate {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-gray, rgba(0, 0, 0, 0.65));
+}
+
 @media (max-width: 640px) {
   .page {
     padding: 1.5rem 1rem 2rem;
-  }
-
-  .item {
-    padding: 0.9rem 1rem;
   }
 }

@@ -21,10 +21,10 @@ html {
 }
 
 :root {
-  --bg-color: #fFfDf3;
+  --bg-color: #fCf9fD; /*fCf9fD*/
   --text-color: #222222;
   --button-color: #bCb9aE;
-  --header-bar-color: #fFfDf3; 
+  --header-bar-color: #ECE9DD; 
   --hover-color: #f76c6c;
   --header-height: 3rem;
   --side-panel-width: 25%;
@@ -32,11 +32,14 @@ html {
   --bg-split-color: rgba(168, 208, 230, 0.15); /* #f0f0f0 #fdfdff */
   --bg-off: #fFfDf3;
   --box-shadow-color: rgba(0, 0, 0, 0);
+  --accent-color-1: #B33A3A;
+  --accent-color-2: #3A5FB3;
+  --text-gray: #8C897E;
 }
 
 [data-theme="dark"] {
-  --bg-color: #1B1A17;
-  --text-color: #fefefe; 
+  --bg-color: #0B0A07;
+  --text-color: #fCf9fD; 
   --button-color: #3A3933;
   --hover-color: #f8e9a1;
   --header-bar-color: #1B1A17;
@@ -44,6 +47,9 @@ html {
   --timeline-line-color: #f76c6c;
   --bg-off: #222222;
   --box-shadow-color: rgba(0, 0, 0, 0);
+  --accent-color-1: #3A5FB3;
+  --accent-color-2: #B33A3A;
+  --text-gray: #aAa9a3;
 }
 
 /* Additional global styles for React app */

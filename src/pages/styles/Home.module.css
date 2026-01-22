@@ -123,13 +123,16 @@
   font-size: clamp(1.5rem, 12vw, 3.7rem);
   line-height: 1.25;
   letter-spacing: 0.01em;
+  color: var(--accent-color-1);
 }
 
+/*
 .cover__name {
   text-decoration: underline wavy #B33A3A;
   text-decoration-thickness: 2px;
   text-underline-offset: 8px;
 }
+*/
 
 .cover__description {
   color: var(--text-color);

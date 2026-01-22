@@ -4,11 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     background: var(--header-bar-color);
     width: 100%;
     max-width: 767px;
-    margin: 0 auto;
+    margin: 0 auto ;
 }
 
 .container {
@@ -32,8 +32,16 @@
     -webkit-text-stroke: 0px var(--text-color);
 }
 
+.subtitle {
+    display: block;
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
 .email {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin: 0.75rem;
     text-align: center;

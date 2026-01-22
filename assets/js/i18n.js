@@ -32,7 +32,7 @@ const translations = {
     reach_out: "If you want to reach out, email works best.",
     find_me_on: "...if not, you'll find me on:",
     based_in: "Based in Barcelona. ",
-    footer: "2026 Laia Querol Alturo - All rights reserved."
+    footer: "2026 - All rights reserved."
   },
 
   ca: {
@@ -68,7 +68,7 @@ const translations = {
     reach_out: "Si vols posar-te en contacte, el correu electrònic és la millor opció.",
     find_me_on: "...si no, em trobaràs a:",
     based_in: "Amb base a Barcelona.",
-    footer: "2026 Laia Querol Alturo - Tots els drets reservats."
+    footer: "2026 - Tots els drets reservats."
   }
 };
 

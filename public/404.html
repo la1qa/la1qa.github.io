@@ -6,11 +6,10 @@
   <script>
     (function() {
       var l = window.location;
-      var origin = l.protocol + '//' + l.host;
-      var pathname = l.pathname.replace(/^\//, '');
+      var path = l.pathname.replace(/^\//, '');
       var search = l.search || '';
       var hash = l.hash || '';
-      var newUrl = origin + '/?' + pathname + search + hash;
+      var newUrl = '/' + (path ? '?' + encodeURIComponent(path) : '') + search + hash;
       window.location.replace(newUrl);
     })();
   </script>

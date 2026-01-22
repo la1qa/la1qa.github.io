@@ -19,7 +19,7 @@ const CV: React.FC = () => {
     };
 
     return (
-        <main className="bd-container l-main">
+        <main className="bd-container l-main white-bg">
             <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>
                 <button
                     className={styles.downloadButton}

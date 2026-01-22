@@ -28,6 +28,10 @@ const translations = {
     scroll_down: "Scroll down",
     languages_text: "Catalan (Native), Spanish (Native), English (C2 Proficiency), Swedish (A1 Elementary)",
     last_update: "Last updated",
+    checkout_code: "View the code",
+    reach_out: "If you want to reach out, email works best.",
+    find_me_on: "...if not, you'll find me on:",
+    based_in: "Based in Barcelona. ",
     footer: "2026 Laia Querol Alturo - All rights reserved."
   },
 
@@ -60,6 +64,10 @@ const translations = {
     languages_text: "Català (Nadiu), Castellà (Nadiu), Anglès (C2), Suec (A1)",
     scroll_down: "Desplaça't cap avall",
     last_update: "Última actualització",
+    checkout_code: "Consulta el codi",
+    reach_out: "Si vols posar-te en contacte, el correu electrònic és la millor opció.",
+    find_me_on: "...si no, em trobaràs a:",
+    based_in: "Amb base a Barcelona.",
     footer: "2026 Laia Querol Alturo - Tots els drets reservats."
   }
 };

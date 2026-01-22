@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import CV from './pages/CV';
+import Contact from './pages/Contact';
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
           <Route path="/" element={<Home />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/cv" element={<CV />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

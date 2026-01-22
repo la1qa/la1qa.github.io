@@ -1,0 +1,155 @@
+.contact {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: var(--header-bar-color);
+    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 767px;
+    width: 100%;
+    background: var(--bg-color);
+    border: 1px solid var(--button-color);
+    border-radius: 1px;
+    box-shadow: none;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.0rem;
+    text-align: center;
+    color: var(--text-gray, #333);
+    font-family: 'Playfair Display', serif;
+    -webkit-text-stroke: 0px var(--text-color);
+}
+
+.email {
+    font-size: 1.0rem;
+    font-weight: 500;
+    margin: 0.5rem;
+    text-align: center;
+    color: var(--text-gray, #f76c6c);
+    text-decoration: none;
+}
+
+.email:hover {
+    text-decoration: underline;
+    color: var(--accent-color-2);
+}
+
+.socialIcons {
+    display: flex;
+    gap: 2rem;
+    margin: 0.5rem;
+    border: 0px dashed var(--button-color);
+    max-width: 767px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: var(--text-gray);
+    justify-content: center;
+}
+
+.iconLink {
+    color: var(--text-gray);
+    transition: transform 0.2s, color 0.2s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.iconLink:hover {
+    transform: scale(1.1);
+    color: var(--accent-color-1, #f76c6c);
+}
+
+.iconLink svg {
+    display: block;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    opacity: 0.85;
+}
+
+.input,
+.textarea {
+    padding: 0.75rem;
+    border: 2px dashed var(--button-color);
+    border-radius: 1px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--accent-color-1, #f76c6c);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 150px;
+    font-family: inherit;
+}
+
+.button {
+    padding: 0.5rem 0.9rem;
+    background: transparent;
+    color: var(--accent-color-1, #f76c6c);
+    border: 2px dashed var(--accent-color-1, #f76c6c);
+    border-radius: 1px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.button:hover {
+    border-color: var(--accent-color-1, #f76c6c);
+    color: var(--header-bar-color);
+    background: var(--accent-color-1, #f76c6c);
+}
+
+.button:active {
+    transform: translateY(0.5px);
+}
+
+.success {
+    color: var(--hover-color, #f76c6c);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

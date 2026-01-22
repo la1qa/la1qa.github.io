@@ -24,13 +24,38 @@
   line-height: 1.2; /* tighter line spacing */
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .footer__copy h3 {
-  font-size: clamp(0.75rem, 2.0vw, 1rem);
+  font-size: clamp(0.5rem, 1.75.0vw, 0.75rem);
 }
 
 .footer__box {
   display: flex;
   flex-direction: column;
+}
+
+.dot {
+  opacity: 0.6;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+.githubLink {
+  color: inherit;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.githubLink:hover {
+  color: var(--hover-color, #f76c6c);
+}
+
+.githubIcon {
+  width: 16px;
+  height: 16px;
 }

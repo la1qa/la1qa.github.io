@@ -21,31 +21,24 @@ html {
 }
 
 :root {
-  --bg-color-old: #fdfdff;
   --bg-color: #fFfDf3;
   --text-color: #222222;
-  --button-color-old: #f76c6c;  
   --button-color: #bCb9aE;
-  --header-bar-color-old: #a8d0e6;
   --header-bar-color: #fFfDf3; 
   --hover-color: #f76c6c;
   --header-height: 3rem;
   --side-panel-width: 25%;
   --timeline-line-color: #f8e9a1;
   --bg-split-color: rgba(168, 208, 230, 0.15); /* #f0f0f0 #fdfdff */
-  --bg-off-old: #fdfdff;
   --bg-off: #fFfDf3;
   --box-shadow-color: rgba(0, 0, 0, 0);
 }
 
 [data-theme="dark"] {
-  --bg-color-old: #222222;
   --bg-color: #1B1A17;
-  --text-color: #fefefe;
-  --button-color-old: #f8e9a1;    
+  --text-color: #fefefe; 
   --button-color: #3A3933;
   --hover-color: #f8e9a1;
-  --header-bar-color-old: #24305e;
   --header-bar-color: #1B1A17;
   --bg-split-color: rgba(25, 33, 48, 0.8); /* blue overlay on black, adjust opacity and RGB */
   --timeline-line-color: #f76c6c;

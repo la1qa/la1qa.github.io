@@ -39,7 +39,7 @@ html {
 }
 
 [data-theme="dark"] {
-  --bg-color: #222222;
+  --bg-color-old: #222222;
   --bg-color: #1B1A17;
   --text-color: #fefefe;
   --button-color-old: #f8e9a1;    
@@ -67,7 +67,6 @@ body {
   font-weight: 500;
   color: var(--text-color);
   background-color: var(--bg-color);
-  background-image: linear-gradient(var(--bg-split-color), var(--bg-split-color));
   line-height: 1.6;
   overflow-x: hidden;
   transition: background-color 0.3s, background-image 0.3s, color 0.3s;

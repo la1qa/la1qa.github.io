@@ -9,6 +9,9 @@ const translations = {
     education: "Education",
     experience: "Experience",
     projects: "Projects",
+    skills: "Skills",
+    languages: "Languages",
+    print: "Print",
     cv: "CV",
     blog: "Blog",
     matcad: "<strong>Bachelor's</strong> in Computational Mathematics and Data Analytics",
@@ -23,6 +26,8 @@ const translations = {
     portfolio: "Portfolio",
     erasmus: "<strong>Erasmus+</strong> Program",
     scroll_down: "Scroll down",
+    languages_text: "Catalan (Native), Spanish (Native), English (C2 Proficiency), Swedish (A1 Elementary)",
+    last_update: "Last updated",
     footer: "2026 Laia Querol Alturo - All rights reserved."
   },
 
@@ -36,6 +41,9 @@ const translations = {
     education: "Educació",
     experience: "Experiència",
     projects: "Projectes",
+    skills: "Habilitats",
+    languages: "Idiomes",
+    print: "Imprimir",
     cv: "CV",
     blog: "Blog",
     matcad: "<strong>Grau</strong> en Matemàtica Computacional i Analítica de Dades",
@@ -49,7 +57,9 @@ const translations = {
     rosa_sensat: "Beca Rosa Sensat",
     portfolio: "Portfoli",
     erasmus: "Programa <strong>Erasmus+</strong>",
+    languages_text: "Català (Nadiu), Castellà (Nadiu), Anglès (C2), Suec (A1)",
     scroll_down: "Desplaça't cap avall",
+    last_update: "Última actualització",
     footer: "2026 Laia Querol Alturo - Tots els drets reservats."
   }
 };

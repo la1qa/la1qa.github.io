@@ -24,7 +24,9 @@ const CV: React.FC = () => {
                 <button
                     className={styles.downloadButton}
                     onClick={handleDownload}
-                data-i18n="print"></button>
+                >
+                    <span data-i18n="print">Print</span>
+                </button>
                 <header className={styles.header}>
                     <h1>Laia Querol Alturo</h1>
                     <div className={styles.meta}>
@@ -105,7 +107,7 @@ const CV: React.FC = () => {
                 </section>
 
                 <p className={styles.lastUpdate}>
-                    <span data-i18n="last_update"></span>: 22/01/2026
+                    <span data-i18n="last_update"></span> 22/01/2026
                 </p>
             </section>
         </main>

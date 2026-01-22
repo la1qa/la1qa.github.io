@@ -30,7 +30,13 @@ function setLanguage(lang) {
     if (!key) return;
     const text = translations && translations[lang] && translations[lang][key];
     if (typeof text === "string") {
-      el.innerHTML = text;
+      // For button elements, set textContent to preserve other child elements
+      if (el.tagName === "BUTTON") {
+        el.textContent = text;
+      } else {
+        // For other elements, use innerHTML to support HTML tags in translations
+        el.innerHTML = text;
+      }
     }
   });
 }

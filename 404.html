@@ -9,7 +9,7 @@
       var path = l.pathname.replace(/^\//, '');
       var search = l.search || '';
       var hash = l.hash || '';
-      var newUrl = '/' + (path ? '?' + encodeURIComponent(path) : '') + search + hash;
+      var newUrl = '/#/' + path + search + hash;
       window.location.replace(newUrl);
     })();
   </script>

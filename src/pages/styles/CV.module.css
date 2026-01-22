@@ -1,7 +1,7 @@
 @import url('../../index.css');
 
 .spacer {
-  padding-top: 1vh;
+  padding-top: 1rem;
   margin: auto;
   max-width: 767px;
   color: var(--text-color);

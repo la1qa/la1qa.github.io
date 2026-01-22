@@ -1,0 +1,115 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import styles from './styles/Header.module.css';
+
+const Header: React.FC = () => {
+  const [theme, setTheme] = useState<string>('light');
+
+  useEffect(() => {
+    // Load saved theme preference
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const lang = e.target.value;
+    localStorage.setItem("lang", lang);
+    if (typeof (window as any).setLanguage === 'function') {
+      (window as any).setLanguage(lang);
+    }
+  };
+
+  return (
+    <header className={styles.header} id="header">
+      <nav className={`${styles.nav} bd-container`}>
+        <a href="https://la1qa.github.io" className={styles.nav__logo}>
+          LAIA QUEROL ALTURO
+        </a>
+        <label className={styles.themeSwitch}>
+          <input 
+            type="checkbox" 
+            id="themeToggle" 
+            checked={theme === 'dark'}
+            onChange={toggleTheme}
+          />
+          <i className={`fas fa-sun ${styles.sun}`}></i>
+          <i className={`fas fa-moon ${styles.moon}`}></i>
+        </label>
+        <li className={styles.dropdown}>
+          <button className={styles.dropbtn}>
+            <i className="fas fa-bars"></i>
+          </button>
+          <div className={styles.dropdownContent}>
+            <a href="/home" className="navbar-link">
+              <i className="fas fa-user"></i>
+              <span data-i18n="home">Home</span>
+            </a>
+            <Link to="/cv" className="navbar-link">
+                <i className="fas fa-file"></i>
+                <span data-i18n="cv">CV</span>
+            </Link>
+            <Link to="/blog" className="navbar-link">
+              <i className="fas fa-newspaper"></i>
+              <span data-i18n="blog">Blog</span>
+            </Link>
+            <div className={styles.langSelectorMobile}>
+              <i className="fas fa-language"></i>
+              <select id="language-dropdown-mobile" className={styles.languageDropdownMobile} onChange={handleLanguageChange}>
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+              </select>
+            </div>
+          </div>
+        </li>
+
+        <div className={styles.nav__menu} id="nav-menu">
+          <ul className={styles.nav__list}>
+            <li className={styles.nav__item}>
+              <a href="/" className={styles.nav__link} data-i18n="home">Home</a>
+            </li>
+            <li className={styles.nav__item}>
+              <Link to="/blog" className={styles.nav__link} data-i18n="blog">
+                Blog
+              </Link>
+            </li>
+            <li className={styles.nav__item}>
+                <Link to="/cv" className={styles.nav__link} data-i18n="cv">
+                    CV
+                </Link>
+            </li>
+          </ul>
+          <div>
+              <input 
+                type="checkbox" 
+                className="checkbox" 
+                id="checkbox"
+                checked={theme === 'dark'}
+                onChange={toggleTheme}
+              />
+              <label htmlFor="checkbox" className="checkbox-label">
+                <i className="fas fa-moon"></i>
+                <i className="fas fa-sun"></i>
+                <span className="ball"></span>
+              </label>
+            </div>
+            <div className="lang-selector">
+              <select id="language-dropdown" onChange={handleLanguageChange}>
+                <option value="en">English</option>
+                <option value="ca">Català</option>
+              </select>
+            </div>
+        </div>
+      </nav>
+    </header>
+  );
+};
+
+export default Header;

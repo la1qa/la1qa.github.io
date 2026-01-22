@@ -1,7 +1,7 @@
 const translations = {
   en: {
     greeting: "Hello!",
-    name: "I'm Laia.",
+    name: "I'm ",
     presentation: `Welcome to my website!
                    This is a space where I share what I do, what I’m learning, and what I’m excited to build next. It serves as a portfolio of my work, but it is also a reflection of how I think and create.`,
     contact_button: "Contact me",
@@ -9,6 +9,7 @@ const translations = {
     education: "Education",
     experience: "Experience",
     projects: "Projects",
+    cv: "CV",
     blog: "Blog",
     matcad: "<strong>Bachelor's</strong> in Computational Mathematics and Data Analytics",
     batxillerat: "Scientific-Technological Baccalaureate",
@@ -21,12 +22,13 @@ const translations = {
     rosa_sensat: "Rosa Sensat Scolarship",
     portfolio: "Portfolio",
     erasmus: "<strong>Erasmus+</strong> Program",
-    scroll_down: "Scroll down"
+    scroll_down: "Scroll down",
+    footer: "2026 Laia Querol Alturo - All rights reserved."
   },
 
   ca: {
     greeting: "Hola!",
-    name: "Soc la Laia.",
+    name: "Soc la ",
     presentation: `Benvinguts al meu web! 
                    Aquest és un espai on comparteixo el que faig, el que estic aprenent i el que em fa il·lusió construir a continuació. Serveix com a portfoli de la meva feina, però també és un reflex de com penso i creo.`,
     contact_button: "Contacta’m",
@@ -34,6 +36,7 @@ const translations = {
     education: "Educació",
     experience: "Experiència",
     projects: "Projectes",
+    cv: "CV",
     blog: "Blog",
     matcad: "<strong>Grau</strong> en Matemàtica Computacional i Analítica de Dades",
     batxillerat: "Batxillerat Científic-Tecnològic",
@@ -45,6 +48,8 @@ const translations = {
     cvc_time1_text: "Obtinguda una beca per treballar a l'equip d'Imatge Mèdica. Treballant en tasques d'Aprenentatge Computacional.",
     rosa_sensat: "Beca Rosa Sensat",
     portfolio: "Portfoli",
-    erasmus: "Programa <strong>Erasmus+</strong>"
+    erasmus: "Programa <strong>Erasmus+</strong>",
+    scroll_down: "Desplaça't cap avall",
+    footer: "2026 Laia Querol Alturo - Tots els drets reservats."
   }
 };

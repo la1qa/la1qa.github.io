@@ -26,3 +26,6 @@ https://pixelied.com/colors/palette-editor/f8e9a1-f76c6c-a8d0e6-24305e-ffffff-22
 - Nice transitions
 - Catalan&English (Spanish?)
 - Spotify
+
+#### 21/01/2026
+Decided to integrade TypeScript to improve the organization of the site.

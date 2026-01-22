@@ -31,7 +31,7 @@ html {
   --timeline-line-color: #f8e9a1;
   --bg-split-color: rgba(168, 208, 230, 0.15); /* #f0f0f0 #fdfdff */
   --bg-off: #fdfdff;
-  --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --box-shadow-color: rgba(0, 0, 0, 0.15);
 }
 
 [data-theme="dark"] {
@@ -43,7 +43,7 @@ html {
   --bg-split-color: rgba(25, 33, 48, 0.8); /* blue overlay on black, adjust opacity and RGB */
   --timeline-line-color: #f76c6c;
   --bg-off: #222222;
-  --box-shadow-color: rgba(0, 0, 0, 0.45);
+  --box-shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -213,6 +213,7 @@ img {
   left: 0;
   z-index: 100;
   background-color: var(--header-bar-color);
+  box-shadow: 0 2px 4px var(--box-shadow-color);
 }
 
 .nav {
@@ -321,7 +322,7 @@ img {
 
 .home {
   background-color: var(--header-bar-color);
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   position: relative; /* allow header-aligned accents inside */
   z-index: 0; /* create stacking context below content wrapper */
 }
@@ -527,7 +528,7 @@ img {
 }
 
 .home__icon:hover {
-  color: var(--timeline-line-color);
+  color: var(--button-color);
   transition: 0.3s;
 }
 
@@ -542,7 +543,7 @@ img {
 .home__icon .fa-github:hover {
   transform: translateY(-2px);
   transition: 0.3s;
-  color: var(--timeline-line-color)
+  color: var(--button-color)
 }
 
 .home__icon .fa-linkedin {
@@ -552,7 +553,7 @@ img {
 .home__icon .fa-linkedin:hover {
   transform: translateY(-2px);
   transition: 0.3s;
-  color: var(--timeline-line-color)
+  color: var(--button-color)
 }
 
 .home__icon .fa-spotify {
@@ -562,7 +563,7 @@ img {
 .home__icon .fa-spotify:hover {
   transform: translateY(-2px);
   transition: 0.3s;
-  color: var(--timeline-line-color)
+  color: var(--button-color)
 }
 
 .home__icon {

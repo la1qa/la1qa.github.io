@@ -1,0 +1,51 @@
+{
+  "name": "github-portfolio",
+  "version": "1.0.0",
+  "description": "This repository contains all the necessary files for my website portfolio, my very first website!",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "classlist-polyfill": "^1.2.0",
+    "esbuild": "^0.21.5",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "nanoid": "^3.3.11",
+    "picocolors": "^1.1.1",
+    "postcss": "^8.5.6",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.12.0",
+    "rollup": "^4.55.3",
+    "source-map-js": "^1.2.1",
+    "typescript": "^5.9.3",
+    "undici-types": "^6.21.0",
+    "vite": "^5.4.21"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/la1qa/la1qa.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/la1qa/la1qa.github.io/issues"
+  },
+  "homepage": "https://github.com/la1qa/la1qa.github.io#readme",
+  "devDependencies": {
+    "@types/react": "^19.2.9",
+    "@types/react-dom": "^19.2.3",
+    "@types/react-router-dom": "^5.3.3",
+    "@vitejs/plugin-react": "^5.1.2"
+  }
+}

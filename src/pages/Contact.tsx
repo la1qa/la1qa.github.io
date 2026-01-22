@@ -12,11 +12,11 @@ export default function Contact() {
         }
 
         if (typeof window.AOS !== 'undefined') {
-            window.AOS.init({
+            (window as any).AOS.init({
                 duration: 1000,
                 once: true,
             });
-            window.AOS.refresh();
+            (window as any).AOS.refresh();
         }
     }, []);
     const email = 'laiaquerolalturo@gmail.com';

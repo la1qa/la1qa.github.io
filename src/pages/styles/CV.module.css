@@ -138,8 +138,13 @@
 }
 
 @media print {
-  :global(body) {
+  @page {
+    size: A4;
     margin: 20mm;
+  }
+
+  :global(body) {
+    margin: 0;
     background: #fff;
     color: #000;
   }

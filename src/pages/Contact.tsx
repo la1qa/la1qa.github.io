@@ -1,10 +1,27 @@
+import React, { useState } from 'react';
 import styles from './styles/Contact.module.css';
 
 export default function Contact() {
+    const [copied, setCopied] = useState(false);
+    const email = 'laiaquerolalturo@gmail.com';
+
+    const handleEmailClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(email);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
+
     return (
         <div className={styles.contact}>
             <span className={styles.subtitle} data-i18n="reach_out">If you want to reach out, email works best.</span>
-            <a href="mailto:laiaquerolalturo@gmail.com" className={styles.email}>laiaquerolalturo@gmail.com</a>
+            <button
+                onClick={handleEmailClick}
+                className={styles.email}
+                style={{ cursor: 'pointer', border: 'none', background: 'none', padding: 0 }}
+            >
+                {copied ? 'Copied!' : email}
+            </button>
             <span data-i18n="find_me_on">...if not, you'll find me on:</span>
             <div className={styles.socialIcons}>
                 <a href="https://github.com/la1qa" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>

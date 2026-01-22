@@ -24,11 +24,8 @@
   line-height: 1.2; /* tighter line spacing */
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-}
-
-.footer__copy h3 {
-  font-size: clamp(0.5rem, 1.75.0vw, 0.75rem);
+  gap: 0.25rem;
+  font-size: clamp(0.5rem, 2.5vw, 1rem);
 }
 
 .footer__box {
@@ -39,7 +36,7 @@
 .dot {
   opacity: 0.6;
   font-weight: 600;
-  margin: 0 0.5rem;
+  margin: 0 0.25rem;
 }
 
 .githubLink {

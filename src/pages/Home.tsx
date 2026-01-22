@@ -39,7 +39,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
               <div className={styles.cover__img} data-aos="fade-up">
-                <img src="/assets/img/getxo.jpg" alt="" className="cover-image" />
+                <img src="/public/assets/img/getxo.jpg" alt="" className="cover-image" />
               </div>
             </div>
             <div className={styles.cover__line} data-aos="fade-up" aria-hidden="true"></div>

@@ -24,7 +24,7 @@ const Home: React.FC = () => {
       <section className={styles.cover__container} id="home">
         <div className={styles.cover__data}>
             <div className={styles['cover__img-mobile']} data-aos="fade-up">
-              <img src="/assets/img/getxo.jpg" alt="" className="cover-image" />
+              <img src="/public/assets/img/getxo.jpg" alt="" className="cover-image" />
             </div>
             <div className={styles.cover__box} data-aos="fade-up">
               <div className={styles.cover__text}>

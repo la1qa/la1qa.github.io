@@ -47,8 +47,8 @@ const Home: React.FC = () => {
               <a href="https://github.com/la1qa" className={styles.cover__icon} target="_blank" rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="36"
-                  height="36"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -64,8 +64,8 @@ const Home: React.FC = () => {
               <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" className={styles.cover__icon} rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="36"
-                  height="36"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -82,8 +82,8 @@ const Home: React.FC = () => {
               <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" className={styles.cover__icon} rel="noopener noreferrer">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="36"
-                  height="36"
+                  width="24"
+                  height="24"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"

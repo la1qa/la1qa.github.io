@@ -1,8 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './styles/Contact.module.css';
 
 export default function Contact() {
     const [copied, setCopied] = useState(false);
+
+    useEffect(() => {
+        // Initialize i18n translations
+        const savedLang = localStorage.getItem("lang") || "en";
+        if (typeof (window as any).setLanguage === 'function') {
+            (window as any).setLanguage(savedLang);
+        }
+
+        if (typeof window.AOS !== 'undefined') {
+            window.AOS.init({
+                duration: 1000,
+                once: true,
+            });
+            window.AOS.refresh();
+        }
+    }, []);
     const email = 'laiaquerolalturo@gmail.com';
 
     const handleEmailClick = (e: React.MouseEvent) => {
@@ -14,16 +30,17 @@ export default function Contact() {
 
     return (
         <div className={styles.contact}>
-            <span className={styles.subtitle} data-i18n="reach_out">If you want to reach out, email works best.</span>
+            <span className={styles.subtitle} data-i18n="reach_out" data-aos="fade-up">If you want to reach out, email works best.</span>
             <button
                 onClick={handleEmailClick}
                 className={styles.email}
                 style={{ cursor: 'pointer', border: 'none', background: 'none', padding: 0 }}
+                data-aos="fade-up"
             >
                 {copied ? 'Copied!' : email}
             </button>
-            <span data-i18n="find_me_on">...if not, you'll find me on:</span>
-            <div className={styles.socialIcons}>
+            <span data-i18n="find_me_on" data-aos="fade-up">...if not, you'll find me on:</span>
+            <div className={styles.socialIcons} data-aos="fade-up">
                 <a href="https://github.com/la1qa" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
@@ -79,7 +96,7 @@ export default function Contact() {
                     <span>Spotify</span>
                 </a>
             </div>
-            <span data-i18n="based_in">Based in Barcelona. </span>
+            <span data-i18n="based_in" data-aos="fade-up">Based in Barcelona. </span>
         </div>
     );
 }

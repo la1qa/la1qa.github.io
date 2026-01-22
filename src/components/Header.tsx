@@ -52,13 +52,17 @@ const Header: React.FC = () => {
               <i className="fas fa-user"></i>
               <span data-i18n="home">Home</span>
             </a>
-            <Link to="/contact" className="navbar-link">
+            <Link to="/cv" className="navbar-link">
                 <i className="fas fa-file"></i>
-                <span data-i18n="contact">Contact</span>
+                <span data-i18n="cv">CV</span>
             </Link>
             <Link to="/blog" className="navbar-link">
               <i className="fas fa-newspaper"></i>
               <span data-i18n="blog">Blog</span>
+            </Link>
+            <Link to="/contact" className="navbar-link">
+                <i className="fas fa-phone"></i>
+                <span data-i18n="contact">Contact</span>
             </Link>
             <div className={styles.langSelectorMobile}>
               <i className="fas fa-language"></i>

@@ -52,7 +52,7 @@
 }
 
 .githubLink:hover {
-  color: var(--hover-color, #f76c6c);
+  color: var(--accent-color-2, #f76c6c);
 }
 
 .githubIcon {

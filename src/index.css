@@ -132,6 +132,7 @@ img {
 
 .white-bg {
   background-color: var(--bg-color);
+  padding: 0 1rem !important;
 }
 
 @media (min-width: 1024px) {
@@ -144,13 +145,6 @@ img {
 .l-main {
   flex: 1;
   padding-top: var(--header-height);
-}
-
-@media (min-width: 1024px) {
-  .bd-container {
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 /* Desktop theme switch */

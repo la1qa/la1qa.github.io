@@ -932,3 +932,9 @@
     overflow: hidden; /* or auto if you want scroll */
   }
 }
+
+.currently {
+  font-style: italic;
+  color: var(--text-gray);
+  font-size: clamp(0.75rem, 2.0vw, 0.9rem);
+}

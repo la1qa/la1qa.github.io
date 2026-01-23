@@ -2,8 +2,10 @@ const translations = {
   en: {
     greeting: "Hello!",
     name: "I'm ",
-    presentation: `Welcome to my website!
+    presentation_old: `Welcome to my website!
                    This is a space where I share what I do, what I’m learning, and what I’m excited to build next. It serves as a portfolio of my work, but it is also a reflection of how I think and create.`,
+    presentation: `I work in data science. Here I collect projects, notes, and thoughts in progress.`,
+    currently: "Currently working on my bachelor's thesis.",
     contact_button: "Contact me",
     home: "Home",
     education: "Education",
@@ -32,15 +34,17 @@ const translations = {
     reach_out: "If you want to reach out, email works best.",
     find_me_on: "...if not, you'll find me on:",
     based_in: "Based in Barcelona. ",
-    footer: "2026 - All rights reserved."
+    footer: "© 2026"
   },
 
   ca: {
     greeting: "Hola!",
     name: "Soc la ",
-    presentation: `Benvinguts al meu web! 
+    presentation_old: `Benvinguts al meu web! 
                    Aquest és un espai on comparteixo el que faig, el que estic aprenent i el que em fa il·lusió construir a continuació. Serveix com a portfoli de la meva feina, però també és un reflex de com penso i creo.`,
-    contact_button: "Contacta’m",
+    presentation: `Treballo en ciència de dades. Aquí recopilo projectes, notes i pensaments en progrés.`,
+    currently: "Actualment treballant en el meu treball de fi de grau.",
+     contact_button: "Contacta’m",
     home: "Inici",
     education: "Educació",
     experience: "Experiència",
@@ -68,7 +72,7 @@ const translations = {
     reach_out: "Si vols posar-te en contacte, el correu electrònic és la millor opció.",
     find_me_on: "...si no, em trobaràs a:",
     based_in: "Amb base a Barcelona.",
-    footer: "2026 - Tots els drets reservats."
+    footer: "© 2026"
   }
 };
 

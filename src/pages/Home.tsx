@@ -37,11 +37,14 @@ const Home: React.FC = () => {
                 <div className={styles.cover__description} data-aos="fade-up">
                   <p data-i18n="presentation"></p>
                 </div>
+                <span className={styles.currently} data-i18n="currently"></span>
               </div>
+              
               <div className={styles.cover__img} data-aos="fade-up">
                 <img src="/assets/img/getxo.jpg" alt="" className="cover-image" />
               </div>
             </div>
+
             <div className={styles.cover__line} data-aos="fade-up" aria-hidden="true"></div>
             <div className={styles.cover__social} data-aos="fade-up">
               <a href="https://github.com/la1qa" className={styles.cover__icon} target="_blank" rel="noopener noreferrer">

@@ -4,12 +4,20 @@ import styles from './styles/Header.module.css';
 
 const Header: React.FC = () => {
   const [theme, setTheme] = useState<string>('light');
+  const [language, setLanguage] = useState<string>('en');
 
   useEffect(() => {
     // Load saved theme preference
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
+  }, []);
+
+  useEffect(() => {
+    // Load saved language preference or detect browser language
+    const browserLang = navigator.language.split('-')[0];
+    const savedLang = localStorage.getItem('lang') || browserLang || 'en';
+    setLanguage(savedLang);
   }, []);
 
   const toggleTheme = () => {
@@ -21,6 +29,7 @@ const Header: React.FC = () => {
 
   const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lang = e.target.value;
+    setLanguage(lang);
     localStorage.setItem("lang", lang);
     if (typeof (window as any).setLanguage === 'function') {
       (window as any).setLanguage(lang);
@@ -70,7 +79,7 @@ const Header: React.FC = () => {
             </Link>
             <div className={styles.langSelectorMobile}>
               <i className="fas fa-language"></i>
-              <select id="language-dropdown-mobile" className={styles.languageDropdownMobile} onChange={handleLanguageChange}>
+              <select id="language-dropdown-mobile" className={styles.languageDropdownMobile} value={language} onChange={handleLanguageChange}>
                 <option value="en">English</option>
                 <option value="ca">Català</option>
               </select>
@@ -119,7 +128,7 @@ const Header: React.FC = () => {
               </label>
             </div>
             <div className="lang-selector">
-              <select id="language-dropdown" onChange={handleLanguageChange}>
+              <select id="language-dropdown" value={language} onChange={handleLanguageChange}>
                 <option value="en">English</option>
                 <option value="ca">Català</option>
               </select>

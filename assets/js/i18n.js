@@ -2,8 +2,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("language-dropdown");
   
-  // Set dropdown to saved language
-  dropdown.value = localStorage.getItem("lang") || "en";
+  // Set dropdown to saved language or detect browser language
+  const browserLang = navigator.language.split('-')[0]; // e.g., "ca" from "ca-ES"
+  const savedLang = localStorage.getItem("lang") || browserLang || "en";
+  dropdown.value = savedLang;
   
   // Change language when user selects a new one
   dropdown.addEventListener("change", (e) => {
@@ -23,7 +25,8 @@ function setLanguage(lang) {
 
 // Initialize language on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "en";
+    const browserLang = navigator.language.split('-')[0];
+    const savedLang = localStorage.getItem("lang") || browserLang || "en";
     setLanguage(savedLang);
 });
 
@@ -32,8 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.getElementById("language-dropdown-mobile");
   
-  // Set dropdown to saved language
-  dropdown.value = localStorage.getItem("lang") || "en";
+  // Set dropdown to saved language or detect browser language
+  const browserLang = navigator.language.split('-')[0];
+  const savedLang = localStorage.getItem("lang") || browserLang || "en";
+  dropdown.value = savedLang;
   
   // Change language when user selects a new one
   dropdown.addEventListener("change", (e) => {

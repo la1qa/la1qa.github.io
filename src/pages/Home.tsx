@@ -37,7 +37,7 @@ const Home: React.FC = () => {
                 <div className={styles.cover__description} data-aos="fade-up">
                   <p data-i18n="presentation"></p>
                 </div>
-                <span className={styles.currently} data-i18n="currently"></span>
+                <span className={styles.currently} data-i18n="currently" data-aos="fade-up"></span>
               </div>
               
               <div className={styles.cover__img} data-aos="fade-up">

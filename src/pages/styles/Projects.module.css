@@ -5,7 +5,9 @@
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 180px; /* base “box” height */
   gap: 1.2rem;  width: 100%;
-  min-height: 200px;}
+  min-height: 200px;
+
+}
 
 .projectCard {
   background: var(--bg-color);
@@ -16,14 +18,28 @@
   flex-direction: column;
 }
 
+.projectCard:hover {
+  border: 2px dashed var(--accent-color-1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .Description {
   display: flex;
   flex-direction: column;
+  container-type: size;
 }
 
 .Description h2 {
-  font-size: 1.5rem;
+  font-size: clamp(0.9rem, 8.0cqw, 1.4rem);
   font-weight: 500;
+}
+
+.Description p {
+  font-size: clamp(0.8rem, 5.0cqw, 0.9rem);
+  color: var(--text-gray);
+  flex-grow: 1;
+  margin-top: 0.2rem;
+  line-height: clamp(0.95rem, 5.75cqw, 1.05rem);
 }
 
 .Image {
@@ -126,6 +142,7 @@
 @media (max-width: 768px) {
   .projectsList {
     grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
   }
 
   /* sizes */

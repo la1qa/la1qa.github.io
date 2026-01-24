@@ -39,16 +39,18 @@ const Blog: React.FC = () => {
       <p>This is where blog posts will be displayed.</p>
       <div className={styles['blog-container']}>
         <BlogSidebar />
-        {posts.map((post) => (
-          <article key={post.slug}>
-            <time>{post.date}</time>
-            <h2>
-              <Link to={`/blog/${post.slug}`}>
-                {post.title[validLang] ?? post.title.en}
-              </Link>
-            </h2>
-          </article>
-        ))}
+        <div className={styles.Posts}>
+          {posts.map((post) => (
+            <article key={post.slug}>
+              <time>{post.date}</time>
+              <h2>
+                <Link to={`/blog/${post.slug}`}>
+                  {post.title[validLang] ?? post.title.en}
+                </Link>
+              </h2>
+            </article>
+          ))}
+        </div>
       </div>
     </main>
   );

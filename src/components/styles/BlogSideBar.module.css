@@ -1,17 +1,15 @@
 /* BlogSidebar.css */
 
 .blog-sidebar {
-  max-width: 250px;
-  margin: 2rem;
-  padding: 1rem 1.5rem;
-  background-color: var(--bg-color); /* lighter paper */
-  border: 2px solid var(--button-color);
+  max-width: 280px;
+  padding: 1rem;
+  background-color: transparent;
+  border: 2px dashed var(--button-color);
   border-radius: 2px;
 }
 
 .blog-sidebar h2 {
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   color: var(--text-color);
 }
 
@@ -22,15 +20,15 @@
 }
 
 .blog-sidebar li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0rem;
 }
 
 .blog-sidebar a {
   text-decoration: none;
-  color: #555;
+  color: var(--text-gray);
   transition: color 0.2s;
 }
 
 .blog-sidebar a:hover {
-  color: #c0392b; /* subtle red accent */
+  color: var(--accent-color-1); /* subtle red accent */
 }

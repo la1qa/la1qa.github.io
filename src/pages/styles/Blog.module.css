@@ -4,9 +4,15 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
-  padding: 2rem;
+  gap: 1rem;
   flex-direction: row;
+}
+
+.Posts {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--button-color);
+    background-color: var(--bg-color);
 }
 
 @media (max-width: 768px) {

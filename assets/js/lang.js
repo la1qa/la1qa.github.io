@@ -39,6 +39,7 @@ function setLanguage(lang) {
       }
     }
   });
+  window.dispatchEvent(new Event("languagechange"));
 }
 
 // expose for React usage

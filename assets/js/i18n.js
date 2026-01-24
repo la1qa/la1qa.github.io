@@ -40,7 +40,8 @@ const translations = {
     portfolio_title: "Portfolio",
     portfolio_description: "You’re currently browsing it :)",
     saf_wrapped_title: "SAF-Wrapped",
-    saf_wrapped_description: "Visualizes usage patterns of the UAB Physical Activity Service."
+    saf_wrapped_description: "Visualizes usage patterns of the UAB Physical Activity Service.",
+    all_posts: "All entires"
   },
 
   ca: {
@@ -84,7 +85,8 @@ const translations = {
     portfolio_title: "Portfoli",
     portfolio_description: "Navegues per ell :)",
     saf_wrapped_title: "SAF-Wrapped",
-    saf_wrapped_description: "Permet visualitzar els patrons d'ús del Servei d'Activitat Física de la UAB."
+    saf_wrapped_description: "Permet visualitzar els patrons d'ús del Servei d'Activitat Física de la UAB.",
+    all_posts: "Totes les entrades"
   }
 };
 

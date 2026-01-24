@@ -1,0 +1,1 @@
+T'està agradant? 

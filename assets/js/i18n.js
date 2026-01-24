@@ -34,7 +34,13 @@ const translations = {
     reach_out: "If you want to reach out, email works best.",
     find_me_on: "...if not, you'll find me on:",
     based_in: "Based in Barcelona. ",
-    footer: "© 2026"
+    footer: "© 2026",
+    projects_intro: `A selection of things I’ve worked on. From coursework and research to small side projects and experiments.`,
+    read_more: "Read More ",
+    portfolio_title: "Portfolio",
+    portfolio_description: "You are surfing it. :)",
+    saf_wrapped_title: "SAF-Wrapped",
+    saf_wrapped_description: "Allows visualizing the use of the UAB Physical Activity Service."
   },
 
   ca: {
@@ -72,7 +78,13 @@ const translations = {
     reach_out: "Si vols posar-te en contacte, el correu electrònic és la millor opció.",
     find_me_on: "...si no, em trobaràs a:",
     based_in: "Amb base a Barcelona.",
-    footer: "© 2026"
+    footer: "© 2026",
+    projects_intro: `Una selecció de coses en les que he treballat. Des de treballs acadèmics i recerca fins a petits projectes paral·lels i experiments.`,
+    read_more: "Llegir més ",
+    portfolio_title: "Portfoli",
+    portfolio_description: "Navegues per ell. :)",
+    saf_wrapped_title: "SAF-Wrapped",
+    saf_wrapped_description: "Permet visualitzar l'us del Servei d'Activitat Física de la UAB."
   }
 };
 

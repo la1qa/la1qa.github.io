@@ -35,9 +35,17 @@ const Projects: React.FC = () => {
         <div className={styles.projectsList}>
             {/* Example project card */}
             <div className={`${styles.projectCard} ${styles.Small}`} data-aos="fade-up">
-                <h2>Portfolio</h2>
-                <p>You are surfing it. :)</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                <div className={styles.Description} >     
+                    <h2>Portfolio</h2>
+                    <p>You are surfing it. :)</p>
+                    <div className={styles.Links}>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div className={styles.Image}>
+                  <img src="/assets/img/project_placeholder.svg" alt="Project preview placeholder" />
+                </div>
             </div>
             <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
                 <div className={styles.Description}> 
@@ -53,19 +61,43 @@ const Projects: React.FC = () => {
                 </div>
             </div>
             <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">
-                <h2>Project Title</h2>
-                <p>Brief description of the project.</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                <div className={styles.Description} >     
+                    <h2>Project Title</h2>
+                    <p>Brief description of the project.</p>
+                    <div className={styles.Links}>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div className={styles.Image}>
+                  <img src="/assets/img/project_placeholder.svg" alt="Project preview placeholder" />
+                </div>
             </div>
             <div className={`${styles.projectCard} ${styles.MediumVertical}`} data-aos="fade-up">
-                <h2>Project Title</h2>
-                <p>Brief description of the project.</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                <div className={styles.Description} >     
+                    <h2>Project Title</h2>
+                    <p>Brief description of the project.</p>
+                    <div className={styles.Links}>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div className={styles.Image}>
+                  <img src="/assets/img/project_placeholder.svg" alt="Project preview placeholder" />
+                </div>
             </div>
             <div className={`${styles.projectCard} ${styles.Hero}`} data-aos="fade-up">
-                <h2>Project Title</h2>
-                <p>Brief description of the project.</p>
-                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+                <div className={styles.Description} >     
+                    <h2>Project Title</h2>
+                    <p>Brief description of the project.</p>
+                    <div className={styles.Links}>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+                <div className={styles.Image}>
+                  <img src="/assets/img/project_placeholder.svg" alt="Project preview placeholder" />
+                </div>
             </div>
             {/* Add more project cards as needed */}
         </div>

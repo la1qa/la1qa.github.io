@@ -46,6 +46,7 @@
   width: 100%;
   overflow: hidden;
   aspect-ratio: 4 / 3;
+  margin-bottom: 0;
 }
 
 .Image img {
@@ -93,6 +94,10 @@
 .Small {
   grid-column: span 1;
   grid-row: span 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0.2rem;
 }
 
 .MediumHorizontal {
@@ -106,20 +111,32 @@
 .MediumVertical {
   grid-column: span 1;
   grid-row: span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0.2rem;
 }
 
 .Large {
   grid-column: span 2;
   grid-row: span 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 0.2rem;
 }
 
 .Hero {
   grid-column: span 3;
   grid-row: span 2; /* or 3 */
+  display: grid;
+  grid-template-columns: 2fr auto;
+  grid-template-rows: 1fr;
+  gap: 0.8rem;
 }
 
 .Small .Image {
-  height: 80px;
+  height: 60px;
 }
 
 .MediumHorizontal .Image {
@@ -133,6 +150,7 @@
 
 .Large .Image {
   height: 180px;
+  align-self: end;
 }
 
 .Huge .Image {
@@ -144,6 +162,16 @@
     grid-template-columns: 1fr;
     grid-auto-rows: 200px;
   }
+
+  .Links {
+    font-size: 0.8rem;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .github:hover {
+        transform: none;
+    }
 
   /* sizes */
     .Small {
@@ -169,5 +197,25 @@
     .Hero {
     grid-column: span 1;
     grid-row: span 2; /* or 3 */
+    }
+
+    .Small .Image {
+        height: 100px;
+    }
+
+    .MediumHorizontal .Image {
+        height: 160px;
+    }
+
+    .MediumVertical .Image {
+        height: 160px;
+    }
+
+    .Large .Image {
+        height: 200px;
+    }
+
+    .Huge .Image {
+        height: 200px;
     }
 }

@@ -1,0 +1,60 @@
+/* BlogPost.css */
+
+.blog-post {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  background-color: #fefbf6; /* paper-ish background */
+  border: 1px solid #e0dfd8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Georgia", serif;
+  line-height: 1.65;
+}
+
+.blog-post h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.blog-post time {
+  display: block;
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post p {
+  margin-bottom: 1rem;
+}
+
+.blog-post img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.blog-post blockquote {
+  border-left: 3px solid #ccc;
+  margin: 1rem 0;
+  padding-left: 1rem;
+  color: #555;
+  font-style: italic;
+}
+
+.blog-post pre {
+  background-color: #f4f3f0;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+}
+
+.blog-post code {
+  background-color: #f4f3f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+}

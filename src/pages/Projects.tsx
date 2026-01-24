@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
                     <h2 data-i18n="portfolio_title">Portfolio</h2>
                     <p data-i18n="portfolio_description">You are surfing it. :)</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a className={styles.readMore} href="/#/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>

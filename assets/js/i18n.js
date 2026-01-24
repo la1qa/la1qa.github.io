@@ -21,6 +21,7 @@ function setLanguage(lang) {
         const key = el.getAttribute("data-i18n");
         el.innerHTML = translations[lang][key];
     });
+  window.dispatchEvent(new Event("languagechange"));
 }
 
 // Initialize language on page load
@@ -54,6 +55,7 @@ function setLanguage(lang) {
         const key = el.getAttribute("data-i18n");
         el.innerHTML = translations[lang][key];
     });
+  window.dispatchEvent(new Event("languagechange"));
 }
 
 // Initialize language on page load

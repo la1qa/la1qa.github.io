@@ -7,6 +7,7 @@ import Blog from './pages/Blog';
 import CV from './pages/CV';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import BlogPostPage from './components/BlogPost';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/cv" element={<CV />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/blog/:slug" element={<BlogPostPage />} />
         </Routes>
         <Footer />
       </div>

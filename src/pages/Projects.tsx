@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import styles from './styles/Projects.module.css';
 
 const Projects: React.FC = () => {
   useEffect(() => {
@@ -7,6 +8,23 @@ const Projects: React.FC = () => {
     if (typeof (window as any).setLanguage === 'function') {
       (window as any).setLanguage(savedLang);
     }
+
+    // Initialize AOS
+    const initAOS = () => {
+      if ((window as any).AOS) {
+        (window as any).AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+        (window as any).AOS.refresh();
+      } else {
+        // Wait for AOS to load
+        setTimeout(initAOS, 100);
+      }
+    };
+    
+    initAOS();
   }, []);
 
   return (
@@ -14,6 +32,40 @@ const Projects: React.FC = () => {
       <div>
         <h1>Projects Page</h1>
         <p>This is where projects will be displayed.</p>
+        <div className={styles.projectsList}>
+            {/* Example project card */}
+            <div className={`${styles.projectCard} ${styles.Small}`} data-aos="fade-up">
+                <h2>Portfolio</h2>
+                <p>You are surfing it. :)</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
+                <div> 
+                    <h2>SAF-Wrapped</h2>
+                    <p>Permet visualitzar l'us del Servei d'Activitat Física de la UAB.</p>
+                    <a href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+                <div className={styles.Image}>
+                    <img src="/assets/img/uabbarcelona_logo.jpeg" alt="Portfolio website preview" />
+                </div>
+            </div>
+            <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">
+                <h2>Project Title</h2>
+                <p>Brief description of the project.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div className={`${styles.projectCard} ${styles.MediumVertical}`} data-aos="fade-up">
+                <h2>Project Title</h2>
+                <p>Brief description of the project.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            <div className={`${styles.projectCard} ${styles.Hero}`} data-aos="fade-up">
+                <h2>Project Title</h2>
+                <p>Brief description of the project.</p>
+                <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+            {/* Add more project cards as needed */}
+        </div>
       </div>
     </main>
   );

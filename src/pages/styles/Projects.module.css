@@ -1,0 +1,116 @@
+@import url('../../index.css');
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 180px; /* base “box” height */
+  gap: 1.2rem;  width: 100%;
+  min-height: 200px;}
+
+.projectCard {
+  background: var(--bg-color);
+  border: 2px solid var(--button-color);
+  padding: 1rem;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.Image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 0.6rem;
+  aspect-ratio: 4 / 3;
+}
+
+.Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.95);
+  object-position: center;
+}
+
+/* sizes */
+.Small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.MediumHorizontal {
+  grid-column: span 2;
+  grid-row: span 1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 0.8rem;
+}
+
+.MediumVertical {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.Large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.Hero {
+  grid-column: span 3;
+  grid-row: span 2; /* or 3 */
+}
+
+.Small .Image {
+  height: 80px;
+}
+
+.MediumHorizontal .Image {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 0;
+  height: 140px;
+}
+
+.MediumVertical .Image {
+  height: 140px;
+}
+
+.Large .Image {
+  height: 180px;
+}
+
+.Huge .Image {
+  height: 180px;
+}
+
+@media (max-width: 768px) {
+  .projectsList {
+    grid-template-columns: 1fr;
+  }
+
+  /* sizes */
+    .Small {
+    grid-column: span 1;
+    grid-row: span 1;
+    }
+
+    .MediumHorizontal {
+    grid-column: span 1;
+    grid-row: span 1;
+    }
+
+    .MediumVertical {
+    grid-column: span 1;
+    grid-row: span 2;
+    }
+
+    .Large {
+    grid-column: span 1;
+    grid-row: span 2;
+    }
+
+    .Hero {
+    grid-column: span 1;
+    grid-row: span 2; /* or 3 */
+    }
+}

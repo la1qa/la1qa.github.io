@@ -43,9 +43,6 @@ const Projects: React.FC = () => {
                         <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-                <div className={styles.Image}>
-                  <img src="/assets/img/project_placeholder.svg" alt="Project preview placeholder" />
-                </div>
             </div>
             <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
                 <div className={styles.Description}> 

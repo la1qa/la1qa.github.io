@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
     <main className="bd-container l-main">
       <div>
         <header className={styles.pageIntro}>
-            <p>
+            <p data-i18n="projects_intro">
                 A selection of things I’ve worked on. From coursework and research
                 to small side projects and experiments.
             </p>
@@ -40,20 +40,20 @@ const Projects: React.FC = () => {
             {/* Example project card */}
             <div className={`${styles.projectCard} ${styles.Small}`} data-aos="fade-up">
                 <div className={styles.Description} >     
-                    <h2>Portfolio</h2>
-                    <p>You are surfing it. :)</p>
+                    <h2 data-i18n="portfolio_title">Portfolio</h2>
+                    <p data-i18n="portfolio_description">You are surfing it. :)</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
-                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
             </div>
             <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
                 <div className={styles.Description}> 
-                    <h2>SAF-Wrapped</h2>
-                    <p>Permet visualitzar l'us del Servei d'Activitat Física de la UAB.</p>
+                    <h2 data-i18n="saf_wrapped_title">SAF-Wrapped</h2>
+                    <p data-i18n="saf_wrapped_description">Permet visualitzar l'us del Servei d'Activitat Física de la UAB.</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog/saf-wrapped" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.readMore} href="/blog/saf-wrapped" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const Projects: React.FC = () => {
                     <h2>Project Title</h2>
                     <p>Brief description of the project.</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ const Projects: React.FC = () => {
                     <h2>Project Title</h2>
                     <p>Brief description of the project.</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
                     <h2>Project Title</h2>
                     <p>Brief description of the project.</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.readMore} href="/blog" target="_blank" rel="noopener noreferrer"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>

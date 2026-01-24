@@ -30,8 +30,12 @@ const Projects: React.FC = () => {
   return (
     <main className="bd-container l-main">
       <div>
-        <h1>Projects Page</h1>
-        <p>This is where projects will be displayed.</p>
+        <header className={styles.pageIntro}>
+            <p>
+                A selection of things I’ve worked on. From coursework and research
+                to small side projects and experiments.
+            </p>
+        </header>
         <div className={styles.projectsList}>
             {/* Example project card */}
             <div className={`${styles.projectCard} ${styles.Small}`} data-aos="fade-up">

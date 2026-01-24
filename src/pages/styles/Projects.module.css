@@ -174,7 +174,6 @@
 @media (max-width: 768px) {
   .projectsList {
     grid-template-columns: 1fr;
-    grid-auto-rows: 200px;
   }
 
   .Description p {
@@ -228,17 +227,12 @@
         gap: 0.2rem;
     }
 
-    .Small .Image {
-        height: 100px;
-    }
-
-    .MediumHorizontal .Image, 
     .MediumVertical .Image {
-        height: 160px;
+        height: 140px;
     }
 
     .Large .Image,
     .Hero .Image {
-        height: 200px;
+        height: 180px;
     }
 }

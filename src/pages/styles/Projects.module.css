@@ -6,7 +6,7 @@
   grid-auto-rows: 180px; /* base “box” height */
   gap: 1.2rem;  width: 100%;
   min-height: 200px;
-
+  margin: 1rem 0;
 }
 
 .projectCard {
@@ -30,7 +30,7 @@
 }
 
 .Description h2 {
-  font-size: clamp(0.9rem, 8.0cqw, 1.4rem);
+  font-size: clamp(1.0rem, 8.5cqw, 1.4rem);
   font-weight: 500;
 }
 
@@ -175,28 +175,34 @@
 
   /* sizes */
     .Small {
-    grid-column: span 1;
-    grid-row: span 1;
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     .MediumHorizontal {
-    grid-column: span 1;
-    grid-row: span 1;
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     .MediumVertical {
-    grid-column: span 1;
-    grid-row: span 1;
+        grid-column: span 1;
+        grid-row: span 1;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 0.8rem;
     }
 
     .Large {
-    grid-column: span 1;
-    grid-row: span 2;
+        grid-column: span 1;
+        grid-row: span 2;
     }
 
     .Hero {
-    grid-column: span 1;
-    grid-row: span 2; /* or 3 */
+        grid-column: span 1;
+        grid-row: span 2; /* or 3 */
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        gap: 0.2rem;
     }
 
     .Small .Image {
@@ -215,7 +221,7 @@
         height: 200px;
     }
 
-    .Huge .Image {
+    .Hero .Image {
         height: 200px;
     }
 }

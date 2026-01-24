@@ -169,17 +169,22 @@
     gap: 0.1rem;
   }
 
+  /* keep row layout on selected cards */
+  .Hero .Links,
+  .Small .Links,
+  .Large .Links {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* disable github icon scaling on mobile */
+  .github,
   .github:hover {
-        transform: none;
-    }
+    transform: none;
+  }
 
   /* sizes */
-    .Small {
-        grid-column: span 1;
-        grid-row: span 1;
-    }
-
-    .MediumHorizontal {
+    .Small, .MediumHorizontal {
         grid-column: span 1;
         grid-row: span 1;
     }
@@ -209,18 +214,12 @@
         height: 100px;
     }
 
-    .MediumHorizontal .Image {
-        height: 160px;
-    }
-
+    .MediumHorizontal .Image, 
     .MediumVertical .Image {
         height: 160px;
     }
 
-    .Large .Image {
-        height: 200px;
-    }
-
+    .Large .Image,
     .Hero .Image {
         height: 200px;
     }

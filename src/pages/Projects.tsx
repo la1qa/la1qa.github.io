@@ -40,13 +40,16 @@ const Projects: React.FC = () => {
                 <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
             </div>
             <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
-                <div> 
+                <div className={styles.Description}> 
                     <h2>SAF-Wrapped</h2>
                     <p>Permet visualitzar l'us del Servei d'Activitat Física de la UAB.</p>
-                    <a href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <div className={styles.Links}>
+                        <a className={styles.readMore} href="/blog/saf-wrapped" target="_blank" rel="noopener noreferrer">Read More <i className="fas fa-arrow-right"></i></a>
+                        <a className={styles.github} href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    </div>
                 </div>
                 <div className={styles.Image}>
-                    <img src="/assets/img/uabbarcelona_logo.jpeg" alt="Portfolio website preview" />
+                    <img src="/assets/img/saf_wrapped.png" alt="SAF-Wrapped project preview" />
                 </div>
             </div>
             <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">

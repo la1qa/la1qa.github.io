@@ -1,4 +1,16 @@
-/* BlogPost.css */
+@import url('../../index.css');
+
+.backLink {
+  display: inline-block;
+  color: var(--accent-color-2, #f76c6c);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
 
 .postHeader {
   display: flex;

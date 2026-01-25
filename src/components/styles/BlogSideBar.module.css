@@ -1,34 +1,3 @@
 /* BlogSidebar.css */
 
-.blog-sidebar {
-  max-width: 280px;
-  padding: 1rem;
-  background-color: transparent;
-  border: 2px dashed var(--button-color);
-  border-radius: 2px;
-}
 
-.blog-sidebar h2 {
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-.blog-sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.blog-sidebar li {
-  margin-bottom: 0rem;
-}
-
-.blog-sidebar a {
-  text-decoration: none;
-  color: var(--text-gray);
-  transition: color 0.2s;
-}
-
-.blog-sidebar a:hover {
-  color: var(--accent-color-1); /* subtle red accent */
-}

@@ -3,6 +3,8 @@ import { posts } from "../content/blog";
 import { Link } from "react-router-dom"; // or Next Link
 import styles from './styles/Blog.module.css';
 import BlogSidebar from '../components/BlogSideBar';
+import BlogPostPreview from '../components/BlogPostPreview';
+import BlogIntro from '../components/BlogIntro';
 
 function getCurrentLang() {
   return localStorage.getItem("lang") || "en";
@@ -11,6 +13,12 @@ function getCurrentLang() {
 const Blog: React.FC = () => {
   const [lang, setLang] = useState<string>(() => getCurrentLang());
   const validLang = (lang === 'ca' ? lang : 'en') as 'en' | 'ca';
+  const [selectedPost, setSelectedPost] = useState<(typeof posts[number] & { path: string }) | null>(null);
+
+  const handleSelectPost = (post: { title: { en: string; ca: string; }; date: string; slug: string; }) => {
+    const selectedPostWithPath = { ...post, path: `/${post.slug}` };
+    setSelectedPost(selectedPostWithPath);
+  };
 
   useEffect(() => {
     const onStorageChange = () => {
@@ -34,25 +42,25 @@ const Blog: React.FC = () => {
   }, []);
 
   return (
-    <main className={`bd-container l-main`}>
-      <h1>Blog Page</h1>
-      <p>This is where blog posts will be displayed.</p>
+    <div className={`bd-container l-main`}>
+      <header className={styles.pageIntro}>
+        <p data-i18n="blog_intro">
+            A chronological collection of notes and posts.
+        </p>
+      </header>
       <div className={styles['blog-container']}>
-        <BlogSidebar />
-        <div className={styles.Posts}>
-          {posts.map((post) => (
-            <article key={post.slug}>
-              <time>{post.date}</time>
-              <h2>
-                <Link to={`/blog/${post.slug}`}>
-                  {post.title[validLang] ?? post.title.en}
-                </Link>
-              </h2>
-            </article>
-          ))}
-        </div>
+        <aside className={styles['blog-sidebar']}>
+          <BlogSidebar onSelectPost={handleSelectPost} />
+        </aside>
+        <main className={styles.Preview}>
+          {selectedPost ? (
+              <BlogPostPreview post={selectedPost} lang={validLang} />
+            ) : (
+              <BlogIntro />
+            )}
+        </main>
       </div>
-    </main>
+    </div>
   );
 };
 

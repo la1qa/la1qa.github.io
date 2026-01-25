@@ -7,7 +7,12 @@ function getCurrentLang() {
   return localStorage.getItem("lang") || "en";
 }
 
-export default function BlogSidebar() {
+// Define props for the sidebar
+type BlogSidebarProps = {
+  onSelectPost: (post: typeof posts[number]) => void;
+};
+
+export default function BlogSidebar({ onSelectPost }: BlogSidebarProps) {
   const [lang, setLang] = useState<string>(() => getCurrentLang());
 
   useEffect(() => {
@@ -25,17 +30,20 @@ export default function BlogSidebar() {
   }, []);
 
   return (
-    <aside className={styles['blog-sidebar']}>
-      <h2 data-i18n="all_posts">All posts</h2>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <Link to={`/blog/${post.slug}`}>
-              {post.date} — {post.title[lang as keyof typeof post.title] ?? post.title.en}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </aside>
+    <ul>
+    {posts.map((post) => (
+        <li key={post.slug}>
+        <a
+            href="#!"
+            onClick={(e) => {
+            e.preventDefault();
+            onSelectPost(post);
+            }}
+        >
+            {post.date} — {post.title[lang as keyof typeof post.title] ?? post.title.en}
+        </a>
+        </li>
+    ))}
+    </ul>
   );
 }

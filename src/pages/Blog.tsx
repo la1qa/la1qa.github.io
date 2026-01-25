@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { posts } from "../content/blog";
-import { Link } from "react-router-dom"; // or Next Link
 import styles from './styles/Blog.module.css';
 import BlogSidebar from '../components/BlogSideBar';
 import BlogPostPreview from '../components/BlogPostPreview';

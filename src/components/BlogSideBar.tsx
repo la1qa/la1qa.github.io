@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { posts } from "../content/blog";
-import { Link } from "react-router-dom";
-import styles from './styles/BlogSideBar.module.css';
 
 function getCurrentLang() {
   return localStorage.getItem("lang") || "en";

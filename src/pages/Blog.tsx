@@ -14,7 +14,7 @@ const Blog: React.FC = () => {
   const validLang = (lang === 'ca' ? lang : 'en') as 'en' | 'ca';
   const [selectedPost, setSelectedPost] = useState<(typeof posts[number] & { path: string }) | null>(null);
 
-  const handleSelectPost = (post: { title: { en: string; ca: string; }; date: string; slug: string; }) => {
+  const handleSelectPost = (post: { title: { en: string; ca: string; }; date: string; slug: string; excerpt: { en: string; ca: string; }; }) => {
     const selectedPostWithPath = { ...post, path: `/${post.slug}` };
     setSelectedPost(selectedPostWithPath);
   };

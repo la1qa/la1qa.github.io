@@ -12,12 +12,6 @@ const CV: React.FC = () => {
 
     const sectionRef = useRef<HTMLElement | null>(null);
 
-    const handleDownload = () => {
-        if (typeof window !== 'undefined') {
-            window.print();
-        }
-    };
-
     return (
         <main className="bd-container l-main white-bg">
             <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>

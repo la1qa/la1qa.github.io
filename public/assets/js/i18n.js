@@ -41,7 +41,7 @@ const translations = {
     portfolio_description: "You’re currently browsing it :)",
     saf_wrapped_title: "SAF-Wrapped",
     saf_wrapped_description: "Visualizes usage patterns of the UAB Physical Activity Service.",
-    all_posts: "All entries",
+    overview: "Overview",
     back_to_blog: "Back to Blog"
   },
 
@@ -50,7 +50,7 @@ const translations = {
     name: "Soc la ",
     presentation_old: `Benvinguts al meu web! 
                    Aquest és un espai on comparteixo el que faig, el que estic aprenent i el que em fa il·lusió construir a continuació. Serveix com a portfoli de la meva feina, però també és un reflex de com penso i creo.`,
-    presentation: `Treballo en ciència de dades. Aquí recopilo projectes, notes i pensaments en progrés.`,
+    presentation: `Treballo en ciència de dades. Aquí recopilo projectes, notes i idees en procés.`,
     currently: "Actualment treballant en el meu treball de fi de grau.",
      contact_button: "Contacta’m",
     home: "Inici",
@@ -87,7 +87,7 @@ const translations = {
     portfolio_description: "Navegues per ell :)",
     saf_wrapped_title: "SAF-Wrapped",
     saf_wrapped_description: "Permet visualitzar els patrons d'ús del Servei d'Activitat Física de la UAB.",
-    all_posts: "Totes les entrades",
+    overview: "Inici",
     back_to_blog: "Tornar al Blog"
   }
 };

@@ -40,18 +40,37 @@ const Blog: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    // Initialize AOS
+    const initAOS = () => {
+      if ((window as any).AOS) {
+        (window as any).AOS.init({
+          duration: 800,
+          once: true,
+          offset: 100
+        });
+        (window as any).AOS.refresh();
+      } else {
+        // Wait for AOS to load
+        setTimeout(initAOS, 100);
+      }
+    };
+    
+    initAOS();
+  }, []);
+
   return (
     <div className={`bd-container l-main`}>
-      <header className={styles.pageIntro}>
+      <header className={styles.pageIntro} data-aos="fade-right">
         <p data-i18n="blog_intro">
             A chronological collection of notes and posts.
         </p>
       </header>
       <div className={styles['blog-container']}>
-        <aside className={styles['blog-sidebar']}>
-          <BlogSidebar onSelectPost={handleSelectPost} />
+        <aside className={styles['blog-sidebar']} data-aos="fade-right">
+          <BlogSidebar onSelectPost={handleSelectPost} onClearPost={() => setSelectedPost(null)} selectedPostSlug={selectedPost?.slug} />
         </aside>
-        <main className={styles.Preview}>
+        <main className={styles.Preview} data-aos="fade-left">
           {selectedPost ? (
               <BlogPostPreview post={selectedPost} lang={validLang} />
             ) : (

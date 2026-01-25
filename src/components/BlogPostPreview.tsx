@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import styles from "./styles/BlogPostPreview.module.css";
 
 type BlogPost = {
   title: Record<string, string>;
@@ -27,19 +28,18 @@ export default function BlogPostPreview({
   }, [post]);
 
   return (
-    <article className="blog-post-preview">
+    <article className={styles["blog-post"]}>
       <header>
         <h2>{post.title[lang]}</h2>
         <time>{post.date}</time>
       </header>
-
-      <div className="blog-post-preview-content">
+      <div>
         <ReactMarkdown>{content}</ReactMarkdown>
       </div>
 
       <footer>
-        <Link to={`/blog/${post.slug}`} className="blog-read-more">
-          Read post →
+        <Link to={`/blog/${post.slug}`} className={styles["blog-read-more"]}>
+          <span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i>
         </Link>
       </footer>
     </article>

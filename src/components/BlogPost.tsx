@@ -27,10 +27,15 @@ export default function BlogPostPage() {
       }
     };
 
+    // Initialize language on mount
+    const currentLang = getCurrentLang();
+    setLang(currentLang);
+    if (typeof (window as any).setLanguage === 'function') {
+      (window as any).setLanguage(currentLang);
+    }
+
     window.addEventListener("storage", onStorageChange);
     window.addEventListener("languagechange", onStorageChange);
-
-    onStorageChange();
 
     return () => {
       window.removeEventListener("storage", onStorageChange);
@@ -58,18 +63,22 @@ export default function BlogPostPage() {
   if (content === null) return <p>Loading post…</p>;
 
   const title = post.title[lang as keyof typeof post.title] ?? post.title.en;
+  
+  // Get translations based on current language
+  const printText = lang === 'ca' ? 'Imprimir' : 'Print';
+  const backText = lang === 'ca' ? 'Tornar al Blog' : 'Back to Blog';
 
   return (
     <main className={`bd-container l-main`}>
       <article className={styles['blog-post']}>
         <header className={styles.postHeader}>
-          <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
-          <a href="/#/blog"><i className="fas fa-arrow-left" aria-hidden="true"></i> <span data-i18n="back_to_blog">Back to Blog</span></a>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }}><i className="fas fa-print" aria-hidden="true"></i> <span>{printText}</span></a>
+          <a href="/#/blog"><i className="fas fa-arrow-left" aria-hidden="true"></i> <span>{backText}</span></a>
         </header>
         <h1>{title}</h1>
         <time>{post.date}</time>
         <ReactMarkdown>{content}</ReactMarkdown>
-        <a href="/#/blog" className={styles.backLink}><i className="fas fa-arrow-left" aria-hidden="true"></i> <span data-i18n="back_to_blog">Back to Blog</span></a>
+        <a href="/#/blog" className={styles.backLink}><i className="fas fa-arrow-left" aria-hidden="true"></i> <span>{backText}</span></a>
       </article>
     </main>
   );

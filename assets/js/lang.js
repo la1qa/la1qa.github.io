@@ -23,7 +23,11 @@ const translations = {
     portfolio: "Portfolio",
     erasmus: "<strong>Erasmus+</strong> Program",
     scroll_down: "Scroll down",
-    footer: "2026 Laia Querol Alturo - All rights reserved."
+    footer: "2026 Laia Querol Alturo - All rights reserved.",
+    print: "Print",
+    back_to_blog: "Back to Blog",
+    blog_intro: "A chronological collection of notes and posts.",
+    read_more: "Read More"
   },
 
   ca: {
@@ -50,6 +54,10 @@ const translations = {
     portfolio: "Portfoli",
     erasmus: "Programa <strong>Erasmus+</strong>",
     scroll_down: "Desplaça't cap avall",
-    footer: "2026 Laia Querol Alturo - Tots els drets reservats."
+    footer: "2026 Laia Querol Alturo - Tots els drets reservats.",
+    print: "Imprimeix",
+    back_to_blog: "Torna al Blog",
+    blog_intro: "Una col·lecció cronològica de notes i publicacions.",
+    read_more: "Llegeix més"
   }
 };

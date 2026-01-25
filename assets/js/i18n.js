@@ -41,7 +41,7 @@ const translations = {
     portfolio_description: "You’re currently browsing it :)",
     saf_wrapped_title: "SAF-Wrapped",
     saf_wrapped_description: "Visualizes usage patterns of the UAB Physical Activity Service.",
-    all_posts: "All entires"
+    all_posts: "All entries"
   },
 
   ca: {

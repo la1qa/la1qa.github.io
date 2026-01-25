@@ -14,9 +14,18 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     padding: 1rem;
     flex: 1;
-    min-width: 250px;
+    min-width: 180px;
     box-sizing: border-box;
     transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 0;
+}
+
+.Card p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    max-width: 100%;
 }
 
 .ReadMore {
@@ -30,4 +39,62 @@
 
 .ReadMore:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .BlogIntro {
+        padding: 0;
+    }
+
+    .BlogIntro h1 {
+        margin: 0.5rem 0 0 0;
+        font-size: 1.5rem;
+    }
+
+    .BlogIntro p {
+        margin: 0.25rem 0;
+        font-size: 0.85rem;
+    }
+
+    .PostCards {
+        margin: 0.5rem 0;
+    }
+
+    .PostCards h2 {
+        margin: 0.5rem 0 0.25rem 0;
+        font-size: 1rem;
+    }
+
+    .Cards {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .Card {
+        padding: 0.75rem;
+        width: 100%;
+        flex: none;
+        overflow: hidden;
+    }
+
+    .Card h3 {
+        margin: 0 0 0.25rem 0;
+        font-size: 0.95rem;
+    }
+
+    .Card time {
+        font-size: 0.75rem;
+    }
+
+    .Card p {
+        margin: 0.25rem 0;
+        font-size: 0.85rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        white-space: normal;
+        max-width: 100%;
+    }
 }

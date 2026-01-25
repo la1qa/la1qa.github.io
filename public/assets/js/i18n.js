@@ -42,7 +42,8 @@ const translations = {
     saf_wrapped_title: "SAF-Wrapped",
     saf_wrapped_description: "Visualizes usage patterns of the UAB Physical Activity Service.",
     overview: "Overview",
-    back_to_blog: "Back to Blog"
+    back_to_blog: "Back to Blog",
+    blog_intro: "A chronological collection of notes and posts."
   },
 
   ca: {
@@ -88,7 +89,8 @@ const translations = {
     saf_wrapped_title: "SAF-Wrapped",
     saf_wrapped_description: "Permet visualitzar els patrons d'ús del Servei d'Activitat Física de la UAB.",
     overview: "Inici",
-    back_to_blog: "Tornar al Blog"
+    back_to_blog: "Tornar al Blog",
+    blog_intro: "Una col·lecció cronològica de notes i publicacions."
   }
 };
 

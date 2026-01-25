@@ -34,6 +34,7 @@
   background-color: transparent;
   border: 2px dashed var(--button-color);
   border-radius: 2px;
+  width: 100%;
 }
 
 .blog-sidebar h2 {
@@ -63,8 +64,16 @@
 
 @media (max-width: 768px) {
   .blog-container {
+    width: 100%;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 1rem;
+    gap: 1.0rem;
+  }
+  .blog-sidebar {
+    max-width: 100%;
+    width: 100%;
+  }
+  .Preview {
+    max-width: 100%;
+    width: 100%;
   }
 }

@@ -2,7 +2,7 @@
 
 .spacer {
   padding: 3rem 0;
-  margin: auto;
+  margin: 2rem auto 0;
   max-width: 767px;
   color: var(--text-color);
   display: flex;
@@ -10,24 +10,21 @@
   font-family: 'Times New Roman', Times, serif;
 }
 
-.downloadButton {
+.printButton {
   color: var(--text-gray, #333);
   display: inline-flex;
   gap: 0.5rem;
   align-items: center;
   background: transparent;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--text-gray, #333);
-  border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
+  text-decoration: none;
   align-self: flex-start;
-  margin: 1rem 0 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.downloadButton:hover{
+.printButton:hover {
   color: var(--accent-color-1, #f76c6c);
-  border-color: var(--accent-color-1, #f76c6c);
 }
 
 .ghostButton {
@@ -154,7 +151,7 @@
     display: none !important;
   }
 
-  .downloadButton {
+  .printButton {
     display: none;
   }
 

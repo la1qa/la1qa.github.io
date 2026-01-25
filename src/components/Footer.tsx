@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer id="contact" className={styles.footer}>
       <div className={styles.footer__container}>
         <h3 className={styles.footer__copy}>
-          <span data-i18n="footer"></span>
+          <span data-i18n="footer">© 2026</span>
           <span aria-hidden="true" className={styles.dot}>·</span>
           <a 
               href="https://github.com/la1qa/la1qa.github.io" 

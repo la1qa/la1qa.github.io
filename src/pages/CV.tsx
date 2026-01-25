@@ -21,12 +21,7 @@ const CV: React.FC = () => {
     return (
         <main className="bd-container l-main white-bg">
             <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>
-                <button
-                    className={styles.downloadButton}
-                    onClick={handleDownload}
-                >
-                    <span data-i18n="print">Print</span>
-                </button>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
                 <header className={styles.header}>
                     <h1>Laia Querol Alturo</h1>
                     <div className={styles.meta}>

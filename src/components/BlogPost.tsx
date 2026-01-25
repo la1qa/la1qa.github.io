@@ -19,17 +19,23 @@ export default function BlogPostPage() {
   // 🔁 Listen for language changes
   useEffect(() => {
     const onStorageChange = () => {
-      setLang(getCurrentLang());
+      const nextLang = getCurrentLang();
+      setLang(nextLang);
+
+      if (typeof (window as any).setLanguage === 'function') {
+        (window as any).setLanguage(nextLang);
+      }
     };
 
     window.addEventListener("storage", onStorageChange);
     window.addEventListener("languagechange", onStorageChange);
 
+    onStorageChange();
+
     return () => {
       window.removeEventListener("storage", onStorageChange);
       window.removeEventListener("languagechange", onStorageChange);
     };
-    onStorageChange();
   }, []);
 
   // 📄 Fetch markdown when lang OR post changes
@@ -56,9 +62,14 @@ export default function BlogPostPage() {
   return (
     <main className={`bd-container l-main`}>
       <article className={styles['blog-post']}>
+        <header className={styles.postHeader}>
+          <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
+          <a href="/#/blog"><i className="fas fa-arrow-left" aria-hidden="true"></i> <span data-i18n="back_to_blog">Back to Blog</span></a>
+        </header>
         <h1>{title}</h1>
         <time>{post.date}</time>
         <ReactMarkdown>{content}</ReactMarkdown>
+        <a href="/#/blog" className={styles.backLink}><i className="fas fa-arrow-left" aria-hidden="true"></i> <span data-i18n="back_to_blog">Back to Blog</span></a>
       </article>
     </main>
   );

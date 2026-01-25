@@ -1,5 +1,20 @@
 /* BlogPost.css */
 
+.postHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.postHeader p, .postHeader a {
+  font-size: 0.875rem;
+  color: var(--text-gray);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
 .blog-post {
   max-width: 768px;
   margin: 2rem auto;
@@ -57,4 +72,19 @@
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-family: "Courier New", monospace;
+}
+
+/* Print styles */
+@media print {
+  .postHeader,
+  .backLink {
+    display: none !important;
+  }
+  
+  .blog-post {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
 }

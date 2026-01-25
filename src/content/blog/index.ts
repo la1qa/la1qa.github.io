@@ -21,7 +21,7 @@ export const posts = [
         'ca': "SAF-Wrapped",
     },
     date: "2026-01-25",
-    slug: "saf-wrapped",
+    slug: "2026-01-saf",
   },
 ].sort((a, b) => b.date.localeCompare(a.date));
 

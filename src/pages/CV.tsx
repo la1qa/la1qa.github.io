@@ -31,22 +31,29 @@ const CV: React.FC = () => {
                         <h3 className={styles.itemTitle}>
                             <span data-i18n="matcad"></span><span className={styles.date}>Sep 2022 - </span>
                         </h3>
-                        <p>Autonomous University of Barcelona (UAB)</p>
+                        <p className={styles.positionTitle}>
+                            <span>Universitat Autònoma de Barcelona (UAB)</span>
+                            <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
+                        </p>
                     </div>
                     <div className={styles.item}>
                         <h3 className={styles.itemTitle}>
                             <span data-i18n="erasmus"></span><span className={styles.date}>Feb 2025 - Jun 2025</span>
                         </h3>
-                        <p>Linköping Universitet (LiU)</p>
+                        <p className={styles.positionTitle}>
+                            <span>Linköpings Universitet (LiU)</span>
+                            <span className={styles.date}> Linköping, Östergötland, Sweden</span>
+                        </p>
                     </div>
                 </section>
 
                 <section className={styles.section}>
                     <h2 data-i18n="experience"></h2>
                     <div className={styles.item}>
-                        <h2 className={styles.itemTitle}>
+                        <h4 className={styles.itemTitle}>
                             <span data-i18n="cvc"></span>
-                        </h2>
+                            <span className={styles.date}> Cerdanyola del Vallès, Catalonia, Spain</span>
+                        </h4>
                         <div className={styles.position}>
                             <h3 className={styles.positionTitle}>
                                 <span data-i18n="cvc_internship"></span>
@@ -73,7 +80,7 @@ const CV: React.FC = () => {
                     <ul className={styles.skillsList}>
                         <li>
                             <span className={styles.skillsTitle}>Programming Languages:</span>
-                            <span>Python, Java, C++, C, JavaScript, TypeScript, SQL, Bash, R</span>
+                            <span>Python, C++, C, SQL, Bash, R, Java, JavaScript, TypeScript</span>
                         </li>
                         <li>
                             <span className={styles.skillsTitle}>Version Control:</span>
@@ -93,6 +100,22 @@ const CV: React.FC = () => {
                 <section className={styles.section}>
                     <h2 data-i18n="languages"></h2>
                     <p data-i18n="languages_text"></p>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 data-i18n="awards"> Awards</h2>
+                    <div className={styles.item}>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="tdr_upc"> 2n Premi Poincaré</span><span className={styles.date}> May 2022</span>
+                        </h3>
+                        <p data-i18n="tdr_upc_text"></p>
+                    </div>
+                    <div className={styles.item}>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="tdr_uab"> 1r Premi Argó</span><span className={styles.date}> June 2022</span>
+                        </h3>
+                        <p data-i18n="tdr_uab_text"></p>
+                    </div>
                 </section>
 
                 <p className={styles.lastUpdate}>

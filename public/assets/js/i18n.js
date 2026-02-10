@@ -46,9 +46,9 @@ const translations = {
     blog_intro: "A chronological collection of notes and posts.",
     awards: "Awards",
     tdr_upc: "2n Premi Poincaré",
-    tdr_upc_text: "Awarded 2nd prize for the best research project, organized by the Faculty of Mathematics and Statistics at the Universitat Politècnica de Catalunya. Project Title: \"Origami: L'art es troba amb les matemàtiques\" (\"Origami: Art meets mathematics\")",
+    tdr_upc_text: "2nd prize, Best Research Project, organized by the Faculty of Mathematics and Statistics at the Universitat Politècnica de Catalunya.",
     tdr_uab: "1r Premi Argó",
-    tdr_uab_text: "Awarded 1st prize for the best research project in the science category, organized by the Universitat Autònoma de Barcelona. Project Title: \"Origami: L'art es troba amb les matemàtiques\" (\"Origami: Art meets mathematics\")"
+    tdr_uab_text: "1st prize, Best Research Project in the science category, organized by the Universitat Autònoma de Barcelona."
   },
 
   ca: {

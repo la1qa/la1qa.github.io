@@ -99,27 +99,45 @@ const CV: React.FC = () => {
 
                 <section className={styles.section}>
                     <h2 data-i18n="languages"></h2>
-                    <p data-i18n="languages_text"></p>
+                    <p className={styles.positionTitle}>
+                        <span> Catalan (Native)</span>
+                        <span className={styles.dot}>·</span>
+                        <span> Spanish (Native)</span>
+                        <span className={styles.dot}>·</span>
+                        <span> English (C2 Proficiency)</span>
+                        <span className={styles.dot}>·</span>
+                        <span> Svenska (A1 Elementary)</span>
+                    </p>
                 </section>
 
                 <section className={styles.section}>
                     <h2 data-i18n="awards"> Awards</h2>
                     <div className={styles.item}>
-                        <h3 className={styles.itemTitle}>
-                            <span data-i18n="tdr_upc"> 2n Premi Poincaré</span><span className={styles.date}> May 2022</span>
-                        </h3>
-                        <p data-i18n="tdr_upc_text"></p>
+                        <p className={styles.itemTitle}>
+                            <span data-i18n="tdr"> Project Title: "Origami: L'art es troba amb les matemàtiques" ("Origami: Art meets mathematics")</span>
+                        </p>
+                        <ul className={styles.awardsList}>
+                            <li>
+                                <h3 className={styles.awardsTitle}>
+                                    <span data-i18n="tdr_uab"> 1r Premi Argó</span>
+                                    <span className={styles.date}> June 2022</span>
+                                </h3>
+                                <p className={styles.awardsText} data-i18n="tdr_uab_text"></p>
+                            </li>
+                            <li>
+                                <h3 className={styles.awardsTitle}>
+                                    <span data-i18n="tdr_upc"> 2n Premi Poincaré</span>
+                                    <span className={styles.date}> May 2022</span>
+                                </h3>
+                                <p className={styles.awardsText} data-i18n="tdr_upc_text"></p>
+                            </li>
+                        </ul>
                     </div>
-                    <div className={styles.item}>
-                        <h3 className={styles.itemTitle}>
-                            <span data-i18n="tdr_uab"> 1r Premi Argó</span><span className={styles.date}> June 2022</span>
-                        </h3>
-                        <p data-i18n="tdr_uab_text"></p>
-                    </div>
+                    
                 </section>
 
                 <p className={styles.lastUpdate}>
-                    <span data-i18n="last_update"></span> 22/01/2026
+                    <span data-i18n="last_update"></span> 10/02/2026
                 </p>
             </section>
         </main>

@@ -124,6 +124,7 @@
   font-weight: 600;
   display: flex;
   justify-content: space-between;
+  font-size: 1.0rem;
 }
 
 p {
@@ -139,12 +140,21 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  line-height: 1.1;
+}
+
+.positionTitle p {
+  line-height: 1.1;
 }
 
 @media print {
   @page {
     size: A4;
     margin: 12mm;
+  }
+
+  :global(html) {
+    font-size: 15px;
   }
 
   :global(body) {

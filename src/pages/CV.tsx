@@ -80,19 +80,27 @@ const CV: React.FC = () => {
                     <ul className={styles.skillsList}>
                         <li>
                             <span className={styles.skillsTitle}>Programming Languages:</span>
-                            <span>Python, C++, C, SQL, Bash, R, Java, JavaScript, TypeScript</span>
+                            <span>Python, C++, C, Bash, R, Java, JavaScript, TypeScript</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Version Control:</span>
-                            <span>Git, GitHub</span>
+                            <span className={styles.skillsTitle}>Data Analysis/ML:</span>
+                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Data Analysis:</span>
-                            <span>Pandas, NumPy, PyTorch, Jupyter Notebooks, Excel, Matplotlib, Scikit-learn</span>
+                            <span className={styles.skillsTitle}>Data Visualization:</span>
+                            <span>Matplotlib, Seaborn, Plotly</span>
+                        </li>
+                        <li>
+                            <span className={styles.skillsTitle}>Database Management:</span>
+                            <span>SQL</span>
                         </li>
                         <li>
                             <span className={styles.skillsTitle}>Front-end Development:</span>
                             <span>React, Node.js, npm, HTML, CSS</span>
+                        </li>
+                        <li>
+                            <span className={styles.skillsTitle}>Other:</span>
+                            <span>Git, GitHub, Jupyter Notebooks</span>
                         </li>
                     </ul>
                 </section>

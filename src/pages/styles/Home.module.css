@@ -938,3 +938,17 @@
   color: var(--text-gray);
   font-size: clamp(0.75rem, 2.0vw, 0.9rem);
 }
+
+.constructionBanner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid var(--accent-color-1);
+  color: var(--accent-color-1);
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-weight: bold;
+  z-index: 20;
+  border-radius: 0px 0px 8px 8px;
+}

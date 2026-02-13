@@ -22,6 +22,10 @@ const Home: React.FC = () => {
     <main className="bd-container l-main">
       {/* Cover Section */}
       <section className={styles.cover__container} id="home">
+        {/* Site Under Construction Banner */}
+        <div className={styles.constructionBanner}>
+          <span>🚧 Site Under Construction 🚧</span>
+        </div>
         <div className={styles.cover__data}>
             <div className={styles['cover__img-mobile']} data-aos="fade-up">
               <img src="/assets/img/getxo.jpg" alt="" className="cover-image" />

@@ -9,8 +9,8 @@ function getCurrentLang() {
 
 export default function BlogIntro() {
     const [lang, setLang] = useState<string>(() => getCurrentLang());
-    const recentPosts = posts.slice(0, 3);
-    const topPosts = posts.slice(0, 2); // example
+    const recentPosts = posts.slice(0, 1); // examples
+    const topPosts = posts.slice(1, 3); // example
 
     useEffect(() => {
         const onStorageChange = () => setLang(getCurrentLang());
@@ -28,10 +28,8 @@ export default function BlogIntro() {
 
     return (
         <div className={styles.BlogIntro}>
-            <h1>Blog</h1>
-            <p>Welcome to my blog</p>
             <section className={styles.PostCards}>
-                <h2 data-i18n="recent_posts">Recent Posts</h2>
+                <h2 data-i18n="recent_posts">Recent Post</h2>
                 <div className={styles.Cards}>
                     {recentPosts.map((post) => (
                         <div key={post.slug} className={styles.Card}>

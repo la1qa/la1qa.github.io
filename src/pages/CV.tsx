@@ -75,7 +75,7 @@ const CV: React.FC = () => {
                     </div>
                 </section>
 
-                <section className={styles.section}>
+                <section className={styles.section} id="skills">
                     <h2 data-i18n="skills"></h2>
                     <ul className={styles.skillsList}>
                         <li>

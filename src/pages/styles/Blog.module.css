@@ -23,13 +23,14 @@
 
 .Preview {
     flex: 1;
-    padding: 1rem;
-    border: 2px solid var(--button-color);
-    background-color: var(--bg-color);
+    padding: 0rem;
+    border: 0px solid var(--button-color);
+    background-color: transparent;
+    color: var(--text-color);
 }
 
 .blog-sidebar {
-  max-width: 280px;
+  max-width: 240px;
   padding: 1rem;
   background-color: transparent;
   border: 2px dashed var(--button-color);
@@ -53,6 +54,7 @@
 }
 
 .blog-sidebar a {
+  font-size: 0.85rem;
   text-decoration: none;
   color: var(--text-gray);
   transition: color 0.2s;

@@ -198,6 +198,10 @@ p {
     column-count: 2 !important;
     column-gap: 1rem !important;
   }
+
+  .lastUpdate {
+    display: none !important;
+  }
 }
 
 .subtle {

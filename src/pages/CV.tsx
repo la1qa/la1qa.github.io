@@ -22,6 +22,23 @@ const CV: React.FC = () => {
                         <span>Cerdanyola del Vallès, Barcelona</span>
                         <span aria-hidden="true" className={styles.dot}>·</span>
                         <a href="mailto:Laia.QuerolA@autonoma.cat">Laia.QuerolA@autonoma.cat</a>
+                        <span aria-hidden="true" className={styles.dot}>·</span>
+                        <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" rel="noopener noreferrer">linkedin.com/in/laia-querol-alturo</a>
+                    </div>
+                    <div className={styles.profileIntro}>
+                        <div className={styles.profilePhotoFrame}>
+                            <img
+                                src="/assets/img/getxo.jpg"
+                                alt="Profile photo of Laia Querol Alturo"
+                                className={styles.profilePhoto}
+                            />
+                        </div>
+                        <p className={styles.profileSummary}>
+                            Student focused on machine learning and deep learning, with hands-on experience in computer vision.
+                            Passionate about leveraging data to solve complex problems and drive innovation. 
+                            Currently working on my bachelor's thesis titled "Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images". Seeking internship
+                            opportunities to further develop my experience.
+                        </p>
                     </div>
                 </header>
 
@@ -35,6 +52,9 @@ const CV: React.FC = () => {
                             <span>Universitat Autònoma de Barcelona (UAB)</span>
                             <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
                         </p>
+                        <span className={styles.description}>
+                            <span data-i18n="matcad_desc">4th year. Passed 192/240ects.</span>
+                        </span>
                     </div>
                     <div className={styles.item}>
                         <h3 className={styles.itemTitle}>
@@ -92,7 +112,7 @@ const CV: React.FC = () => {
                         </li>
                         <li>
                             <span className={styles.skillsTitle}>Database Management:</span>
-                            <span>SQL</span>
+                            <span>SQL, MongoDB</span>
                         </li>
                         <li>
                             <span className={styles.skillsTitle}>Front-end Development:</span>
@@ -114,7 +134,7 @@ const CV: React.FC = () => {
                         <span className={styles.dot}>·</span>
                         <span> English (C2 Proficiency)</span>
                         <span className={styles.dot}>·</span>
-                        <span> Svenska (A1 Elementary)</span>
+                        <span> Swedish (A1 Elementary)</span>
                     </p>
                 </section>
 

@@ -48,7 +48,24 @@ const translations = {
     tdr_upc: "2n Premi Poincaré",
     tdr_upc_text: "2nd prize, Best Research Project, organized by the Faculty of Mathematics and Statistics at the Universitat Politècnica de Catalunya.",
     tdr_uab: "1r Premi Argó",
-    tdr_uab_text: "1st prize, Best Research Project in the science category, organized by the Universitat Autònoma de Barcelona."
+    tdr_uab_text: "1st prize, Best Research Project in the science category, organized by the Universitat Autònoma de Barcelona.",
+    profile_summary: "Student in data science with experience in computer vision and applied research. Currently working on a thesis on predictive modeling from medical images. Skilled in data preprocessing, exploratory analysis, and data visualization. Committed to ethical data handling, privacy preservation, with an interest in applying data to support informed decision-making.",
+    matcad_desc: "4th year. Passed 192/240ects.",
+    programming_languages: "Programming Languages:",
+    data_analysis_ml: "Data Analysis/ML:",
+    data_visualization: "Data Visualization:",
+    database_management: "Database Management:",
+    front_end_development: "Front-end Development:",
+    other: "Other:",
+    cat: "Catalan (Native)",
+    esp: "Spanish (Native)",
+    eng: "English (C2 Proficiency)",
+    swe: "Swedish (A1 Elementary)",
+    june_2022: "June 2022",
+    may_2022: "May 2022",
+    cvc_tfg: "Bachelor's Thesis",
+    cvc_time3: "Jan 2026 - June 2026",
+    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\""
   },
 
   ca: {
@@ -95,7 +112,30 @@ const translations = {
     saf_wrapped_description: "Permet visualitzar els patrons d'ús del Servei d'Activitat Física de la UAB.",
     overview: "Inici",
     back_to_blog: "Tornar al Blog",
-    blog_intro: "Una col·lecció cronològica de notes i publicacions."
+    blog_intro: "Una col·lecció cronològica de notes i publicacions.",
+    awards: "Premis",
+    tdr: "Treball de Recerca: <i>\"Origami: L'art es troba amb les matemàtiques\"</i>",
+    tdr_upc: "2n Premi Poincaré",
+    tdr_upc_text: "Organitzat per la Facultat de Matemàtiques i Estadística de la Universitat Politècnica de Catalunya.",
+    tdr_uab: "1r Premi Argó",
+    tdr_uab_text: "En la categoria de ciències, organitzat per la Universitat Autònoma de Barcelona.",
+    profile_summary: "Estudiant en ciència de dades amb experiència en visió per computador i recerca aplicada. Actualment desenvolupant el TFG sobre modelització predictiva a partir d’imatges mèdiques. Amb competències en preprocessament de dades, anàlisi exploratòria i visualització. Compromesa amb el tractament ètic de les dades, la privacitat i amb interès en aplicar dades per a la presa de decisions informades.",
+    matcad_desc: "4t any.",
+    programming_languages: "Llenguatges de Programació:",
+    data_analysis_ml: "Anàlisi de Dades/ML:",
+    data_visualization: "Visualització de Dades:",
+    database_management: "Gestió de Bases de Dades:",
+    front_end_development: "Desenvolupament Front-end:",
+    other: "Altres:",
+    cat: "Català (Nadiu)",
+    esp: "Castellà (Nadiu)",
+    eng: "Anglès (C2)",
+    swe: "Suec (A1)",
+    june_2022: "Juny 2022",
+    may_2022: "Maig 2022",
+    cvc_tfg: "Treball de Fi de Grau",
+    cvc_time3: "Gen 2026 - June 2026",
+    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\""
   }
 };
 

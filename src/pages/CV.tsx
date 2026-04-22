@@ -33,11 +33,8 @@ const CV: React.FC = () => {
                                 className={styles.profilePhoto}
                             />
                         </div>
-                        <p className={styles.profileSummary}>
-                            Student focused on machine learning and deep learning, with hands-on experience in computer vision.
-                            Passionate about leveraging data to solve complex problems and drive innovation. 
-                            Currently working on my bachelor's thesis titled "Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images". Seeking internship
-                            opportunities to further develop my experience.
+                        <p className={styles.profileSummary} data-i18n="profile_summary">
+                            Student in data science with experience in computer vision and applied research. Currently working on a thesis on predictive modeling from medical images. Skilled in data preprocessing, exploratory analysis, and data visualization. Committed to ethical data handling, privacy preservation, with an interest in applying data to support informed decision-making.
                         </p>
                     </div>
                 </header>
@@ -76,6 +73,15 @@ const CV: React.FC = () => {
                         </h4>
                         <div className={styles.position}>
                             <h3 className={styles.itemTitle}>
+                                <span data-i18n="cvc_tfg"></span>
+                                <span className={styles.date} data-i18n="cvc_time3"></span>
+                            </h3>
+                            <ul className={styles.list}>
+                                <li><i data-i18n="cvc_time3_text"></i></li>
+                            </ul>
+                        </div>
+                        <div className={styles.position}>
+                            <h3 className={styles.itemTitle}>
                                 <span data-i18n="cvc_internship"></span>
                                 <span className={styles.date} data-i18n="cvc_time2"></span>
                             </h3>
@@ -99,27 +105,27 @@ const CV: React.FC = () => {
                     <h2 data-i18n="skills"></h2>
                     <ul className={styles.skillsList}>
                         <li>
-                            <span className={styles.skillsTitle}>Programming Languages:</span>
+                            <span className={styles.skillsTitle} data-i18n="programming_languages"></span>
                             <span>Python, C++, C, Bash, R, Java, JavaScript, TypeScript</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Data Analysis/ML:</span>
+                            <span className={styles.skillsTitle} data-i18n="data_analysis_ml"></span>
                             <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Data Visualization:</span>
+                            <span className={styles.skillsTitle} data-i18n="data_visualization"></span>
                             <span>Matplotlib, Seaborn, Plotly</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Database Management:</span>
+                            <span className={styles.skillsTitle} data-i18n="database_management"></span>
                             <span>SQL, MongoDB</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Front-end Development:</span>
+                            <span className={styles.skillsTitle} data-i18n="front_end_development"></span>
                             <span>React, Node.js, npm, HTML, CSS</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle}>Other:</span>
+                            <span className={styles.skillsTitle} data-i18n="other"></span>
                             <span>Git, GitHub, Jupyter Notebooks</span>
                         </li>
                     </ul>
@@ -128,13 +134,13 @@ const CV: React.FC = () => {
                 <section className={styles.section}>
                     <h2 data-i18n="languages"></h2>
                     <p className={styles.positionTitle}>
-                        <span> Catalan (Native)</span>
+                        <span data-i18n="cat"> Catalan (Native)</span>
                         <span className={styles.dot}>·</span>
-                        <span> Spanish (Native)</span>
+                        <span data-i18n="esp"> Spanish (Native)</span>
                         <span className={styles.dot}>·</span>
-                        <span> English (C2 Proficiency)</span>
+                        <span data-i18n="eng"> English (C2 Proficiency)</span>
                         <span className={styles.dot}>·</span>
-                        <span> Swedish (A1 Elementary)</span>
+                        <span data-i18n="swe"> Swedish (A1 Elementary)</span>
                     </p>
                 </section>
 
@@ -148,14 +154,14 @@ const CV: React.FC = () => {
                             <li>
                                 <h3 className={styles.awardsTitle}>
                                     <span data-i18n="tdr_uab"> 1r Premi Argó</span>
-                                    <span className={styles.date}> June 2022</span>
+                                    <span className={styles.date} data-i18n="june_2022"> June 2022</span>
                                 </h3>
                                 <p className={styles.awardsText} data-i18n="tdr_uab_text"></p>
                             </li>
                             <li>
                                 <h3 className={styles.awardsTitle}>
                                     <span data-i18n="tdr_upc"> 2n Premi Poincaré</span>
-                                    <span className={styles.date}> May 2022</span>
+                                    <span className={styles.date} data-i18n="may_2022"> May 2022</span>
                                 </h3>
                                 <p className={styles.awardsText} data-i18n="tdr_upc_text"></p>
                             </li>

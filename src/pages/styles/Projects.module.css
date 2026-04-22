@@ -49,7 +49,7 @@
 }
 
 .Description p {
-  font-size: clamp(0.8rem, 5.0cqw, 0.9rem);
+  font-size: clamp(0.7rem, 4.75cqw, 0.75rem);
   color: var(--text-gray);
   flex-grow: 1;
   margin-top: 0.4rem;
@@ -92,11 +92,24 @@
 
 .readMore:hover {
   text-decoration: underline;
-}   
+}  
+
+.paper {
+  color: var(--text-gray);
+  transition: transform 0.3s ease;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.paper:hover {
+  color: var(--accent-color-1);
+  transform: scale(1.1);
+}
 
 .github {
   color: var(--text-gray);
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 
 .github:hover {
@@ -159,7 +172,7 @@
 }
 
 .MediumVertical .Image {
-  height: 180px;
+  height: 140px;
 }
 
 .Large .Image {

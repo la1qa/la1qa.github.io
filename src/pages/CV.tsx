@@ -105,28 +105,28 @@ const CV: React.FC = () => {
                     <h2 data-i18n="skills"></h2>
                     <ul className={styles.skillsList}>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="programming_languages"></span>
+                            <span className={styles.skillsTitle} data-i18n="programming_languages"> Programming Languages:</span>
                             <span>Python, C++, C, Bash, R, Java, JavaScript, TypeScript</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="data_analysis_ml"></span>
-                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV</span>
+                            <span className={styles.skillsTitle} data-i18n="data_analysis_ml"> Data Analysis/ML:</span>
+                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV, gudhi</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="data_visualization"></span>
-                            <span>Matplotlib, Seaborn, Plotly</span>
+                            <span className={styles.skillsTitle} data-i18n="data_visualization"> Data Visualization:</span>
+                            <span>Matplotlib, Seaborn</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="database_management"></span>
-                            <span>SQL, MongoDB</span>
+                            <span className={styles.skillsTitle} data-i18n="database_management"> Database Management:</span>
+                            <span>SQL, MongoDB, Neo4j</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="front_end_development"></span>
-                            <span>React, Node.js, npm, HTML, CSS</span>
+                            <span className={styles.skillsTitle} data-i18n="web_development"> Web Development:</span>
+                            <span>React, Node.js, npm, HTML5, CSS</span>
                         </li>
                         <li>
-                            <span className={styles.skillsTitle} data-i18n="other"></span>
-                            <span>Git, GitHub, Jupyter Notebooks</span>
+                            <span className={styles.skillsTitle} data-i18n="other"> Other:</span>
+                            <span>Git, GitHub, Jupyter Notebooks, VS Code</span>
                         </li>
                     </ul>
                 </section>

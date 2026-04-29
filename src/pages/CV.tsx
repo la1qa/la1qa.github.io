@@ -50,7 +50,7 @@ const CV: React.FC = () => {
                             <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
                         </p>
                         <span className={styles.description}>
-                            <span data-i18n="matcad_desc">4th year. Passed 192/240ects.</span>
+                            <span data-i18n="matcad_desc">4th year.</span>
                         </span>
                     </div>
                     <div className={styles.item}>

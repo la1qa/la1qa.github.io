@@ -52,7 +52,7 @@ const translations = {
     tdr_uab: "1r Premi Argó",
     tdr_uab_text: "1st prize, Best Research Project in the science category, organized by the Universitat Autònoma de Barcelona.",
     profile_summary: "Student in data science with experience in computer vision and applied research. Currently working on a thesis on predictive modeling from medical images. Skilled in data preprocessing, exploratory analysis, and data visualization. Committed to ethical data handling, privacy preservation, with an interest in applying data to support informed decision-making.",
-    matcad_desc: "4th year. Passed 192/240ects.",
+    matcad_desc: "4th year.",
     programming_languages: "Programming Languages:",
     data_analysis_ml: "Data Analysis/ML:",
     data_visualization: "Data Visualization:",

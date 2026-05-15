@@ -50,7 +50,7 @@ const CV: React.FC = () => {
                             <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
                         </p>
                         <span className={styles.description}>
-                            <span data-i18n="matcad_desc">4th year.</span>
+                            <span data-i18n="matcad_desc"></span>
                         </span>
                     </div>
                     <div className={styles.item}>
@@ -110,7 +110,7 @@ const CV: React.FC = () => {
                         </li>
                         <li>
                             <span className={styles.skillsTitle} data-i18n="data_analysis_ml"> Data Analysis/ML:</span>
-                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV, gudhi</span>
+                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV, Excel, gudhi</span>
                         </li>
                         <li>
                             <span className={styles.skillsTitle} data-i18n="data_visualization"> Data Visualization:</span>
@@ -171,7 +171,7 @@ const CV: React.FC = () => {
                 </section>
 
                 <p className={styles.lastUpdate}>
-                    <span data-i18n="last_update"></span> 10/02/2026
+                    <span data-i18n="last_update"></span> 15/05/2026
                 </p>
             </section>
         </main>

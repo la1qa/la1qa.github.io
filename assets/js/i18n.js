@@ -117,6 +117,7 @@ const translations = {
     blog_intro: "Una col·lecció cronològica de notes i publicacions.",
     awards: "Premis",
     tdr: "Treball de Recerca: <i>\"Origami: L'art es troba amb les matemàtiques\"</i>",
+    tdr_description: "Explora les bases matemàtiques de l'origami, destacant les seves capacitats més enllà de la geometria euclidiana clàssica. Aplica aquests principis per modificar el patró de plegat Stern Vicky, construint amb èxit una estrella de 7 puntes i mostrant aplicacions del plegat de paper.",
     tdr_upc: "2n Premi Poincaré",
     tdr_upc_text: "Organitzat per la Facultat de Matemàtiques i Estadística de la Universitat Politècnica de Catalunya.",
     tdr_uab: "1r Premi Argó",
@@ -136,7 +137,7 @@ const translations = {
     june_2022: "Juny 2022",
     may_2022: "Maig 2022",
     cvc_tfg: "Treball de Fi de Grau",
-    cvc_time3: "Gen 2026 - June 2026",
+    cvc_time3: "Gen 2026 - Sep 2026",
     cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\""
   }
 };

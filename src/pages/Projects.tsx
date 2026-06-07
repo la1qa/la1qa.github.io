@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
                     </div>
                 </div>
                 <div className={`${styles.Image} ${styles.Origami}`}>
-                  <img src="/assets/img/estel7-removebg-preview.png" alt="Origami star: 7-pointed Stern Vicky" />
+                  <img src="/assets/img/estel7-nobg.png" alt="Origami star: 7-pointed Stern Vicky" />
                 </div>
             </div>
             <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">

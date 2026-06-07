@@ -359,4 +359,13 @@ p {
   .profileSummary {
     text-align: center;
   }
+
+  .item h3, .item p, .item h4 {
+    flex-direction: column;
+  }
+
+  .positionTitle {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

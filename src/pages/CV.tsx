@@ -39,31 +39,7 @@ const CV: React.FC = () => {
                     </div>
                 </header>
 
-                <section className={styles.section}>
-                    <h2 data-i18n="education"></h2>
-                    <div className={styles.item}>
-                        <h3 className={styles.itemTitle}>
-                            <span data-i18n="matcad"></span><span className={styles.date}>Sep 2022 - </span>
-                        </h3>
-                        <p className={styles.positionTitle}>
-                            <span>Universitat Autònoma de Barcelona (UAB)</span>
-                            <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
-                        </p>
-                        <span className={styles.description}>
-                            <span data-i18n="matcad_desc"></span>
-                        </span>
-                    </div>
-                    <div className={styles.item}>
-                        <h3 className={styles.itemTitle}>
-                            <span data-i18n="erasmus"></span><span className={styles.date}>Feb 2025 - Jun 2025</span>
-                        </h3>
-                        <p className={styles.positionTitle}>
-                            <span>Linköpings Universitet (LiU)</span>
-                            <span className={styles.date}> Linköping, Östergötland, Sweden</span>
-                        </p>
-                    </div>
-                </section>
-
+                
                 <section className={styles.section}>
                     <h2 data-i18n="experience"></h2>
                     <div className={styles.item}>
@@ -98,6 +74,31 @@ const CV: React.FC = () => {
                                 <li data-i18n="cvc_time1_text"></li>
                             </ul>
                         </div>
+                    </div>
+                </section>
+
+                <section className={styles.section}>
+                    <h2 data-i18n="education"></h2>
+                    <div className={styles.item}>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="matcad"></span><span className={styles.date}>Sep 2022 - </span>
+                        </h3>
+                        <p className={styles.positionTitle}>
+                            <span>Universitat Autònoma de Barcelona (UAB)</span>
+                            <span className={styles.date}> Cerdanyola del Vallès, Barcelona, Spain</span>
+                        </p>
+                        <span className={styles.description}>
+                            <span data-i18n="matcad_desc"></span>
+                        </span>
+                    </div>
+                    <div className={styles.item}>
+                        <h3 className={styles.itemTitle}>
+                            <span data-i18n="erasmus"></span><span className={styles.date}>Feb 2025 - Jun 2025</span>
+                        </h3>
+                        <p className={styles.positionTitle}>
+                            <span>Linköpings Universitet (LiU)</span>
+                            <span className={styles.date}> Linköping, Östergötland, Sweden</span>
+                        </p>
                     </div>
                 </section>
 
@@ -171,8 +172,9 @@ const CV: React.FC = () => {
                 </section>
 
                 <p className={styles.lastUpdate}>
-                    <span data-i18n="last_update"></span> 15/05/2026
+                    <span data-i18n="last_update"></span> 10/06/2026
                 </p>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
             </section>
         </main>
     );

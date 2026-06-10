@@ -81,8 +81,8 @@
 .profileSummary {
   margin: 0;
   max-width: 100%;
-  text-align: left;
-  line-height: 1.35;
+  text-align: justify;
+  line-height: 1.2;
   color: var(--text-gray, #333);
 }
 
@@ -166,17 +166,18 @@ p {
 .position {
   padding-left: 1rem;
   margin-bottom: 0.25rem;
+  border-left: 2px solid var(--text-gray, rgba(0, 0, 0, 0.65));
 }
 
 .positionTitle {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .positionTitle p {
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .description {
@@ -252,7 +253,7 @@ p {
   }
 
   .profileSummary {
-    text-align: left !important;
+    text-align: justify !important;
   }
 
   .lastUpdate {
@@ -271,7 +272,7 @@ p {
   padding-left: 0rem;
   display: grid;
   gap: 0.4rem;
-  line-height: 1.1;
+  line-height: 1.2;
 }
 
 .skillsList {
@@ -285,7 +286,7 @@ p {
 .awardsList {
   column-count: 1;
   column-gap: 1rem;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0rem;
   list-style: none;
   margin: 0;
 }
@@ -300,12 +301,14 @@ p {
 }
 
 .awardsList li {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.25rem 0;
+  padding: 0 0 0 1rem;
   display: flex;
   gap: 0;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.2;
   break-inside: avoid;
+  border-left: 2px solid var(--text-gray, rgba(0, 0, 0, 0.65));
 }
 
 .skillsTitle {
@@ -367,5 +370,38 @@ p {
   .positionTitle {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+.itemTitle {
+  line-height: 1.2;
+}
+
+/*max-width 768 edits not on print*/
+@media print {
+  .skillsList {
+    column-count: 2;
+  }
+  .awardsList {
+    column-count: 1;
+  }
+
+  .profileIntro {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profileSummary {
+    text-align: justify;
+  }
+
+  .item h3, .item p, .item h4 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .positionTitle {
+    flex-direction: row;
+    align-items: center;
   }
 }

@@ -39,6 +39,7 @@
 .Description {
   display: flex;
   flex-direction: column;
+  gap: 0.35rem;
   /*container-type: size;*/
 }
 
@@ -56,11 +57,18 @@
   line-height: clamp(0.95rem, 5.75cqw, 1.05rem);
 }
 
+.Text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .Image {
   width: 100%;
   overflow: hidden;
   aspect-ratio: 4 / 3;
   margin-bottom: 0;
+  align-self: center;
 }
 
 .Image img {
@@ -79,6 +87,7 @@
   margin-top: auto;
   font-size: 0.85rem;
   align-content: center;
+  line-height: 1.0;
 }
 
 .Links a {
@@ -227,6 +236,7 @@
     .Small, .MediumHorizontal {
         grid-column: span 1;
         grid-row: span 1;
+        max-height: none;
     }
 
     .MediumVertical {

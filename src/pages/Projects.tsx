@@ -51,20 +51,21 @@ const Projects: React.FC = () => {
             <div className={`${styles.projectCard} ${styles.MediumHorizontal}`} data-aos="fade-up">
                 <div className={styles.Description} >     
                     <h2 data-i18n="tdr_title">Origami: Ancient Art meets Mathematics</h2>
-                    <p data-i18n="tdr_description"></p>
-                    <div className={styles.Links}>
-                        <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        <div>
-                          <a className={styles.paper} href="https://fme.upc.edu/ca/activitats-secundaria/premi-poincare/historia-i-edicions/2022/treballs-guanyadors-2022/craig-origami_l_art_es_troba_amb_les_matematiques_-memoria.pdf" target="_blank" rel="noopener noreferrer">
-                            <i className="fa-solid fa-file"></i> PDF
-                          </a>
-                          <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                    <div className={styles.Text}>
+                        <p data-i18n="tdr_description"></p>
+                        <div className={styles.Links}>
+                            <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <div>
+                              <a className={styles.paper} href="https://fme.upc.edu/ca/activitats-secundaria/premi-poincare/historia-i-edicions/2022/treballs-guanyadors-2022/craig-origami_l_art_es_troba_amb_les_matematiques_-memoria.pdf" target="_blank" rel="noopener noreferrer">
+                                <i className="fa-solid fa-file"></i> PDF
+                              </a>
+                              <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className={`${styles.Image} ${styles.Origami}`}>
                   <img src="/assets/img/estel7-nobg.png" alt="Origami star: 7-pointed Stern Vicky" />
-                  <img src="/assets/img/project_placeholder.svg" alt="Origami star: 7-pointed Stern Vicky" />
                 </div>
             </div>
             <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">

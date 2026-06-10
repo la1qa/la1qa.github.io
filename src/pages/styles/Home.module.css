@@ -946,7 +946,7 @@
 .constructionBanner {
   position: absolute;
   top: 0;
-  left: calc(50% - 512px + 75px); /* align with the right edge of the cover container */
+  left: 50%; /* align with the right edge of the cover container */
   transform: translateX(-50%);
   color: var(--accent-color-1);
   padding: 0.5rem 1rem;

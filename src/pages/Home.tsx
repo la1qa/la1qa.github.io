@@ -25,7 +25,7 @@ const Home: React.FC = () => {
         <div className={styles.cover__background} aria-hidden="true">
           {/* Site Under Construction Banner */}
           <div className={styles.constructionBanner}>
-            <span>🚧 Site Under Construction 🚧</span>
+            <span> *site under construction </span>
           </div>
           <div className={styles.cover__data}>
               <div className={styles['cover__img-mobile']} data-aos="fade-up">

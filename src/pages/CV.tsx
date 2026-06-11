@@ -113,18 +113,18 @@ const CV: React.FC = () => {
                             <span className={styles.skillsTitle} data-i18n="data_analysis_ml"> Data Analysis/ML:</span>
                             <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV, Excel, gudhi</span>
                         </li>
-                        <li>
+                        {/* <li>
                             <span className={styles.skillsTitle} data-i18n="data_visualization"> Data Visualization:</span>
                             <span>Matplotlib, Seaborn</span>
-                        </li>
+                        </li> */}
                         <li>
                             <span className={styles.skillsTitle} data-i18n="database_management"> Database Management:</span>
                             <span>SQL, MongoDB, Neo4j</span>
                         </li>
-                        <li>
+                        {/* <li>
                             <span className={styles.skillsTitle} data-i18n="web_development"> Web Development:</span>
                             <span>React, Node.js, npm, HTML5, CSS</span>
-                        </li>
+                        </li> */}
                         <li>
                             <span className={styles.skillsTitle} data-i18n="other"> Other:</span>
                             <span>Git, GitHub, Jupyter Notebooks, VS Code</span>

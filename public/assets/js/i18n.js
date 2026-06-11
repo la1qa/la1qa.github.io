@@ -45,7 +45,7 @@ const translations = {
     back_to_blog: "Back to Blog",
     blog_intro: "A chronological collection of notes and posts.",
     awards: "Awards",
-    tdr: "Research Project: <i>\"Origami: Ancient Art meets Mathematics\"</i>",
+    tdr: "Research Project: <i>\"Origami: Ancient Art meets Mathematics\" (High School)</i>",
     tdr_description: "Explores the mathematical foundations of origami, highlighting its capabilities beyond classical Euclidean geometry. It applies these principles to modify the Stern Vicky crease pattern, successfully constructing 7-pointed star, and showcase applications of paper folding.",
     tdr_upc: "2n Premi Poincaré",
     tdr_upc_text: "2nd prize, Best Research Project, organized by the Faculty of Mathematics and Statistics at the Universitat Politècnica de Catalunya.",

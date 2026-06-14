@@ -46,13 +46,18 @@ const Projects: React.FC = () => {
                     <p data-i18n="portfolio_description">You are surfing it. :)</p>
                     <div className={styles.Links}>
                         <a className={styles.readMore} href="/#/blog/2026-01-portfolio"><span data-i18n="read_more" onClick={() => trackEvent("click", { element: "read more", project_name: "Portfolio", language: localStorage.getItem("lang") || "en" })}>Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"
-                          onClick={() => {
-                            trackEvent("click", { element: "github", project_name: "Portfolio", language: localStorage.getItem("lang") || "en" });
-                          }}
-                        >
-                          <i className="fab fa-github"></i> GitHub
-                        </a>
+                        <div>
+                          <a className={styles.stats} href="/#/stats" onClick={() => trackEvent("click", { element: "stats", project_name: "Portfolio", language: localStorage.getItem("lang") || "en" })}>
+                            <i className="fas fa-chart-bar"></i> Stats
+                          </a>
+                          <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"
+                            onClick={() => {
+                              trackEvent("click", { element: "github", project_name: "Portfolio", language: localStorage.getItem("lang") || "en" });
+                            }}
+                          >
+                            <i className="fab fa-github"></i> GitHub
+                          </a>
+                        </div>
                     </div>
                 </div>
             </div>

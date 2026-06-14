@@ -8,6 +8,7 @@ import CV from './pages/CV';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import BlogPostPage from './components/BlogPost';
+import Stats from './pages/Stats';
 
 const AnalyticsTracker = () => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const App: React.FC = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/blog/:slug" element={<BlogPostPage />} />
+          <Route path="/stats" element={<Stats />} />
         </Routes>
         <Footer />
       </div>

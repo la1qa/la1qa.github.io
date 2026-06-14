@@ -53,7 +53,7 @@ const Home: React.FC = () => {
 
               <div className={styles.cover__line} data-aos="fade-up" aria-hidden="true"></div>
               <div className={styles.cover__social} data-aos="fade-up">
-                <a href="https://github.com/la1qa" className={styles.cover__icon} target="_blank" rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "github", social_platform: "GitHub", page: "home" })}}>
+                <a href="https://github.com/la1qa" className={styles.cover__icon} target="_blank" rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "github", social_platform: "GitHub", page: "home", language: localStorage.getItem("lang") || "en" })}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
                     <path d="M9 18c-4.51 2-5-2-7-2" />
                   </svg>
                 </a>
-                <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" className={styles.cover__icon} rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "linkedin", social_platform: "LinkedIn" , page: "home" })}}>
+                <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" className={styles.cover__icon} rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "linkedin", social_platform: "LinkedIn" , page: "home", language: localStorage.getItem("lang") || "en" })}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -88,7 +88,7 @@ const Home: React.FC = () => {
                     <circle cx="4" cy="4" r="2" />
                   </svg>
                 </a>
-                <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" className={styles.cover__icon} rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "spotify", social_platform: "Spotify" , page: "home" })}}>
+                <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" className={styles.cover__icon} rel="noopener noreferrer" onClick={() => {trackEvent("click", { element: "spotify", social_platform: "Spotify" , page: "home", language: localStorage.getItem("lang") || "en" })}}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"

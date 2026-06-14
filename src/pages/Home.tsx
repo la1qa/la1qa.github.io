@@ -109,7 +109,7 @@ const Home: React.FC = () => {
                 </a>
               </div>
           </div>
-          <div className={styles.coverCard}>
+          {/* <div className={styles.coverCard}>
             <div className={styles.coverCardContent}>
               <h2 data-i18n="projects">Projects</h2>
               <p data-i18n="cover_card_description">Check out my project!</p>
@@ -126,7 +126,7 @@ const Home: React.FC = () => {
               <h2 data-i18n="about">About Me</h2>
               <p data-i18n="cover_card_description">Check out my about page!</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section>

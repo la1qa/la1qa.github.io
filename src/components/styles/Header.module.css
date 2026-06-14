@@ -32,7 +32,7 @@
 
 .nav__link:hover {
   color: var(--text-color);
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
 }
 
 .nav__logo {
@@ -297,3 +297,52 @@
     display: none;
   }
 }
+
+/* The parent link container defines the rigid structural footprint */
+.nav__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: relative;
+  min-height: 24px; /* Gives a reliable hit target */
+  /* Keep your current font sizes and default colors here */
+}
+
+.nav__link:hover {
+  /* Keep your current hover styles here */
+  text-decoration: underline; /* Prevents underline on hover */
+}
+
+/* The Text Link Element */
+.linkText {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+/* The Icon Element (Stacked directly over/under the text space) */
+.hoverIcon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.8); /* Slightly smaller initialization scale */
+  opacity: 0;
+  pointer-events: none; /* Prevents cursor fighting between text and icon elements */
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* --- HOVER STATES --- */
+
+/* 1. Fade out the text when hovering the link container */
+/* .nav__link:hover .linkText {
+  opacity: 0;
+  transform: translateY(-4px);
+} */
+
+/* 2. Fade in the icon and snap it to full scale */
+/* .nav__link:hover .hoverIcon {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+} */

@@ -7,14 +7,12 @@ const Header: React.FC = () => {
   const [language, setLanguage] = useState<string>('en');
 
   useEffect(() => {
-    // Load saved theme preference
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
   }, []);
 
   useEffect(() => {
-    // Load saved language preference or detect browser language
     const browserLang = navigator.language.split('-')[0];
     const savedLang = localStorage.getItem('lang') || browserLang || 'en';
     setLanguage(savedLang);
@@ -42,18 +40,21 @@ const Header: React.FC = () => {
         <a href="https://la1qa.github.io" className={styles.nav__logo}>
           LAIA QUEROL ALTURO
         </a>
+        
         <label className={styles.themeSwitch}>
           <input 
             type="checkbox" 
             id="themeToggle" 
             checked={theme === 'dark'}
             onChange={toggleTheme}
+            aria-label="Toggle theme"
           />
           <i className={`fas fa-sun ${styles.sun}`}></i>
           <i className={`fas fa-moon ${styles.moon}`}></i>
         </label>
+        
         <li className={styles.dropdown}>
-          <button className={styles.dropbtn}>
+          <button className={styles.dropbtn} aria-label="Open menu">
             <i className="fas fa-bars"></i>
           </button>
           <div className={styles.dropdownContent}>
@@ -79,7 +80,7 @@ const Header: React.FC = () => {
             </Link>
             <div className={styles.langSelectorMobile}>
               <i className="fas fa-language"></i>
-              <select id="language-dropdown-mobile" className={styles.languageDropdownMobile} value={language} onChange={handleLanguageChange}>
+              <select id="language-dropdown-mobile" className={styles.languageDropdownMobile} value={language} onChange={handleLanguageChange} aria-label="Select language">
                 <option value="en">English</option>
                 <option value="ca">Català</option>
               </select>
@@ -90,49 +91,57 @@ const Header: React.FC = () => {
         <div className={styles.nav__menu} id="nav-menu">
           <ul className={styles.nav__list}>
             <li className={styles.nav__item}>
-              <a href="/" className={styles.nav__link} data-i18n="home">Home</a>
+              <a href="/" className={styles.nav__link} data-i18n="home">
+                <i className={`fas fa-user ${styles.hoverIcon}`}></i>
+                <span className={styles.linkText}>Home</span>
+              </a>
             </li>
             <li className={styles.nav__item}>
               <Link to="/projects" className={styles.nav__link} data-i18n="projects">
-                Projects
+                <i className={`fas fa-briefcase ${styles.hoverIcon}`}></i>
+                <span className={styles.linkText}>Projects</span>
               </Link>
             </li>
             <li className={styles.nav__item}>
               <Link to="/blog" className={styles.nav__link} data-i18n="blog">
-                Blog
+                <i className={`fas fa-newspaper ${styles.hoverIcon}`}></i>
+                <span className={styles.linkText}>Blog</span>
               </Link>
             </li>
             <li className={styles.nav__item}>
-                <Link to="/cv" className={styles.nav__link} data-i18n="cv">
-                    CV
-                </Link>
+              <Link to="/cv" className={styles.nav__link} data-i18n="cv">
+                <i className={`fas fa-file ${styles.hoverIcon}`}></i>
+                <span className={styles.linkText}>CV</span>
+              </Link>
             </li>
             <li className={styles.nav__item}>
-                <Link to="/contact" className={styles.nav__link} data-i18n="contact">
-                    Contact
-                </Link>
+              <Link to="/contact" className={styles.nav__link} data-i18n="contact">
+                <i className={`fas fa-phone ${styles.hoverIcon}`}></i>
+                <span className={styles.linkText}>Contact</span>
+              </Link>
             </li>
           </ul>
           <div>
-              <input 
-                type="checkbox" 
-                className="checkbox" 
-                id="checkbox"
-                checked={theme === 'dark'}
-                onChange={toggleTheme}
-              />
-              <label htmlFor="checkbox" className="checkbox-label">
-                <i className="fas fa-moon"></i>
-                <i className="fas fa-sun"></i>
-                <span className="ball"></span>
-              </label>
-            </div>
-            <div className="lang-selector">
-              <select id="language-dropdown" value={language} onChange={handleLanguageChange}>
-                <option value="en">English</option>
-                <option value="ca">Català</option>
-              </select>
-            </div>
+            <input 
+              type="checkbox" 
+              className="checkbox" 
+              id="checkbox"
+              checked={theme === 'dark'}
+              onChange={toggleTheme}
+              aria-label="Toggle theme"
+            />
+            <label htmlFor="checkbox" className="checkbox-label">
+              <i className="fas fa-moon"></i>
+              <i className="fas fa-sun"></i>
+              <span className="ball"></span>
+            </label>
+          </div>
+          <div className="lang-selector">
+            <select id="language-dropdown" value={language} onChange={handleLanguageChange} aria-label="Select language">
+              <option value="en">English</option>
+              <option value="ca">Català</option>
+            </select>
+          </div>
         </div>
       </nav>
     </header>

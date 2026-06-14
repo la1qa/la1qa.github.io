@@ -24,6 +24,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function setLanguage(lang) {
   localStorage.setItem("lang", lang);
+
+  // Google Analytics event for language change
+  window.gtag?.("event", "language_change", {
+    language: lang
+  });
+
   const elements = document.querySelectorAll("[data-i18n]");
   elements.forEach((el) => {
     const key = el.getAttribute("data-i18n");

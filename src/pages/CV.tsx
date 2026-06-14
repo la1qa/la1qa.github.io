@@ -16,15 +16,15 @@ const CV: React.FC = () => {
     return (
         <main className="bd-container l-main white-bg">
             <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("click", { element: "print_cv", page: "cv", position: "top" }); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("click", { element: "print_cv", page: "cv", position: "top", language: localStorage.getItem("lang") || "en" }); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
                 <header className={styles.header}>
                     <h1>Laia Querol Alturo</h1>
                     <div className={styles.meta}>
                         <span>Cerdanyola del Vallès, Barcelona</span>
                         <span aria-hidden="true" className={styles.dot}>·</span>
-                        <a href="mailto:Laia.QuerolA@autonoma.cat" onClick={() => trackEvent("click", { element: "email", page: "cv"})}>Laia.QuerolA@autonoma.cat</a>
+                        <a href="mailto:Laia.QuerolA@autonoma.cat" onClick={() => trackEvent("click", { element: "email", page: "cv", language: localStorage.getItem("lang") || "en" })}>Laia.QuerolA@autonoma.cat</a>
                         <span aria-hidden="true" className={styles.dot}>·</span>
-                        <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("click", { element: "linkedin", social_platform: "LinkedIn", page: "cv" })}>linkedin.com/in/laia-querol-alturo</a>
+                        <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("click", { element: "linkedin", social_platform: "LinkedIn", page: "cv", language: localStorage.getItem("lang") || "en" })}>linkedin.com/in/laia-querol-alturo</a>
                     </div>
                     <div className={styles.profileIntro}>
                         <div className={styles.profilePhotoFrame}>
@@ -175,7 +175,7 @@ const CV: React.FC = () => {
                 <p className={styles.lastUpdate}>
                     <span data-i18n="last_update"></span> 10/06/2026
                 </p>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("click", { element: "print_cv", page: "cv", position: "bottom" }); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("click", { element: "print_cv", page: "cv", position: "bottom", language: localStorage.getItem("lang") || "en" }); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
             </section>
         </main>
     );

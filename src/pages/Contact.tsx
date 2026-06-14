@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { trackEvent } from "../utils/analytics";
 import styles from './styles/Contact.module.css';
 
 export default function Contact() {
@@ -41,7 +42,7 @@ export default function Contact() {
             </button>
             <span data-i18n="find_me_on" data-aos="fade-up">...if not, you'll find me on:</span>
             <div className={styles.socialIcons} data-aos="fade-up">
-                <a href="https://github.com/la1qa" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                <a href="https://github.com/la1qa" target="_blank" rel="noopener noreferrer" className={styles.iconLink} onClick={() => trackEvent("github_click", { social_platform: "GitHub" })}>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="24" 
@@ -58,7 +59,7 @@ export default function Contact() {
                     </svg>
                     <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                <a href="https://linkedin.com/in/laia-querol-alturo" target="_blank" rel="noopener noreferrer" className={styles.iconLink} onClick={() => trackEvent("linkedin_click", { social_platform: "LinkedIn" })}>
                     <svg 
                         xmlns="http://www.w3.org/2000/svg" 
                         width="24" 
@@ -76,7 +77,7 @@ export default function Contact() {
                     </svg>
                     <span>LinkedIn</span>
                 </a>
-                <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
+                <a href="https://open.spotify.com/user/x8ra08bclftmmw7pboh8gaptd?si=df8370fe84e64cc2" target="_blank" rel="noopener noreferrer" className={styles.iconLink} onClick={() => trackEvent("spotify_click", { social_platform: "Spotify" })}>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

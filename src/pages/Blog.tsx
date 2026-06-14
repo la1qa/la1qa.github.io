@@ -23,20 +23,14 @@ const Blog: React.FC = () => {
     const onStorageChange = () => {
       const nextLang = getCurrentLang();
       setLang(nextLang);
-
-      if (typeof (window as any).setLanguage === 'function') {
-        (window as any).setLanguage(nextLang);
-      }
     };
 
     window.addEventListener("storage", onStorageChange);
-    window.addEventListener("languagechange", onStorageChange);
 
     onStorageChange();
 
     return () => {
       window.removeEventListener("storage", onStorageChange);
-      window.removeEventListener("languagechange", onStorageChange);
     };
   }, []);
 

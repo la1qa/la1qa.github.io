@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { trackEvent } from "../utils/analytics";
 import styles from './styles/Projects.module.css';
 
 const Projects: React.FC = () => {
+
   useEffect(() => {
     // Initialize i18n translations
     const savedLang = localStorage.getItem("lang") || "en";
@@ -43,8 +45,14 @@ const Projects: React.FC = () => {
                     <h2 data-i18n="portfolio_title">Portfolio</h2>
                     <p data-i18n="portfolio_description">You are surfing it. :)</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/#/blog/2026-01-portfolio"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                        <a className={styles.readMore} href="/#/blog/2026-01-portfolio"><span data-i18n="read_more" onClick={() => trackEvent("read_more_click", { project_name: "Portfolio" })}>Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a className={styles.github} href="https://github.com/la1qa/la1qa.github.io" target="_blank" rel="noopener noreferrer"
+                          onClick={() => {
+                            trackEvent("github_click", { project_name: "Portfolio" });
+                          }}
+                        >
+                          <i className="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
             </div>
@@ -54,12 +62,16 @@ const Projects: React.FC = () => {
                     <div className={styles.Text}>
                         <p data-i18n="tdr_description"></p>
                         <div className={styles.Links}>
-                            <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                            <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more" onClick={() => trackEvent("read_more_click", { project_name: "Origami" })}>Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                             <div>
-                              <a className={styles.paper} href="https://fme.upc.edu/ca/activitats-secundaria/premi-poincare/historia-i-edicions/2022/treballs-guanyadors-2022/craig-origami_l_art_es_troba_amb_les_matematiques_-memoria.pdf" target="_blank" rel="noopener noreferrer">
+                              <a className={styles.paper} href="https://fme.upc.edu/ca/activitats-secundaria/premi-poincare/historia-i-edicions/2022/treballs-guanyadors-2022/craig-origami_l_art_es_troba_amb_les_matematiques_-memoria.pdf" target="_blank" rel="noopener noreferrer"
+                                onClick={() => trackEvent("pdf_click", { project_name: "Origami" })}
+                              >
                                 <i className="fa-solid fa-file"></i> PDF
                               </a>
-                              <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                              <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("github_click", { project_name: "Origami" })}>
+                                <i className="fab fa-github"></i> GitHub
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -86,8 +98,10 @@ const Projects: React.FC = () => {
                     <h2 data-i18n="saf_wrapped_title">SAF-Wrapped</h2>
                     <p data-i18n="saf_wrapped_description">Permet visualitzar l'us del Servei d'Activitat Física de la UAB.</p>
                     <div className={styles.Links}>
-                        <a className={styles.readMore} href="/#/blog/2026-01-saf"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        <a className={styles.github} href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                        <a className={styles.readMore} href="/#/blog/2026-01-saf"><span data-i18n="read_more" onClick={() => trackEvent("read_more_click", { project_name: "SAF-Wrapped" })}>Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a className={styles.github} href="https://github.com/la1qa/SAF-Wrapped" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("github_click", { project_name: "SAF-Wrapped" })}>
+                            <i className="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
                 <div className={styles.Image}>
@@ -100,7 +114,9 @@ const Projects: React.FC = () => {
                     <p>Brief description of the project.</p>
                     <div className={styles.Links}>
                         <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
-                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>
+                        <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer" onClick={() => trackEvent("github_click", { project_name: "Project Title" })}>
+                            <i className="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
                 <div className={styles.Image}>

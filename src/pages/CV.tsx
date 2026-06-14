@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { trackEvent } from "../utils/analytics";
 import styles from './styles/CV.module.css';
 
 const CV: React.FC = () => {
@@ -15,7 +16,7 @@ const CV: React.FC = () => {
     return (
         <main className="bd-container l-main white-bg">
             <section className={`${styles.spacer}`} aria-hidden="true" ref={sectionRef}>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("print_click"); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
                 <header className={styles.header}>
                     <h1>Laia Querol Alturo</h1>
                     <div className={styles.meta}>
@@ -174,7 +175,7 @@ const CV: React.FC = () => {
                 <p className={styles.lastUpdate}>
                     <span data-i18n="last_update"></span> 10/06/2026
                 </p>
-                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print</span></a>
+                <a href="#" onClick={(e) => { e.preventDefault(); window.print(); trackEvent("print_click"); }} className={styles.printButton}><i className="fas fa-print" aria-hidden="true"></i> <span data-i18n="print">Print CV</span></a>
             </section>
         </main>
     );

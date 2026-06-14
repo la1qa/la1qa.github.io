@@ -1,4 +1,11 @@
-declare module "*.md?raw" {
-  const content: string;
-  export default content;
+declare global {
+  interface Window {
+    gtag: (
+      command: string,
+      eventName: string,
+      params?: Record<string, unknown>
+    ) => void;
+  }
 }
+
+export {};

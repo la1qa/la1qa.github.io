@@ -66,10 +66,10 @@ const Header: React.FC = () => {
               <i className="fas fa-briefcase"></i>
               <span data-i18n="projects">Projects</span>
             </Link>
-            <Link to="/blog" className="navbar-link">
+            {/* <Link to="/blog" className="navbar-link">
               <i className="fas fa-newspaper"></i>
               <span data-i18n="blog">Blog</span>
-            </Link>
+            </Link> */}
             <Link to="/cv" className="navbar-link">
                 <i className="fas fa-file"></i>
                 <span data-i18n="cv">CV</span>
@@ -102,12 +102,12 @@ const Header: React.FC = () => {
                 <span className={styles.linkText}>Projects</span>
               </Link>
             </li>
-            <li className={styles.nav__item}>
+            {/* <li className={styles.nav__item}>
               <Link to="/blog" className={styles.nav__link} data-i18n="blog">
                 <i className={`fas fa-newspaper ${styles.hoverIcon}`}></i>
                 <span className={styles.linkText}>Blog</span>
               </Link>
-            </li>
+            </li> */}
             <li className={styles.nav__item}>
               <Link to="/cv" className={styles.nav__link} data-i18n="cv">
                 <i className={`fas fa-file ${styles.hoverIcon}`}></i>

@@ -43,7 +43,21 @@ const CV: React.FC = () => {
                 
                 <section className={styles.section}>
                     <h2 data-i18n="experience"></h2>
+                    
                     <div className={styles.item}>
+                        <h4>
+                            <span data-i18n="zurich"></span>
+                            <span className={styles.date}> Barcelona, Catalonia, Spain</span>
+                        </h4>
+                        <div className={styles.position}>
+                            <h3 className={styles.itemTitle}>
+                                <span data-i18n="FutureZ"></span>
+                                <span className={styles.date} data-i18n="FutureZ_time"></span>
+                            </h3>
+                            <ul className={styles.list}>
+                                <li><i data-i18n="FutureZ_text"></i></li>
+                            </ul>
+                        </div>
                         <h4>
                             <span data-i18n="cvc"></span>
                             <span className={styles.date}> Cerdanyola del Vallès, Catalonia, Spain</span>

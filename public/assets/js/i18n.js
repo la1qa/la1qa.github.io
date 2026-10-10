@@ -67,7 +67,11 @@ const translations = {
     may_2022: "May 2022",
     cvc_tfg: "Bachelor's Thesis",
     cvc_time3: "Jan 2026 - June 2026",
-    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\""
+    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\"",
+    zurich: "Zurich Insurance",
+    FutureZ: "Pricing & Data Analytics Intern",
+    FutureZ_time: "Oct 2026 - Jul 2027",
+    FutureZ_text: "Internship within the FutureZ program."
   },
 
   ca: {
@@ -138,7 +142,11 @@ const translations = {
     may_2022: "Maig 2022",
     cvc_tfg: "Treball de Fi de Grau",
     cvc_time3: "Gen 2026 - Sep 2026",
-    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\""
+    cvc_time3_text: "\"Persistent Homology for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images\"",
+    zurich: "Zurich Insurance",
+    FutureZ: "Pricing & Data Analytics Intern",
+    FutureZ_time: "Oct 2026 - Jul 2027",
+    FutureZ_text: "Pràctiques dins el programa FutureZ.",
   }
 };
 

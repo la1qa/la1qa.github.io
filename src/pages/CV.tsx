@@ -126,7 +126,7 @@ const CV: React.FC = () => {
                         </li>
                         <li>
                             <span className={styles.skillsTitle} data-i18n="data_analysis_ml"> Data Analysis/ML:</span>
-                            <span>Pandas, NumPy, PyTorch, Scikit-learn, OpenCV, Excel, gudhi</span>
+                            <span>Pandas, PyTorch, Scikit-learn, OpenCV, gudhi, PySpark</span>
                         </li>
                         {/* <li>
                             <span className={styles.skillsTitle} data-i18n="data_visualization"> Data Visualization:</span>
@@ -142,7 +142,7 @@ const CV: React.FC = () => {
                         </li> */}
                         <li>
                             <span className={styles.skillsTitle} data-i18n="other"> Other:</span>
-                            <span>Git, GitHub, Jupyter Notebooks, VS Code</span>
+                            <span>Git, GitHub, GitLab, Jupyter Notebooks, VS Code</span>
                         </li>
                     </ul>
                 </section>

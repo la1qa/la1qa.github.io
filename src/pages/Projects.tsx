@@ -87,8 +87,8 @@ const Projects: React.FC = () => {
             </div>
             <div className={`${styles.projectCard} ${styles.Large}`} data-aos="fade-up">
                 <div className={styles.Description} >     
-                    <h2>Project Title</h2>
-                    <p>Brief description of the project.</p>
+                    <h2>Persistent Homolgy for the Prediction of Lymph Node Status in Colorectal Cancer from Histology Images</h2>
+                    <p>Bachelor's Thesis. </p>
                     <div className={styles.Links}>
                         <a className={styles.readMore} href="/#/blog"><span data-i18n="read_more">Read More</span><i className="fas fa-arrow-right" aria-hidden="true"></i></a>
                         <a className={styles.github} href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i> GitHub</a>

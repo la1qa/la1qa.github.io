@@ -4,8 +4,8 @@ const translations = {
     name: "I'm ",
     presentation_old: `Welcome to my website!
                    This is a space where I share what I do, what I’m learning, and what I’m excited to build next. It serves as a portfolio of my work, but it is also a reflection of how I think and create.`,
-    presentation: `I work in data science. Here I collect projects, notes, and thoughts in progress.`,
-    currently: "Currently working on my bachelor's thesis.",
+    presentation: `I work in data science. Here I collect projects, notes, and thoughts.`,
+    currently: "Currently starting on a new role.",
     contact_button: "Contact me",
     home: "Home",
     education: "Education",
@@ -79,9 +79,9 @@ const translations = {
     name: "Soc la ",
     presentation_old: `Benvinguts al meu web! 
                    Aquest és un espai on comparteixo el que faig, el que estic aprenent i el que em fa il·lusió construir a continuació. Serveix com a portfoli de la meva feina, però també és un reflex de com penso i creo.`,
-    presentation: `Treballo en ciència de dades. Aquí recopilo projectes, notes i idees en procés.`,
-    currently: "Actualment treballant en el meu treball de fi de grau.",
-     contact_button: "Contacta’m",
+    presentation: `Treballo en ciència de dades. Aquí recopilo projectes, notes i idees.`,
+    currently: "Actualment iniciant-me en una nova empresa.",
+    contact_button: "Contacta’m",
     home: "Inici",
     education: "Educació",
     experience: "Experiència",

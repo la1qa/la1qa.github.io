@@ -1,10 +1,10 @@
-This repository contains all the necessary files for my website portfolio, my very first website!
+This repository contains the source code and assets for my website portfolio, my very first website!
 
 Check it out here! [la1qa.github.io](https://la1qa.github.io/)
 
-I’m excited to dive into HTML, CSS, and JavaScript to create a portfolio that is not only visually appealing but also efficient, engaging, and informative. I’ll be using Git locally and pushing updates to GitHub, a workflow I’m revisiting and plan to integrate regulary from now on.
+The website is a space to showcase my projects, experience, skills and interests. I want it to feel personal, balancing a professional presentation with simplicity and character. The visual direction uses warm neutral backgrounds, clean typography, generous whitespace and subtle colour accents, letting the content speak for itself.
 
-The palette I have chosen is the following:
+Built with React, TypeScript, HTML and CSS, the project is also an opportunity to experiment with web development, explore new ideas and continuously improve my skills.
 
 <!--
 #ffffff
@@ -15,20 +15,11 @@ The palette I have chosen is the following:
 #222222
 -->
 
-![Color Palette](assets/img/palette.png)
+<!-- ![Color Palette](assets/img/palette.png) -->
 
 <!--
 https://pixelied.com/colors/palette-editor/f8e9a1-f76c6c-a8d0e6-24305e-ffffff-222222
 -->
 
-### Goals for the website:
-- Both Dark&Light mode
-- Nice transitions
-- Catalan&English (Spanish?)
-- Spotify
-
-#### 21/01/2026
-Decided to integrade TypeScript to improve the organization of the site.
-
-#### 22/01/2026
-Changing palette, my 2026 muji planner is the new inspiration
+### Development
+The project is version-controlled with Git and hosted on GitHub Pages. It is continuously evolving as I learn, experiment and add new projects and features.

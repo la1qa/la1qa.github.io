@@ -1,1 +1,1 @@
-Are you liking it so far?
+A personal portfolio designed to showcase my projects, experience, skills and interests. Its visual identity is minimalist, calm and intentional, with warm off-white backgrounds, clean typography, generous whitespace and subtle red and blue accents. The website should feel personal rather than corporate, balancing a professional presentation with simplicity and character. The design prioritises clarity, usability and content over unnecessary decoration or visual effects, letting the content speak for itself.
